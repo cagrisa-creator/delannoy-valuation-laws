@@ -1,0 +1,130 @@
+PRIORIDADE E CONTRIBUIÇÃO - DELANNOY
+Consulta: 9 novembro 2026
+Fonte analisado: outputs/delannoy-independent-researcher/artigo/main.tex
+
+PARECER
+
+Não localizei uma demonstração publicada equivalente à lei geral do
+rascunho: a Conjectura 4 de Lengyel com o limiar explícito indicado,
+incluindo deslocamentos negativos quando os índices de D são não negativos,
+nem uma formulação publicada equivalente à lei de dois índices pares ou
+à lei multiplicativa para todo multiplicador ímpar.
+
+Isso sustenta INEDITISMO PLAUSÍVEL DO RESULTADO GERAL, não uma certificação
+de prioridade. A ausência de resultado nas buscas não demonstra inexistência.
+Não anunciar "primeira prova" como fato definitivamente estabelecido.
+Uma classificação bibliográfica especializada ou um resultado expresso em
+outra notação pode ter escapado às buscas. Correção e novidade são questões
+separadas: esta busca não substitui a auditoria das provas.
+
+O QUE DE FATO SERIA A CONTRIBUIÇÃO
+
+- Uma prova universal da lei de valoração proposta por Lengyel, com
+  limiar efetivo, seria uma contribuição concreta, mesmo sem aplicações
+  amplas. A novidade principal deve ser atribuída ao teorema e ao método
+  de prova, não ao volume de testes computacionais.
+- A normalização ramificada de termos constantes, o controle analítico
+  uniforme e o incremento cúbico formam o método que o artigo precisa
+  explicar de modo legível e comparar com técnicas padrão.
+- A lei multiplicativa do pacote NEG já é corolário da lei geral no
+  próprio artigo; não a apresentar como uma segunda descoberta independente.
+- As Conjecturas 1–3 de Lengyel são formulações intimamente relacionadas
+  das duas valorações em torno de 0 e -1. A contagem de quatro conjecturas
+  não deve sugerir quatro avanços independentes de igual porte.
+- Não foi estabelecido que cada ingrediente técnico, como reflexão,
+  expansão de Mahler, identidade formal do dilogaritmo ou estimativas
+  binomiais, seja novo isoladamente. São ferramentas padrão ou derivadas
+  de identidades padrão; citar as fontes correspondentes.
+
+COMPARAÇÃO COM AS FONTES PRIMÁRIAS
+
+1. T. Lengyel, INTEGERS 21 (2021), A86, pp. 4–5.
+   https://math.colgate.edu/~integers/v86/v86.pdf
+   A fonte formula C1–C3 como valorações exatas nos pontos-base e C4
+   para n suficientemente grande. O rascunho pretende demonstrá-las e
+   tornar o limiar genérico explícito. Deve manter os quantificadores
+   e os casos de índices definidos exatamente como no teorema revisado.
+
+2. R.-H. Wang e M. X. X. Zhong, preprint de 9 maio 2025.
+   https://arxiv.org/html/2505.05728v1
+   Título do preprint: Congruences for sums of Delannoy numbers and polynomials.
+   Theorem 3.1: para a>=2, D(2^a+1) é congruente a 3+2^(a+2)
+   módulo 2^(2a+2); também fornece uma congruência para D(2^a-1).
+   Subtrair duas escalas consecutivas já produz o caso b=u=1 da
+   fórmula C4 genérica, n>=2. Esse caso particular não é novo.
+   A fonte não fornece a lei uniforme para todos b,u, nem as valorações
+   exatas de todos os pontos-base. A comparação já está no rascunho.
+   Publicação localizada com título atualizado:
+   Congruences for sums of Delannoy numbers and Legendre polynomials.
+   DOI: https://doi.org/10.1142/S1793042126500442
+   Conferir a versão de registro antes de fechar a bibliografia final.
+
+3. M. A. Alekseyev, T. Amdeberhan, J. Shallit e I. Vukusic (2025).
+   https://arxiv.org/html/2505.08935v1
+   On the p-adic valuations of values of Legendre polynomials.
+   Theorem 3 exige v_p(r)>=1. D(N)=P_N(3), mas para p=2 temos
+   v_2(3)=0; logo o resultado não cobre diretamente as diferenças
+   2-ádicas do presente artigo. A aplicação a Delannoy discutida nessa
+   fonte é a valoração 3-ádica. Não confundir os dois problemas.
+
+4. Z.-W. Sun, Arithmetic properties of Delannoy numbers and Schröder numbers,
+   J. Number Theory 183 (2018), 146–171.
+   https://arxiv.org/pdf/1602.00574
+   Antecedente amplo de congruências e somas de polinômios. Não identifiquei
+   nele a lei 2-ádica de diferenças que o rascunho pretende demonstrar.
+
+5. Z.-W. Sun, On Delannoy numbers and Schroeder numbers,
+   J. Number Theory 131 (2011), 2387–2397.
+   https://arxiv.org/pdf/1009.2486
+   Resultados principais tratam somas e congruências para primos ímpares.
+   Não foi identificado como prova equivalente dos enunciados atuais.
+
+6. C.-B. Jia e J.-Q. Huang (2024), Congruences involving Delannoy numbers
+   and Schröder numbers.
+   https://arxiv.org/html/2410.17522v1
+   O alvo são somas normalizadas com propriedades de integridade,
+   paridade e congruências em primos >3, não a lei geral de diferenças.
+
+7. C. Djadi e H. Belbachir, JIS 29 (2026), Article 26.5.2,
+   Congruence Properties for the Delannoy Triangle Coefficients.
+   https://cs.uwaterloo.ca/journals/JIS/VOL29/Djadi/djadi6.html
+   Publicado em 21 setembro 2026. Generaliza congruências tipo
+   Wolstenholme para coeficientes do triângulo, principalmente p>=5.
+   Não é uma resolução da lei de diferenças 2-ádicas do rascunho.
+
+OUTROS CONTROLES
+
+A lista pública de trabalhos do autor original e as referências de A001850
+foram consultadas para descobrir antecedentes adicionais:
+https://sites.oxy.edu/lengyel/morepapers.html
+https://oeis.org/A001850
+Essas listas não são prova de que todas as publicações posteriores foram
+identificadas. Resultados sobre categorias de Delannoy, Stirling, Fibonacci,
+ou valorações 3-ádicas foram distinguidos do problema atual, apesar da
+coincidência de palavras-chave.
+
+Buscas combinaram Delannoy, Lengyel, Conjecture 1/4, fourth conjecture,
+2-adic, valuation, differences, D(pn), Mahler, dilogarithm, cubic e anos
+2021–2026. As fontes comparadas tecnicamente acima são primárias.
+
+RECOMENDAÇÃO PARA A REDAÇÃO
+
+Afirmação defensável: "We give explicit-threshold valuation laws for
+central Delannoy differences, addressing the conjectures formulated by
+Lengyel, and derive a two-point law and its multiplier consequence."
+
+Evitar "first ever", "world-first", "four independent breakthroughs" e
+argumentos de importância baseados apenas no número de verificações.
+Na carta de submissão, explicar que o resultado generaliza uniformemente
+um caso especial conhecido de Wang–Zhong, e que o suplemento NEG não é
+uma premissa da prova universal. Não alegar que sua estrutura interna
+ficou demonstrada só porque a lei da soma total foi obtida.
+
+NOTA PRÁTICA SOBRE CONSULTA A ESPECIALISTAS
+
+Uma nota editorial oficial informa que Tamás Lengyel faleceu em 6/2/2024.
+Portanto, não recomendar procurá-lo para validar o novo resultado.
+Fonte: https://math.colgate.edu/~integers/y27/y27.pdf
+
+Nenhuma publicação, submissão, mensagem ou alteração do manuscrito foi feita
+nesta pesquisa bibliográfica.

@@ -6,14 +6,27 @@
   "journal_constraint": "USA journal accepting direct submission without mandatory arXiv",
   "courant_cpam_status": "Excluded under no-arXiv constraint; current author instructions require arXiv",
   "github_url": "https://github.com/cagrisa-creator/delannoy-valuation-laws",
-  "github_status": "Created; uploading prepared files",
+  "github_status": "Manuscript and verification files uploaded and verified",
   "zenodo_draft_url": "https://zenodo.org/uploads/24074633",
   "zenodo_reserved_doi": "10.5281/zenodo.24074633",
   "zenodo_status": "Saved draft; not published; DOI not active",
   "next_steps": [
-    "Confirm uploaded repository files",
-    "Upload final archive to the saved Zenodo draft before publishing",
-    "Select a US journal without mandatory arXiv and check authorship rules"
+    "Author and specialist verification of the mathematical proof",
+    "Author-written journal version, matching journal AI policy",
+    "Choose one compatible journal; no arXiv deposit",
+    "Complete file upload and publish saved Zenodo draft only when the release is finalized"
   ],
-  "notes": "No journal submission or arXiv deposit has been made. AI assistance and working-draft status retained."
+  "notes": "No journal submission or arXiv deposit has been made. AI assistance and working-draft status retained.",
+  "github_verified_commit": "85734efefd23d71c6e0840f604fc8f6dfc661d12",
+  "novelty_assessment": "Plausible novelty of the uniform theorem; no equivalent proof located in seven primary-source comparisons; priority not certified",
+  "journal_shortlist": [
+    "INTEGERS",
+    "New York Journal of Mathematics",
+    "Rocky Mountain Journal of Mathematics",
+    "Proceedings of the AMS (if within 15 published pages)"
+  ],
+  "journal_excluded_due_to_arxiv": [
+    "Courant Journal of Pure and Applied Mathematics",
+    "Illinois Journal of Mathematics"
+  ]
 }

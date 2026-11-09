@@ -1,0 +1,114 @@
+REVISTAS COM VINCULO INSTITUCIONAL NOS EUA
+Conferido em 09/11/2026. Fontes oficiais; nenhuma submissao realizada.
+
+PRIORIDADES PARA DELANNOY
+Mais diretas: INTEGERS e Rocky Mountain Journal of Mathematics (RMJ).
+Alternativa geral seletiva: New York Journal of Mathematics (NYJM).
+Mais ambiciosas: Michigan Mathematical Journal e Pacific Journal of Mathematics.
+Illinois Journal of Mathematics foi investigada, mas exige arXiv no formulario
+atual; portanto nao atende a preferencia do usuario.
+A adequacao e uma inferencia editorial, nao promessa de aceite.
+
+1. INTEGERS
+Vinculo: apoio de Colgate University, Hamilton, New York, junto de Charles
+University e DIMATIA. A revista pertence aos editores, nao a Colgate.
+Escopo: combinatoria e teoria dos numeros, incluindo sequencias. Melhor
+adequacao tematica do grupo; publicou a conjectura original de Lengyel.
+Submissao: PDF por email para integersjournal@gmail.com, com MSC,
+palavras-chave e declaracao sobre IA. Nenhuma exigencia de arXiv nas
+instrucoes completas consultadas. Sem taxas de submissao ou processamento.
+IA: narrativa e palavras devem ser do autor; declarar assistencia alem de
+ortografia e gramatica. O rascunho precisa de reconstrucao autoral.
+Fontes:
+https://math.colgate.edu/~integers/
+https://math.colgate.edu/~integers/submit.html
+https://math.colgate.edu/~integers/policies.html
+
+2. NEW YORK JOURNAL OF MATHEMATICS
+Vinculo: base editorial e equipe de producao na SUNY, University at Albany,
+New York; site oficial hospedado pela universidade.
+Escopo: matematica geral, com novidade, correcao, relevancia e interesse amplo.
+Submissao: email a somente UM editor da area, com anexo PDF OU link ao arXiv.
+Portanto arXiv e explicitamente opcional. Gratuita para autores e leitores.
+IA: declarar uso no email e no manuscrito; segue a politica da AMS.
+Fontes:
+https://nyjm.albany.edu/
+https://nyjm.albany.edu/Instr.html
+https://nyjm.albany.edu/edboard.htm
+https://nyjm.albany.edu/EditorialAreas.html
+
+3. ROCKY MOUNTAIN JOURNAL OF MATHEMATICS
+Vinculo: Rocky Mountain Mathematics Consortium, entidade sem fins lucrativos
+com sede na Arizona State University. Membros incluem Arizona State,
+University of Arizona, Colorado State, University of Colorado e University
+of Utah. Nao e exclusiva de uma universidade; ha membro canadense.
+Escopo: pesquisa significativa em ampla gama teorica e aplicada; adequacao
+plausivel para um artigo completo de teoria dos numeros e combinatoria.
+Submissao: EditFlow, PDF no estilo RMJ, maximo de 30 paginas nesse estilo.
+Nao foi encontrada exigencia de arXiv nas instrucoes e formulario atuais.
+Taxas: instrucoes declaram ausencia de page charges.
+Prazo: formulario atual avisa backlog de 2,5 anos; nao e prazo de parecer.
+IA: o formulario alerta sobre repetidas submissoes sem rigor ou fora do
+escopo, incluindo manuscritos largamente gerados por IA. Nao foi localizada
+uma politica detalhada de IA ali.
+Fontes:
+https://rmmc.asu.edu/
+https://rmmc.asu.edu/unvlst.htm
+https://rmmc.asu.edu/rmj/rmj.html
+https://rmmc.asu.edu/rmj/author.html
+https://ef.msp.org/submit_new.php?j=rmj
+
+4. MICHIGAN MATHEMATICAL JOURNAL
+Vinculo: fundada pelo Department of Mathematics da University of Michigan,
+que mantem responsabilidade editorial. Ann Arbor, Michigan. A partir do
+volume 77 (2027), publicada em acordo com Duke University Press.
+Escopo: contribuicoes significativas em matematica geral; alvo ambicioso
+para um resultado sobre uma sequencia sem demonstrar interesse mais amplo.
+Submissao ATUAL: EditFlow. A pagina atual da universidade foi conferida;
+nao usar a antiga instrucao de envio por email ainda presente em buscas.
+Sem exigencia de arXiv nas instrucoes e formulario atuais consultados.
+Taxas dos autores: nao confirmadas explicitamente; nao prometer gratuidade.
+IA: nao considera artigos substancialmente escritos por IA; exige AI
+Statement em todos os artigos, com explicacao e responsabilidade autoral.
+Fontes:
+https://lsa.umich.edu/math/centers-outreach/michigan-mathematical-journal.html
+https://www.dukeupress.edu/michigan-mathematical-journal
+https://ef.msp.org/submit_new.php?j=michigan
+
+5. PACIFIC JOURNAL OF MATHEMATICS
+Vinculo: MSP publica em nome de Pacific Journal of Mathematics, uma
+corporacao sem fins lucrativos. Escritorio editorial oficial no Department
+of Mathematics, UCLA, Los Angeles; producao MSP em Berkeley. Nao chamar
+simplesmente de revista 'da UCLA': universidade e corporacao nao sao a
+mesma entidade. Instituicoes de apoio historicas nao sao proprietarias.
+Escopo: matematica de alta qualidade em ampla gama de assuntos; ambiciosa.
+Submissao: EditFlow, PDF em amsart 12pt, margens padrao, resumo de cerca de
+150 palavras, MSC, palavras-chave e dados dos autores.
+ArXiv e condicional: SE o artigo ja estiver la, informar numero apos aceite.
+Nao exige postagem previa. Site atual afirma nao cobrar taxas dos autores.
+IA: declarar ajuda em argumentos/citacoes; artigos largamente criados por
+IA nao podem ser submetidos. Nova submissao apos rejeicao na propria
+revista exige convite explicito.
+Fontes:
+https://msp.org/pjm/about/journal/about.html
+https://msp.org/pjm/about/journal/submissions.html
+https://msp.org/pjm/about/journal/officers.html
+https://ef.msp.org/submit_new.php?j=pjm
+
+6. ILLINOIS JOURNAL OF MATHEMATICS - EXCLUIR DA ROTA SEM ARXIV
+Vinculo: Duke University Press publica em nome do Department of Mathematics
+na University of Illinois Urbana-Champaign; relacao oficial e explicita.
+Escopo: matematica geral, significativa e de interesse substancial.
+As instrucoes gerais pedem PDF por EditFlow, mas o formulario ATUAL diz
+explicitamente que so aceita artigos previamente postados no arXiv.
+IA: declarar assistencia; artigos largamente escritos por IA proibidos.
+Fontes:
+https://ijm.math.illinois.edu/
+https://ijm.math.illinois.edu/authors/
+https://ef.msp.org/submit_new.php?j=illinois
+
+RECOMENDACAO
+INTEGERS como primeira opcao tematica; RMJ como alternativa, ponderando o
+backlog. NYJM se a exposicao e o metodo sustentarem interesse amplo.
+Michigan e Pacific sao alvos mais ambiciosos. Submeter a uma revista por vez.
+Vinculo com uma universidade nao implica validacao institucional do artigo.

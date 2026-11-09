@@ -1,0 +1,98 @@
+POSSÍVEIS DESTINOS AMERICANOS - pesquisa em fontes oficiais, 09/11/2026
+
+DISTINÇÃO DOS NOMES
+
+1. AIM = American Institute of Mathematics (aimath.org).
+   É um instituto de pesquisa apoiado pela NSF, voltado a colaboração,
+   workshops e programas. Tem série de preprints, mas não identifiquei uma
+   revista própria com rota pública de submissão de artigos avulsos. Portanto,
+   não apresentar “enviar ao AIM” como uma submissão normal a periódico.
+   A série de preprints não deve ser confundida com publicação arbitrada nem
+   presumida aberta a qualquer autor. A elegibilidade dessa série não foi
+   estabelecida nas páginas consultadas.
+   Fontes:
+   https://aimath.org/
+   https://aimath.org/preprint-series/
+
+2. AMS = American Mathematical Society (ams.org).
+   É a sociedade que publica Proceedings of the AMS, Transactions of the AMS,
+   Mathematics of Computation e outros periódicos. Esta é uma rota real de
+   publicação arbitrada para o artigo Delannoy, sujeita à avaliação editorial.
+
+   Proceedings of the AMS: possível encaixe para uma demonstração curta,
+   completa e significativa. A instrução oficial consultada indica limite de
+   15 páginas publicadas e exige trabalho correto, novo, não trivial,
+   significativo, bem escrito e de interesse para um número substancial de
+   matemáticos. Não aceita, em geral, passos inconclusivos para um teorema
+   ainda não demonstrado. Deve-se converter o rascunho assistido em manuscrito
+   autoral verificável; a alegação de C1-C4 precisa de conferência final.
+   Fonte oficial disponível (2025):
+   https://www.ams.org/journals/proc/2025-153-06/proc-153-06-print-matter.pdf
+   Página do periódico:
+   https://www.ams.org/journals/proc/
+   Submissão indicada pela fonte:
+   https://www.ams.org/submission/proc
+
+   Transactions of the AMS: alternativa para um desenvolvimento mais longo e
+   significativo; não escolher apenas para evitar compactar o artigo. Minha
+   inferência editorial: a versão C1-C4 integrada pode justificar consideração,
+   mas a adequação e o nível não estão certificados por nossa revisão.
+   Página:
+   https://www.ams.org/journals/tran/
+   Fonte oficial sobre perfis e escopos dos periódicos (histórica):
+   https://www.ams.org/notices/201009/201009FullIssue.pdf
+
+   Mathematics of Computation: inclui teoria computacional dos números e
+   álgebra. Ter um certificado ou usar computador não basta para enquadramento.
+   Para o artigo atual, a contribuição principal é uma prova de valorações;
+   Proceedings ou uma revista especializada parece encaixe mais direto.
+   Fonte oficial de escopo (histórica):
+   https://www.ams.org/journals/mcom/1996-65-216/mcom-65-216-print-matter.pdf
+   Página:
+   https://www.ams.org/journals/mcom/
+
+3. AIMS = American Institute of Mathematical Sciences / AIMS Press.
+   É diferente de AIM e AMS. Publica AIMS Mathematics, revista de amplo escopo
+   matemático que aceita trabalhos originais e usa revisão por pares. O escopo
+   oficial exige trabalho correto, novo, não trivial e de interesse para número
+   substancial de leitores. O tema Delannoy cabe no escopo amplo, sem que isso
+   implique uma promessa de aceitação ou o melhor encaixe editorial.
+   Fontes:
+   https://www.aimspress.com/journal/math
+   https://www.aimspress.com/math/news/solo-detail/instructionsforauthors
+   Submissão ligada oficialmente:
+   https://aimspress.jams.pub/
+
+PESQUISADOR INDEPENDENTE E ARXIV
+
+As instruções de Proceedings consultadas aceitam submissão direta de PDF e
+pedem identificação, contato e classificação matemática. Não exigem passagem
+prévia pelo arXiv; portanto, não ter arXiv não impede essa rota de submissão.
+Não identifiquei nelas exigência de doutorado, vínculo universitário ou filiação
+à AMS. É legítimo usar identificação verdadeira de pesquisador independente;
+isto é uma leitura das condições publicadas, não uma garantia de aceitação.
+Não inventar universidade ou vínculo. A aceitação depende da matemática,
+novidade, relevância, exposição e avaliação dos editores/árbitros.
+
+TAXAS
+
+Não confirmei valor atual em fonte oficial acessível; não citar valor numérico.
+O relatório oficial da AIMS informa adoção de APCs desde 2020, e artigos de
+2026 reconhecem pagamento de APC, mas isso não estabelece o preço atual.
+Fonte histórica oficial:
+https://www.aimspress.com/aimspress-data/math/2020/1/PDF/math-05-01-i.pdf
+Não extrapolar isenção ou custo da AMS sem conferir a modalidade e a tabela
+vigente antes da submissão. Algumas páginas atuais da AMS e AIMS retornaram
+403 ou conteúdo incompleto no acesso utilizado.
+
+RESPOSTA PRÁTICA SUGERIDA
+
+“Pode tentar uma revista americana, sim, inclusive como pesquisador
+independente e sem arXiv. Mas precisamos distinguir o nome: AIM é instituto
+de pesquisa; AMS é a sociedade que publica Proceedings e Transactions; AIMS
+publica AIMS Mathematics. Para o trabalho unido, Proceedings da AMS seria
+uma tentativa temática plausível se couber em 15 páginas e a demonstração
+final estiver plenamente conferida. Isso significa possibilidade de submissão,
+não garantia de publicação.”
+
+Nenhuma submissão, mensagem ou cadastro foi realizado.

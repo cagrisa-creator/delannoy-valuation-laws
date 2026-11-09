@@ -27,3 +27,11 @@ ALTERNATIVAS A CONFERIR
 INTEGERS (Colgate/Carroll, EUA): https://math.colgate.edu/~integers/submit.html
 New York Journal of Mathematics (Albany, EUA): https://nyjm.albany.edu/
 Conferir instruções completas e regras de autoria/assistência de IA antes de submeter.
+
+PESQUISA CONCLUÍDA
+Ineditismo plausível; prioridade não certificada.
+INTEGERS: primeira opção temática. NYJM e RMJ: alternativas sem arXiv.
+Proceedings AMS: possibilidade para versão de até 15 páginas publicadas.
+Illinois e Courant/CPAM excluídas pela exigência de arXiv.
+Ver Ineditismo_e_revistas_EUA.pdf e os três relatórios em pesquisa_editorial/.
+GitHub: arquivos carregados e autoria Independent Researcher conferida.
