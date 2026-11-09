@@ -1,0 +1,18 @@
+{
+  "method": "Exact three-term Delannoy recurrence to index 8192; truncated integer binomial sums for large parameters",
+  "checks_by_group": {
+    "basepoint_zero": 2048,
+    "basepoint_minus_one": 2048,
+    "conjecture_2": 2048,
+    "conjecture_3": 2048,
+    "exceptional_C4_including_scale_four": 222,
+    "multiplier_exact": 3334,
+    "two_point_exact": 2016,
+    "multiplier_large_modular": 252
+  },
+  "checks_total": 14016,
+  "failures_count": 0,
+  "failures": [],
+  "status": "PASS",
+  "scope_warning": "Finite corroboration only. Does not regenerate NEG terms, ladders, or tail estimates."
+}

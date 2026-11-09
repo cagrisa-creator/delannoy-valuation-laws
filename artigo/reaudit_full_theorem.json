@@ -1,0 +1,15 @@
+{
+  "main_source": "outputs/revisao_delannoy/artigo/main.tex",
+  "method": "Exact three-term Delannoy recurrence through index 8192; independent modular generalized-binomial recurrence for large/signed arguments",
+  "counts": {
+    "negative_shift": 16629,
+    "exact_integer_total": 39349,
+    "exceptional": 160,
+    "positive_shift": 22560,
+    "large_modular_F_total": 4608,
+    "large_modular_negative_endpoint": 368,
+    "large_modular_D_domain": 4240,
+    "large_exceptional_total": 960
+  },
+  "failures": []
+}

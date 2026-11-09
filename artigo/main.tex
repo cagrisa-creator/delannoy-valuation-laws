@@ -1,0 +1,947 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CT}{\operatorname{CT}}
+\newcommand{\Z}{\mathbb Z}\newcommand{\Q}{\mathbb Q}
+\newcommand{\Ztwo}{\mathbb Z_2}\newcommand{\Qtwo}{\mathbb Q_2}
+\newcommand{\cO}{\mathcal O}\newcommand{\vp}{v_2}
+\newcommand{\vpi}{v_\pi}
+\title{Delannoy valuation laws:\\explicit thresholds and multiplicative differences}
+\author{C\'esar Augusto Grisa\\{\small Independent Researcher}}
+\date{9 November 2026}
+\begin{document}
+\maketitle
+\begin{center}\small
+AI-assisted working draft. The mathematical arguments and suggested extensions
+require the author's verification; see the assistance statement at the end.
+\end{center}
+\begin{abstract}
+For the central Delannoy numbers $D(N)$, Lengyel conjectured the exact
+$2$-adic valuation of $D(u2^{n+1}+b)-D(u2^n+b)$ for odd positive $u$
+and sufficiently large $n$. This working revision presents an integrated
+argument with explicit thresholds: the valuation is
+$n+2v_2(b(b+1))$ for $b\ne0,-1$ and
+$n\ge\max\{2,v_2(b(b+1))\}$, provided the indices are nonnegative;
+for $b=0,-1$ the valuation is $3n$ for $n\ge2$.
+A ramified constant-term argument gives a uniform Mahler bound and
+local Taylor estimates. An elementary kernel cancellation gives a cubic
+increment congruence from scale $2^3$. The remaining small-valuation
+cases reduce to eight explicit arithmetic evaluations involving only
+$D(N)$ with $N\le36$. The same ingredients prove the basepoint
+valuations in Lengyel's first three conjectures. As a consequence,
+for every positive even $n$ and odd integer $p>1$,
+$v_2(D(pn)-D(n))=v_2(p-1)+3v_2(n)$.
+The finite NEG archive is preserved as supplementary data, while its
+claimed total valuation law is derived as a corollary of the analytic proof.
+The uniform internal structure of the NEG decomposition is not assumed.
+\end{abstract}
+
+\section{The valuation law and its scope}
+The central Delannoy numbers, sequence A001850, are given by
+\[
+D(N)=\sum_{k=0}^N2^k\binom Nk^2\qquad(N\ge0).
+\]
+Their combinatorial and arithmetic properties are discussed in
+\cite{Sulanke2003,BanderierSchwer2005,Sun2018,Lengyel2021}.
+Lengyel's Conjecture~4 \cite[Conjecture~4]{Lengyel2021} predicts, for
+odd positive $u$ and $n$ sufficiently large, the valuation $3n$ if
+$b=0,-1$ and $n+2v_2(b(b+1))$ otherwise.
+
+\begin{theorem}\label{thm:main}
+Let $b\in\Z$, let $u$ be an odd positive integer, and let $n$ be a
+nonnegative integer. Suppose
+$b+u2^n\ge0$.
+If $b\notin\{0,-1\}$, put $t=v_2(b(b+1))$. Then
+\[
+v_2\bigl(D(b+u2^{n+1})-D(b+u2^n)\bigr)=n+2t
+\qquad(n\ge\max\{2,t\}).
+\]
+If $b\in\{0,-1\}$, then
+\[
+v_2\bigl(D(b+u2^{n+1})-D(b+u2^n)\bigr)=3n
+\qquad(n\ge2).
+\]
+\end{theorem}
+The condition on the indices is automatic when $b\ge0$ and eventually
+holds for every fixed negative $b$ and positive $u$. Thus the statement
+implies the full sufficiently-large-$n$ assertion of Conjecture~4.
+It does not assert optimal thresholds in every individual case.
+For instance, the generic formula fails at $b=u=1,n=1$:
+$D(5)-D(3)=1620$ has valuation $2$, rather than $3$.
+
+\paragraph{Relation to recent work.}
+Wang and Zhong \cite[Theorem~3.1]{WangZhong2025} prove
+$D(2^a+1)\equiv3+2^{a+2}\pmod{2^{2a+2}}$ for $a\ge2$.
+Subtracting consecutive instances already gives the case $b=u=1$
+of the generic formula. The target here is the uniform law for arbitrary
+integer shifts and odd multipliers, with an explicit threshold.
+Recent work on valuations of Legendre polynomial values
+\cite{AlekseyevEtAl2025} addresses a different valuation problem;
+in particular, its prime-divisibility hypotheses do not directly cover
+the present $2$-adic differences at $P_N(3)=D(N)$.
+
+The proof has three parts: analytic control on the four residue classes
+modulo $4$, a cubic increment at larger scales, and a finite table for
+the remaining two valuation types. The basepoint laws and the fourth conjecture are derived first;
+two-point and multiplicative valuation laws follow as corollaries.
+The finite NEG archive records a complementary cancellation mechanism.
+Historical audit reports and the NEG tables are not mathematical premises
+of the universal arguments.
+
+\section{Interpolation and reflection}
+Define
+\[
+F(x)=\sum_{k\ge0}2^k\binom{x}{k}^2\qquad(x\in\Ztwo).
+\]
+Since $\binom{x}{k}\in\Ztwo$, the series converges uniformly,
+defines a continuous function, and agrees with $D$ at nonnegative integers.
+\begin{lemma}\label{lem:reflection}
+For every $x\in\Ztwo$, one has $F(-x-1)=-F(x)$.
+\end{lemma}
+\begin{proof}
+Euler's hypergeometric transformation gives, for every integer $N\ge0$,
+the formal identity
+\[
+\sum_{k\ge0}\binom{N+k}{k}^2z^k
+=(1-z)^{-2N-1}\sum_{j=0}^N\binom Nj^2z^j.
+\]
+Both sides converge at $z=2$ in $\Qtwo$; expanding the rational factor
+about zero is legitimate for $z\in2\Ztwo$. Since
+$\binom{-N-1}{k}=(-1)^k\binom{N+k}{k}$, evaluation gives
+$F(-N-1)=-D(N)$. Density of the nonnegative integers in $\Ztwo$
+and continuity extend the identity to every $x$.
+\end{proof}
+
+\section{A uniform Mahler bound on the even charts}
+Let $A(u)=F(4u)$ and $H(u)=F(4u+2)$ for $u\in\Ztwo$.
+For $u\ge0$ these equal $D(4u)$ and $D(4u+2)$.
+Write $\beta_{A,m}=\Delta^m A(0)$ and
+$\beta_{H,m}=\Delta^m H(0)$, where $\Delta f(u)=f(u+1)-f(u)$.
+We use the usual Mahler expansion of a continuous function on $\Ztwo$
+\cite{Mahler1958,Robert2000}. Write $s_2(m)$ for the number of ones
+in the binary expansion of $m$.
+\subsection{Constant-term model}
+
+Put
+\[
+\mathcal Q(w)=w+3+2w^{-1}=(1+w)(1+2w^{-1}),
+\qquad R(w)=\mathcal Q(w)^4-1.
+\]
+The elementary constant-term identity
+\[
+D(n)=\CT\,\mathcal Q(w)^n
+\]
+follows by expanding the two factors in $(1+w)^n(1+2w^{-1})^n$ and
+selecting equal exponents.  Therefore, for every $m\ge1$,
+\begin{equation}\label{eq:beta-ct}
+\beta_{A,m}=\CT\,R(w)^m,
+\qquad
+\beta_{H,m}=\CT\,\mathcal Q(w)^2R(w)^m.
+\end{equation}
+Indeed, applying $\Delta^m$ to $\mathcal Q(w)^{4u}$ at $u=0$ multiplies by
+$(\mathcal Q(w)^4-1)^m$.
+
+\subsection{Ramified normalization}
+
+Let $K=\Q_2(\pi)$ with $\pi^2=2$, and let $\cO_K$ be its valuation ring.
+Substitute $w=\pi x$ and define
+\[
+S(x)=\frac{R(\pi x)}4,
+\qquad
+P(x)=\mathcal Q(\pi x)^2.
+\]
+A direct expansion gives
+\begin{align*}
+S(x)={}&x^4+6\pi x^3+31x^2+45\pi x+80\\
+&+45\pi x^{-1}+31x^{-2}+6\pi x^{-3}+x^{-4},\\
+P(x)={}&13+\pi^2Y+3\pi^3Z,
+\end{align*}
+where
+\[
+Y=x^2+x^{-2},\qquad Z=x+x^{-1}.
+\]
+In particular $S,P\in\cO_K[x,x^{-1}]$ and
+\[
+S\equiv T\pmod\pi,
+\qquad
+T=x^4+x^2+x^{-2}+x^{-4}.
+\]
+Since the substitution $w=\pi x$ does not change a constant term,
+\begin{equation}\label{eq:normalization}
+\frac{\beta_{A,m}}{4^m}=\CT\,S(x)^m\in\Q_2,
+\qquad
+\frac{\beta_{H,m}}{4^m}=\CT\,P(x)S(x)^m\in\Q_2.
+\end{equation}
+
+\begin{lemma}[Bulk divisibility]\label{lem:bulk}
+For every $m\ge1$,
+\[
+\vp(\beta_{A,m})\ge2m,
+\qquad
+\vp(\beta_{H,m})\ge2m.
+\]
+\end{lemma}
+
+\begin{proof}
+The two normalized constant terms in \eqref{eq:normalization} belong to
+$\cO_K$ because $S$ and $P$ are integral Laurent polynomials.  They also
+belong to $\Q_2$.  Hence they are in $\cO_K\cap\Q_2=\Z_2$.  Multiplication
+by $4^m$ proves the claim.
+\end{proof}
+
+\subsection{One extra factor when $s_2(m)=2$}
+
+\begin{lemma}[Parity of the principal term]\label{lem:parity}
+For every $m\ge1$,
+\[
+\CT\,T^m\equiv0\pmod2.
+\]
+\end{lemma}
+
+\begin{proof}
+Modulo $2$ one has $T\equiv Y^2+Y$.  For every $r\ge1$,
+\[
+\CT\,Y^r=
+\begin{cases}
+0,&r\text{ odd},\\
+\binom{2a}{a},&r=2a,
+\end{cases}
+\]
+and $\binom{2a}{a}$ is even for $a\ge1$.  Expanding
+$(Y^2+Y)^m=\sum_{j=0}^{m}\binom mjY^{m+j}$ proves the result.
+\end{proof}
+
+\begin{lemma}[The $s_2(m)=2$ branch]\label{lem:pop2}
+If $s_2(m)=2$, then
+\[
+\vp(\beta_{A,m})\ge2m+1,
+\qquad
+\vp(\beta_{H,m})\ge2m+1.
+\]
+\end{lemma}
+
+\begin{proof}
+Reduce the normalized terms in \eqref{eq:normalization} modulo $\pi$.
+Since $S\equiv T\pmod\pi$ and $P\equiv1\pmod\pi$,
+\[
+\CT S^m\equiv\CT T^m\equiv0\pmod\pi,
+\qquad
+\CT(PS^m)\equiv\CT T^m\equiv0\pmod\pi.
+\]
+Both constant terms are in $\Q_2$.  The intersection
+$\pi\cO_K\cap\Q_2=2\Z_2$ now gives one extra factor $2$ beyond
+Lemma~\ref{lem:bulk}.
+\end{proof}
+
+\subsection{Two extra factors for powers of two}
+
+\begin{lemma}[Power comparison]\label{lem:power-comparison}
+For every $a\ge2$,
+\[
+S^{2^a}\equiv T^{2^a}\pmod{\pi^4\cO_K[x,x^{-1}]}.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $S=T+E$ with $E\in\pi\cO_K[x,x^{-1}]$.  For completeness, the required binomial valuation has a direct proof.
+For $1\le k\le2^a-1$,
+\[
+\binom{2^a}{k}=\frac{2^a}{k}\binom{2^a-1}{k-1}.
+\]
+Over $\mathbb F_2$,
+\[
+(1+X)^{2^a-1}=\frac{1+X^{2^a}}{1+X}
+=1+X+\cdots+X^{2^a-1},
+\]
+so $\binom{2^a-1}{k-1}$ is odd.  Hence
+\[
+\vp\!\binom{2^a}{k}=a-\vp(k).
+\]
+Thus
+\[
+\vpi\!\left(\binom{2^a}{k}E^k\right)
+\ge2(a-\vp(k))+k\ge4.
+\]
+For $k=2^a$ the valuation is at least $2^a\ge4$.  The binomial
+expansion proves the congruence.
+\end{proof}
+
+\begin{lemma}[Parity strengthened at powers of two]\label{lem:power-parity}
+For every $a\ge1$,
+\[
+\CT\,T^{2^a}\in4\Z_2,
+\qquad
+\CT\,(PT^{2^a})\in4\Z_2.
+\]
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+T=x^{-4}(1+x^2)(1+x^6).
+\]
+For $m=2^a$, the constant term is
+\[
+\CT\,T^m=\sum_b\binom mb\binom m{2m-3b}.
+\]
+In every nonzero summand both indices are strictly between $0$ and $m$:
+the endpoints are invalid, while an index equal to $0$ or $m$ would force
+$3\mid m$, impossible for a power of $2$.  Both binomial coefficients
+are therefore even, so every summand is divisible by $4$.
+
+Moreover, $\CT(ZT^m)=0$ because $T^m$ has only even exponents, and
+\[
+\CT(YT^m)=2[x^2]T^m
+\]
+is even by inversion symmetry.  From
+$P=13+\pi^2Y+3\pi^3Z$ and $\pi^2=2$, it follows that
+$\CT(PT^m)$ is also divisible by $4$.
+\end{proof}
+
+\begin{lemma}[The power-of-two branch]\label{lem:powers}
+For every $m=2^a$ with $a\ge0$,
+\[
+\vp(\beta_{A,m})\ge2m+2,
+\qquad
+\vp(\beta_{H,m})\ge2m+2.
+\]
+\end{lemma}
+
+\begin{proof}
+For $m=1,2$, direct expansion gives
+\[
+\CT S=80,\quad \CT(PS)=2244,
+\quad \CT S^2=16568,\quad \CT(PS^2)=504968,
+\]
+all divisible by $4$.  For $m=2^a$ with $a\ge2$,
+Lemma~\ref{lem:power-comparison} and Lemma~\ref{lem:power-parity} show
+\[
+\CT S^m\in4\Z_2,
+\qquad
+\CT(PS^m)\in4\Z_2.
+\]
+Multiplying by $4^m$ in \eqref{eq:normalization} proves the claim.
+\end{proof}
+
+\subsection{Universal Mahler bound}
+
+\begin{theorem}[Universal Mahler bound]\label{thm:mahler}
+For both charts $f=A,H$ and every $m\ge1$,
+\[
+\vp(\Delta^m f(0))\ge \vp(m!)+m+3.
+\]
+\end{theorem}
+
+\begin{proof}
+Legendre's identity gives $\vp(m!)=m-s_2(m)$, so the desired lower
+bound is $2m-s_2(m)+3$.
+
+If $s_2(m)\ge3$, Lemma~\ref{lem:bulk} gives $2m\ge2m-s_2(m)+3$.
+If $s_2(m)=2$, Lemma~\ref{lem:pop2} gives $2m+1$.
+If $s_2(m)=1$, then $m$ is a power of two and Lemma~\ref{lem:powers}
+gives $2m+2$.  These are exactly the three required cases.
+\end{proof}
+
+\subsection{Mahler-to-Tate-to-Taylor consequence}
+
+\begin{corollary}[Tate and Taylor control]\label{cor:tate}
+For $f=A,H$, there is a series $G_f(u)\in\Z_2\langle u\rangle$ such that
+\[
+f(u)-f(0)=16uG_f(u).
+\]
+Moreover,
+\[
+f(u+h)-f(u)-hf'(u)\in32h^2\Z_2\langle u,h\rangle.
+\]
+\end{corollary}
+
+\begin{proof}
+Write $\beta_m=\Delta^m f(0)$ and
+\[
+f(u)=\sum_{m\ge0}\beta_m\binom um
+=\sum_{m\ge0}c_m(u)_m,
+\qquad c_m=\frac{\beta_m}{m!}.
+\]
+Theorem~\ref{thm:mahler} gives $c_m\in2^{m+3}\Z_2$ for $m\ge1$.
+If
+\[
+(u)_m=\sum_{j=0}^m s(m,j)u^j
+\]
+with $s(m,j)\in\Z$, then the power-series coefficient
+\[
+a_j=\sum_{m\ge j}c_ms(m,j)
+\]
+converges in $\Z_2$ and satisfies $a_j\in2^{j+3}\Z_2$ for $j\ge1$.
+Hence $f(u)-f(0)=\sum_{j\ge1}a_ju^j$ belongs to
+$16u\Z_2\langle u\rangle$.
+
+Finally,
+\[
+f(u+h)-f(u)-hf'(u)
+=\sum_{j\ge2}a_j\sum_{\ell=2}^j\binom j\ell u^{j-\ell}h^\ell.
+\]
+For $j\ge2$, $a_j\in2^{j+3}\Z_2\subseteq32\Z_2$.  Factoring $h^2$
+proves the asserted quadratic remainder bound.
+\end{proof}
+
+
+\section{Local estimates and eight arithmetic evaluations}
+% Self-contained replacement for M3 -> M5a -> M5b assembly.
+% Inputs: reflection and a_j in 2^{j+3} Z_2 for A and H, proved in M3.
+% Mathematical improvement independently derived 20 October 2026.
+
+\begin{lemma}[Local analytic control]\label{lem:local-control}
+For each $r\in\{0,1,2,3\}$ write
+\[
+G_r(u)=F(4u+r)=\sum_{j\ge0}a_{r,j}u^j.
+\]
+Then $a_{r,j}\in2^{j+3}\mathbb Z_2$ for $j\ge1$. Consequently, for
+$b\in\mathbb Z_2$ and $h,L\in4\mathbb Z_2$,
+\begin{align}
+F(b+h)-F(b)-hF'(b)&\in2h^2\mathbb Z_2,\label{eq:physical-taylor}\\
+F'(b+h)-F'(b)&\in4h\mathbb Z_2,\label{eq:physical-derivative}\\
+F(b+h+L)-F(b+h)-F(b+L)+F(b)&\in4hL\mathbb Z_2.\label{eq:physical-mixed}
+\end{align}
+In particular, if $\Delta(b,h)=F(b+2h)-F(b+h)$, then
+\[
+\Delta(b,h)-hF'(b)\in2h^2\mathbb Z_2.
+\]
+\end{lemma}
+\begin{proof}
+The coefficient bound for $r=0,2$ is the Mahler--Tate conclusion. For the
+other two charts use $G_1(u)=-G_2(-u-1)$ and
+$G_3(u)=-G_0(-u-1)$. The coefficient of $u^j$ after this substitution is
+a convergent sum of terms $\pm a_{r,k}\binom{k}{j}$, $k\ge j$;
+every such term lies in $2^{j+3}\mathbb Z_2$.
+
+For any of the four charts, the ordinary Taylor remainder lies in
+$32v^2\mathbb Z_2\langle u,v\rangle$, since its terms have $j\ge2$.
+Also
+\[
+G_r'(u+v)-G_r'(u)\in64v\mathbb Z_2\langle u,v\rangle:
+\]
+the $j=1$ contribution vanishes, the $j=2$ contribution has the extra
+factor $2$, and $a_{r,j}\in64\mathbb Z_2$ for $j\ge3$.
+The same argument gives
+\[
+G_r(u+v+w)-G_r(u+v)-G_r(u+w)+G_r(u)
+\in64vw\mathbb Z_2\langle u,v,w\rangle.
+\]
+Indeed, its degree-two contribution is $2a_{r,2}vw$; all higher-degree
+contributions have integral coefficients and $a_{r,j}\in64\mathbb Z_2$.
+Writing $b=4u+r$, $h=4v$, and $L=4w$ gives
+\eqref{eq:physical-taylor}--\eqref{eq:physical-mixed} after division by
+$4$ for the derivative or by $16$ for the quadratic factors.
+Finally, apply \eqref{eq:physical-taylor} to the increments $2h$ and $h$
+at $b$ and subtract.
+\end{proof}
+
+\begin{lemma}[Four derivative checks]\label{lem:four-derivatives}
+Let $b\in\Ztwo$. If $t=v_2(b(b+1))\in\{1,2\}$, then
+\[
+F'(b)\equiv2^{2t}\pmod{2^{2t+1}}.
+\]
+\end{lemma}
+\begin{proof}
+Put $H=2^{2t}$ and $M=2^{2t+1}$. Lemma~\ref{lem:local-control} gives
+\[
+\frac{F(b+2H)-F(b+H)}{H}\equiv F'(b)\pmod{M}.
+\]
+For $t=1$, the relevant classes are $b=1,2\pmod4$; derivative shifts
+by $4$ lie in $16\mathbb Z_2\subseteq M\mathbb Z_2$.
+For $t=2$, the relevant classes are $b=3,4\pmod8$; derivative shifts
+by $8$ lie in $32\mathbb Z_2=M\mathbb Z_2$.
+It therefore suffices to evaluate the following four entries from
+$D(N)=\sum_{k=0}^{N}2^k\binom Nk^2$:
+\[
+\begin{array}{c|c|c|c|c}
+t&b&H&M&[D(b+2H)-D(b+H)]/H\pmod M\\\hline
+1&1&4&8&4\\
+1&2&4&8&4\\
+2&3&16&32&16\\
+2&4&16&32&16
+\end{array}
+\]
+All four quotients are integers and the listed residues are exact.
+\end{proof}
+
+\begin{lemma}[Four transition checks]\label{lem:four-transitions}
+Let $b\in\Ztwo$. If $t=v_2(b(b+1))=2$ and $n\in\{2,3\}$, then for every odd $u$,
+\[
+v_2\bigl(\Delta(b,u2^n)\bigr)=n+4.
+\]
+\end{lemma}
+\begin{proof}
+Work modulo $2^{n+5}$. By \eqref{eq:physical-mixed}, replacing $b$ by
+$b+8$ changes $\Delta(b,h)$ by a multiple of $4h\cdot8$, which is
+divisible by $2^{n+5}$ when $v_2(h)=n$.
+
+To reduce $u$ modulo $2$, set $K=2^{n+1}$. Taylor expansion at $b+2h$
+and $b+h$ gives
+\[
+\Delta(b,h+K)-\Delta(b,h)
+=K\bigl(2F'(b+2h)-F'(b+h)\bigr)+E,
+\quad E\in2K^2\mathbb Z_2.
+\]
+By \eqref{eq:physical-derivative}, the expression in parentheses belongs
+to $F'(b)+4h\mathbb Z_2\subseteq16\mathbb Z_2$, using
+Lemma~\ref{lem:four-derivatives} and $n\ge2$. Its product with $K$ is
+therefore divisible by $2^{n+5}$; so is $E$, since
+$v_2(2K^2)=2n+3\ge n+5$.
+Thus $b$ reduces to $3,4\pmod8$ and odd $u$ reduces to $1\pmod2$.
+The four exact evaluations are
+\[
+\begin{array}{c|c|c|c|c}
+n&b&u&\text{modulus}&D(b+2u2^n)-D(b+u2^n)\\\hline
+2&3&1&128&64\pmod{128}\\
+2&4&1&128&64\pmod{128}\\
+3&3&1&256&128\pmod{256}\\
+3&4&1&256&128\pmod{256}
+\end{array}
+\]
+These residues have valuation $n+4$ as required.
+\end{proof}
+
+\begin{proposition}[Low-valuation branch]\label{prop:low-eight-checks}
+For $b\in\Ztwo$ with $t=v_2(b(b+1))\in\{1,2\}$ and every odd $u$, the equality
+\[
+v_2\bigl(F(b+2u2^n)-F(b+u2^n)\bigr)=n+2t
+\]
+holds for every $n\ge2$.
+\end{proposition}
+\begin{proof}
+For $n\ge2t$, set $h=u2^n$. The main term $hF'(b)$ has valuation
+$n+2t$, by Lemma~\ref{lem:four-derivatives}. Its error lies in
+$2h^2\mathbb Z_2$ and has valuation at least $2n+1\ge n+2t+1$.
+The sum therefore has valuation $n+2t$. This covers every $n\ge2$ for
+$t=1$ and every $n\ge4$ for $t=2$. The two remaining values of $n$ are
+Lemma~\ref{lem:four-transitions}.
+\end{proof}
+
+\section{An elementary cubic increment}
+% Self-contained replacement for the original M2/M4 arguments.
+% Uses only amsmath, amssymb, amsthm and ordinary theorem environments.
+
+\begin{lemma}[Elementary kernel cancellation]\label{lem:elementary-kernels}
+Put
+\[
+ H_j=\sum_{i=1}^j\frac1i,\qquad H_0=0,\qquad
+ K=\sum_{k\ge1}\frac{2^k}{k^2},\qquad
+ \Sigma=\sum_{k\ge1}\frac{2^kH_{k-1}}{k^2},\qquad\nu=-2\Sigma.
+\]
+These series converge in $\mathbb Q_2$, and
+$K=0$ and $\nu\in\mathbb Z_2^\times$.
+\end{lemma}
+\begin{proof}
+Write
+$L(z)=\sum_{k\ge1}z^k/k^2$ and
+$\ell(z)=\sum_{k\ge1}(-1)^{k+1}z^k/k$.
+Both series converge when $z\in2\mathbb Z_2$.
+The following identity holds in $\mathbb Q[[z]]$:
+\[
+ L(z)+L\left(\frac{z}{z-1}\right)
+ =-\frac12\ell(-z)^2.
+\]
+Indeed, differentiation makes both sides equal to
+$\ell(-z)/(1-z)$, and both sides have zero constant term.
+All series and the composition converge for $z\in2\mathbb Z_2$.
+For example, expand $(z/(z-1))^k=(-1)^kz^k(1-z)^{-k}$;
+its degree-$d$ terms after division by $k^2$ have valuation at least
+$d-2\lfloor\log_2d\rfloor$ for $d\ge k$.
+This tends to infinity, justifying the double-series rearrangement.
+Thus the formal identity can be evaluated at $z=2$.
+The formal logarithm identity
+\[
+ \ell(a+b+ab)=\ell(a)+\ell(b)
+\]
+also converges for $a,b\in2\mathbb Z_2$.  At $a=b=-2$ it gives
+$0=2\ell(-2)$, hence $\ell(-2)=0$ in characteristic zero.
+Since $2/(2-1)=2$, the first identity now gives $2K=0$.
+
+For the second assertion, set
+$T_k=2^{k+1}H_{k-1}/k^2$.
+For $k\ge2$,
+\[
+ v_2(T_k)\ge k+1-2v_2(k)-\lfloor\log_2(k-1)\rfloor.
+\]
+This bound tends to infinity, proving convergence.
+For $k=2,3,5,6,7,8$ the bound is at least one, whereas
+$T_4=11/3$ is odd.  For $k\ge9$, put
+$a=\lfloor\log_2 k\rfloor$; the bound is at least $k+1-3a$,
+which is at least one for $a=3$ and at least
+$2^a+1-3a\ge5$ for $a\ge4$.
+Thus $\nu=-\sum_kT_k\equiv1\pmod2$.
+\end{proof}
+
+\begin{proposition}[Cubic increment from scale eight]\label{prop:cubic-t3}
+Let
+$F(z)=\sum_{k\ge0}2^k\binom zk^2$ for $z\in\mathbb Z_2$.
+For integers $x\ne y$ and $t\ge3$, put
+$q=2^t$ and $c=v_2(y-x)$.  Then
+\[
+ F(qy)-F(qx)
+ \equiv\nu q^3(y^3-x^3)\pmod{2^{3t+c+1}}.
+\]
+\end{proposition}
+\begin{proof}
+Use the cutoff $Q=2^{t+1}$.
+For $2\le k<Q$, write
+\[
+ R_k(X)=\prod_{j=1}^{k-1}(1-X/j)^2
+        =\sum_{m=0}^{2k-2}e_{k,m}X^m,
+ \qquad L_k=\lfloor\log_2(k-1)\rfloor.
+\]
+Each factor has degree-$d$ coefficient of valuation at least $-dL_k$;
+hence $v_2(e_{k,m})\ge-mL_k$.
+Also $e_{k,0}=1$, $e_{k,1}=-2H_{k-1}$ and
+\[
+ 2^k\binom{qz}{k}^2=q^2z^2\frac{2^k}{k^2}R_k(qz).
+\]
+For every $t\ge3$ and $k\ge2$,
+\[
+ t+k-2v_2(k)-2L_k\ge1.                         \tag{*}
+\]
+For $L_k=0,1,2$ the minimum is $t-2$.
+If $L=L_k\ge3$ and $2^L<k<2^{L+1}$, then
+$v_2(k)\le L-1$, giving the lower bound
+$t+2^L+3-4L\ge t-1\ge2$.
+If $k=2^{L+1}$, the expression is
+$t+2^{L+1}-4L-2\ge t+2$.
+
+Since $L_k\le t$ for $k<Q$, the degree-$m$ part with $m\ge2$
+of the difference has valuation at least
+\[
+ 3t+c+[t+k-2v_2(k)-2L_k]+(m-2)(t-L_k)
+ \ge3t+c+1.
+\]
+Here $y^{m+2}-x^{m+2}$ is divisible by $y-x$.
+The $k=1$ term is exactly $2q^2(y^2-x^2)$, so including it yields
+\[
+ \sum_{1\le k<Q}2^k
+  \left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]
+ \equiv q^2K_{<Q}(y^2-x^2)
+       -2q^3\Sigma_{<Q}(y^3-x^3)
+       \pmod{2^{3t+c+1}},
+\]
+where $K_{<Q}=\sum_{1\le k<Q}2^k/k^2$ and
+$\Sigma_{<Q}=\sum_{1\le k<Q}2^kH_{k-1}/k^2$.
+
+For the quadratic kernel tail, with $a=\lfloor\log_2k\rfloor\ge t+1$,
+\[
+ v_2(q^2 2^k/k^2)\ge2t+2^a-2a\ge Q-2.
+\]
+The last expression increases with $a$ since its successive difference
+is $2^a-2>0$.
+For the cubic kernel tail, at $k=2^a$ the elementary bound is
+$3t+2+2^a-3a\ge Q-1$; between consecutive powers of two
+it is at least two larger.  Again the dyadic minimum increases,
+as its successive difference is $2^a-3>0$.
+Consequently
+\[
+ q^2(K-K_{<Q})\in2^{Q-2}\mathbb Z_2,
+ \qquad
+ 2q^3(\Sigma-\Sigma_{<Q})\in2^{Q-1}\mathbb Z_2.
+\]
+After multiplication by the respective power differences, each bound
+gains $c$.  Since $Q-2=2^{t+1}-2\ge3t+1$ for $t\ge3$,
+the finite kernels can be replaced by $K$ and $\Sigma$.
+
+Finally, generalized binomial coefficients at integer arguments are
+integers, including negative arguments.  Vandermonde's identity and
+$\binom{q(y-x)}j=\frac{q(y-x)}j\binom{q(y-x)-1}{j-1}$ give
+\[
+ v_2\left(2^k\left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]\right)
+ \ge k+t+c-\lfloor\log_2k\rfloor
+ \ge Q+c-1\qquad(k\ge Q).
+\]
+The function $k-\lfloor\log_2k\rfloor$ is nondecreasing.
+The high-index sum therefore lies in
+$2^{Q+c-1}\mathbb Z_2\subseteq2^{3t+c+1}\mathbb Z_2$.
+Using $K=0$ and $\nu=-2\Sigma$ finishes the proof.
+\end{proof}
+
+\begin{corollary}[Odd-base valuation]\label{cor:odd-base-t3}
+For $t\ge3$, odd $r\in\mathbb Z$, and nonzero $s\in\mathbb Z$,
+\[
+ v_2\left(F(2^t(r+2s))-F(2^t(r+s))\right)=3t+v_2(s).
+\]
+\end{corollary}
+\begin{proof}
+The cubic difference is
+$s(3r^2+9rs+7s^2)$, whose parenthesis is odd for either parity of $s$.
+Since $\nu$ is a unit, the main term has valuation $3t+v_2(s)$
+and the error has strictly larger valuation.
+\end{proof}
+
+
+\section{Basepoint valuations and the first three conjectures}
+\begin{proposition}[Valuations at zero and minus one]\label{prop:basepoints}
+For every odd integer $u$ and every $a\ge2$,
+\[
+v_2\bigl(F(2^a u)-1\bigr)=3a,
+\qquad
+v_2\bigl(F(2^a u-1)+1\bigr)=3a.
+\]
+For positive $u$, the same statements hold with $D$ in place of $F$.
+\end{proposition}
+\begin{proof}
+For $a\ge3$, apply Proposition~\ref{prop:cubic-t3} with $t=a$,
+$x=0$, and $y=u$. Since $F(0)=1$, $v_2(u)=0$, and $\nu$ is a unit,
+\[
+F(2^a u)-1\equiv\nu2^{3a}u^3\pmod{2^{3a+1}},
+\]
+which has valuation $3a$. This allows either sign of $u$.
+
+It remains to treat $a=2$. For every odd integer $u$, put $b=4u$.
+Then $v_2(b(b+1))=2$, and Lemma~\ref{lem:four-derivatives} gives
+$F'(b)\in16\Ztwo$. By \eqref{eq:physical-taylor} with $h=8$,
+\[
+F(b+8)-F(b)=8F'(b)+E,\qquad E\in128\Ztwo.
+\]
+Thus $F(b+8)\equiv F(b)\pmod{128}$. Every odd integer $u$ has
+the form $1+2j$ with $j\in\Z$; iterating this congruence in either
+direction gives
+\[
+F(4u)\equiv F(4)=321\pmod{128}.
+\]
+Consequently $F(4u)-1\equiv64\pmod{128}$, of valuation $6$.
+
+For the second equality, reflection yields
+\[
+F(2^a u-1)+1=-\bigl(F(-2^a u)-1\bigr).
+\]
+The first part applies to the signed odd integer $-u$.
+At nonnegative indices $F$ agrees with $D$.
+\end{proof}
+
+\begin{corollary}[Lengyel's first three conjectures]\label{cor:c123}
+For $a\ge2$ and positive odd $u$,
+\[
+v_2\bigl(D(2^a u)-1\bigr)
+=v_2\bigl(D(2^a u-1)+1\bigr)=3a.
+\]
+In particular,
+\[
+v_2\bigl(D(4m+3)+1\bigr)=3\bigl(v_2(m+1)+2\bigr)
+\qquad(m\ge0),
+\]
+and
+\[
+v_2\bigl(D(2m)-1\bigr)=3v_2(2m)
+\qquad(m>0\text{ even}).
+\]
+\end{corollary}
+\begin{proof}
+The first statement is Proposition~\ref{prop:basepoints} and is
+Conjecture~1 of \cite{Lengyel2021}. For Conjecture~2, apply the
+minus-one formula to $4(m+1)$, whose valuation is $2+v_2(m+1)$.
+For Conjecture~3, use the zero-basepoint formula at $2m$.
+The degenerate value $m=0$ in the last formula can be included only
+with the extended convention $v_2(0)=+\infty$.
+\end{proof}
+
+\section{Assembly and the exceptional shifts}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+First suppose $b\notin\{0,-1\}$, and put $t=v_2(b(b+1))$.
+For $t=1,2$, Proposition~\ref{prop:low-eight-checks} proves the claim
+for $F$ on $\Ztwo$. For $t\ge3$, set $q=2^t$ and
+$s=u2^{n-t}$, so $s$ is a nonzero integer.
+If $b=qr$, then $r$ is odd, and Corollary~\ref{cor:odd-base-t3} gives
+\[
+v_2\bigl(F(b+2u2^n)-F(b+u2^n)\bigr)
+=3t+v_2(s)=n+2t.
+\]
+If $b=qr-1$ with $r$ odd, reflection turns the difference into
+\[
+-\bigl(F(q(-r-2s))-F(q(-r-s))\bigr).
+\]
+Apply the same corollary with $(-r,-s)$. The argument allows negative
+$r$ and therefore covers negative integer shifts as well.
+
+For $b=0$ and $n\ge2$, Proposition~\ref{prop:basepoints} gives
+\[
+v_2\bigl(D(u2^{n+1})-1\bigr)=3n+3,
+\qquad
+v_2\bigl(D(u2^n)-1\bigr)=3n.
+\]
+Subtracting these deviations from $1$ gives valuation $3n$.
+For $b=-1$, use the two deviations from $-1$ furnished by the same
+proposition; their valuations are again $3n+3$ and $3n$.
+In each case, adding an error of strictly higher valuation preserves
+the valuation of the main term: $B+E=B(1+E/B)$ with $E/B\in2\Ztwo$.
+Finally $F$ agrees with $D$ at both indices, which are nonnegative
+by the hypothesis of the theorem.
+\end{proof}
+
+
+\section{Two-point and multiplicative valuation laws}
+\begin{corollary}[Two even indices of the same valuation]\label{cor:two-point}
+Let $M,N$ be distinct positive even integers with
+$v_2(M)=v_2(N)=a$. Then
+\[
+v_2\bigl(D(M)-D(N)\bigr)=v_2(M-N)+2a.
+\]
+\end{corollary}
+\begin{proof}
+Exchange $M,N$ if necessary so that $M>N$. Put
+$h=M-N=U2^k$ with $U$ positive odd and $k=v_2(M-N)$.
+Since $M/2^a$ and $N/2^a$ are odd, $k\ge a+1\ge2$.
+Set $B=2N-M$. Then $v_2(B)=a$, $B+1$ is odd, and
+$B\notin\{0,-1\}$. In particular $v_2(B(B+1))=a$.
+Moreover
+\[
+B+U2^k=N>0,\qquad B+U2^{k+1}=M>0.
+\]
+Theorem~\ref{thm:main} applies because $k\ge\max\{2,a\}$ and gives
+the required valuation $k+2a$.
+\end{proof}
+
+\begin{corollary}[Global even multiplier law]\label{cor:multiplier}
+For every positive even integer $n$ and every odd integer $p>1$,
+\[
+\boxed{v_2\bigl(D(pn)-D(n)\bigr)=v_2(p-1)+3v_2(n).}
+\]
+No primality assumption on $p$ is required.
+\end{corollary}
+\begin{proof}
+Write $a=v_2(n)$ and $s=v_2(p-1)$. The two indices $pn,n$ have
+the same valuation $a$, and
+$v_2(pn-n)=a+s$. Corollary~\ref{cor:two-point} gives
+$(a+s)+2a=s+3a$.
+\end{proof}
+
+\begin{remark}[The explicit bridge to the NEG target]\label{rem:neg-bridge}
+Writing $n=2^a u$ and $p-1=2^s q$ with $u,q$ odd, the direct
+substitution in Theorem~\ref{thm:main} is
+\[
+B=(2-p)n,\qquad k=a+s,\qquad U=qu.
+\]
+Here $B+U2^k=n$, $B+U2^{k+1}=pn$, and
+$v_2(B(B+1))=a$. Since $a,s\ge1$, $k\ge\max\{2,a\}$.
+The negative-shift part of the theorem is essential when $p>1$.
+An unspecified sufficiently-large-scale assertion would not justify
+this substitution uniformly, because $B$ varies with the parameters.
+For example, $p=3,n=2$ gives
+$D(6)-D(2)=8976=2^4\cdot561$, consistent with $1+3=4$.
+\end{remark}
+
+\section{Finite arithmetic and reproducibility}
+The only finite evaluations required by the proof are the four derivative
+residues and four transition residues displayed in the two tables.
+They are direct evaluations of a finite binomial sum and involve indices
+at most $36$. Thus the written proof can be checked without a large
+computation or access to an external archive.
+The accompanying file \texttt{eight\_checks.py} recomputes all eight
+entries using exact integers. A separate modular script tests the
+cubic congruence for $8{,}832$ signed pairs and scales $3\le t\le8$;
+these additional checks corroborate the estimates and are not substitutes
+for their universal proofs. The original million-class transition
+certificate is no longer needed by this revision.
+
+
+\section{The archived finite NEG data}\label{sec:neg-archive}
+The accompanying archive \texttt{NEG\_original.zip} preserves the
+submitted finite dataset and its reports. Its target formula is exactly
+Corollary~\ref{cor:multiplier}. The archived section decomposes a
+truncated sum into terms with negative and nonnegative valuation margins
+relative to $w=v_2(p-1)+3v_2(n)$. In this terminology, NEG refers to
+negative margins of summands, not to negative Delannoy indices.
+
+The report describes $104{,}448$ sampled parameter tuples and
+$13{,}552$ NEG cases. Its CSV and JSON contain $11{,}858$ distinct
+keys of the form
+\[
+(p\bmod8,\ s,\ a,\ q\bmod256,\ u\bmod128).
+\]
+An archive-consistency check confirms agreement between those two tables,
+the NEG multiplicity total, the stored ladder lengths, and the terminal
+pair $(-1,0)$ in every recorded ladder. The full sampling total is
+reported by the archive; only the NEG state records are supplied.
+The archived generation parameters have $s\le12$ and a finite list
+of exponents $a\le64$. The actual NEG table has $a\ge7$.
+
+The package does not include the program that generated the terms,
+their complete formulas, a proof of reduction to all residue states,
+or a written proof of its claimed tail bound. In particular, the key
+retains the unbounded parameters $a,s$ exactly. Internal consistency
+of the stored ladders is therefore distinct from a universal proof of
+their dependence on the key.
+
+The archived summands are not identified with the harmonic-kernel terms
+defined earlier. Some cumulative valuations rise and then fall: for
+example, a stored ladder contains $(-3,1),(-2,-1),(-1,0)$. The terminal
+pair therefore does not assert monotonicity.
+
+The role of this archive in the unified paper is supplementary:
+Corollary~\ref{cor:multiplier} proves the total valuation law for all
+the stated even indices and odd multipliers, including parameters
+outside the finite sample, without invoking the NEG decomposition.
+It does not by itself prove the separate valuation of each block,
+the determinism of every unobserved ladder, or the archived tail claim.
+Those internal statements require their own definitions and proofs.
+
+\paragraph{Reproduction files.}
+\texttt{check\_joined\_claims.py} tests the added basepoint,
+exceptional, two-point, and multiplier consequences by exact integer
+arithmetic and tests additional large parameters modularly.
+\texttt{verify\_NEG\_archive.py} checks only archive integrity and
+cross-table consistency. Its JSON report explicitly distinguishes
+these checks from regeneration of the original mathematical computation.
+
+\paragraph{Assistance and draft status.}
+This working revision was prepared with OpenAI Codex assistance for
+mathematical review, suggested proof techniques, exact arithmetic,
+literature search, and English drafting. The proposed changes include
+the doubled cutoff in the cubic estimate, the stronger local Taylor
+and mixed-increment bounds, the eight-entry reduction, the elementary
+kernel proof, the extensions to negative and exceptional shifts,
+the basepoint argument at scale four, the deductions of Conjectures~1--3,
+and the two-point and multiplier corollaries. The finite NEG archive
+was checked for internal consistency, not regenerated from missing source.
+The author must independently verify and take responsibility for these
+arguments and references. This file is a review draft, not a claim of
+completed peer review. Before submission, its narrative must be reconstructed
+by the author where required by the chosen journal's policy, and the
+assistance must be disclosed as that policy requires.
+
+\begin{thebibliography}{10}
+\bibitem{AlekseyevEtAl2025}
+M.~A. Alekseyev, T. Amdeberhan, J. Shallit, and I. Vukusic,
+\emph{On the $p$-adic valuations of values of Legendre polynomials},
+arXiv:2505.08935 (2025),
+\url{https://arxiv.org/abs/2505.08935}.
+\bibitem{BanderierSchwer2005}
+C. Banderier and S. Schwer, Why Delannoy numbers?,
+\emph{J. Statist. Plann. Inference} \textbf{135} (2005), 40--54.
+\bibitem{Lengyel2021}
+T. Lengyel, On some $p$-adic properties and supercongruences of Delannoy
+and Schr\"oder numbers, \emph{INTEGERS} \textbf{21} (2021), A86,
+\url{https://math.colgate.edu/~integers/v86/v86.pdf}.
+\bibitem{Mahler1958}
+K. Mahler, An interpolation series for continuous functions of a $p$-adic
+variable, \emph{J. Reine Angew. Math.} \textbf{199} (1958), 23--34;
+correction, \textbf{208} (1961), 70--72.
+\bibitem{Robert2000}
+A.~M. Robert, \emph{A Course in $p$-adic Analysis},
+Graduate Texts in Mathematics 198, Springer, 2000.
+\bibitem{Sulanke2003}
+R.~A. Sulanke, Objects counted by the central Delannoy numbers,
+\emph{J. Integer Seq.} \textbf{6} (2003), Article 03.1.5.
+\bibitem{Sun2018}
+Z.-W. Sun, Arithmetic properties of Delannoy numbers and Schr\"oder numbers,
+\emph{J. Number Theory} \textbf{183} (2018), 146--171.
+\bibitem{WangZhong2025}
+R.-H. Wang and M.~X.~X. Zhong,
+\emph{Congruences for sums of Delannoy numbers and polynomials},
+arXiv:2505.05728v1 (2025), Theorem~3.1,
+\url{https://arxiv.org/html/2505.05728v1}.
+\end{thebibliography}
+\end{document}

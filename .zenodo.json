@@ -1,0 +1,33 @@
+{
+  "title": "Delannoy valuation laws: explicit thresholds and multiplicative differences",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>Working preprint by César Augusto Grisa (Independent Researcher). This revision presents integrated arguments for the four Delannoy valuation conjectures formulated by Lengyel (2021), an explicit generic threshold, basepoint valuations, a two-point law on even indices of equal 2-adic valuation, and the consequence v2(D(pn)-D(n)) = v2(p-1)+3v2(n) for positive even n and odd p greater than one, without a primality assumption.</p><p>The manuscript includes AI-assisted proof suggestions and drafting, as disclosed in its assistance statement. It remains a working draft for author and specialist verification and has not been peer reviewed. The original finite NEG archive is preserved as supplementary data. Its internal consistency was checked; the missing term generator, decomposition definitions and tail arguments were not reconstructed. The NEG archive is not a premise of the universal proof.</p>",
+  "creators": [
+    {
+      "name": "Grisa, César Augusto",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-11-09",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "central Delannoy numbers",
+    "2-adic valuation",
+    "Mahler expansion",
+    "Lengyel conjectures",
+    "p-adic analysis",
+    "reproducibility"
+  ],
+  "notes": "Documents are licensed CC BY 4.0. Code files are additionally licensed MIT; see LICENSE-CODE. Public working draft, not a peer-reviewed publication.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cagrisa-creator/delannoy-c4-candidate",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "doi": "10.5281/zenodo.24074633"
+}

@@ -1,0 +1,19 @@
+{
+  "updated": "2026-11-09",
+  "author": "César Augusto Grisa",
+  "affiliation": "Independent Researcher",
+  "arxiv_authorized": false,
+  "journal_constraint": "USA journal accepting direct submission without mandatory arXiv",
+  "courant_cpam_status": "Excluded under no-arXiv constraint; current author instructions require arXiv",
+  "github_url": "https://github.com/cagrisa-creator/delannoy-valuation-laws",
+  "github_status": "Created; uploading prepared files",
+  "zenodo_draft_url": "https://zenodo.org/uploads/24074633",
+  "zenodo_reserved_doi": "10.5281/zenodo.24074633",
+  "zenodo_status": "Saved draft; not published; DOI not active",
+  "next_steps": [
+    "Confirm uploaded repository files",
+    "Upload final archive to the saved Zenodo draft before publishing",
+    "Select a US journal without mandatory arXiv and check authorship rules"
+  ],
+  "notes": "No journal submission or arXiv deposit has been made. AI assistance and working-draft status retained."
+}

@@ -1,0 +1,29 @@
+CHECKPOINT - 09/11/2026
+
+Autor: César Augusto Grisa
+Afiliação corrigida: Independent Researcher
+
+RESTRIÇÃO EXPRESSA DO AUTOR
+Não depositar no arXiv. Procurar revista nos EUA que aceite submissão direta.
+Não usar a rota atual Courant/CPAM, que exige arXiv.
+Não confundir um depósito Zenodo ou repositório GitHub com publicação aceita.
+
+LINKS NOVOS
+GitHub: https://github.com/cagrisa-creator/delannoy-valuation-laws
+Zenodo - rascunho salvo na conta: https://zenodo.org/uploads/24074633
+DOI reservado: 10.5281/zenodo.24074633
+O DOI ainda não está ativo; o depósito não foi publicado.
+
+O texto e os metadados usam Independent Researcher. O artigo compilou.
+O status de rascunho e a declaração de assistência de IA foram mantidos.
+Nenhuma submissão à revista foi feita. Nenhum envio ao arXiv foi feito.
+
+FONTE DA EXIGÊNCIA DE ARXIV
+https://msp.org/courant/about/journal/submissions.html
+Anúncio da sucessora da antiga CPAM:
+https://cims.nyu.edu/dynamic/news/1510/
+
+ALTERNATIVAS A CONFERIR
+INTEGERS (Colgate/Carroll, EUA): https://math.colgate.edu/~integers/submit.html
+New York Journal of Mathematics (Albany, EUA): https://nyjm.albany.edu/
+Conferir instruções completas e regras de autoria/assistência de IA antes de submeter.

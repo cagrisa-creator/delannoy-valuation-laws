@@ -1,0 +1,23 @@
+{
+  ".gitignore": "9b1ddc0a3dfad67ab1325154d0d6c7ba82ea107259490fef15d591cfb8e135da",
+  ".zenodo.json": "aedcf70dd9ef42d3820d5fe571f8de7e025522c00892df3c3e57d291c87afacb",
+  "CITATION.cff": "e95c73460628889bf2b70b171f02c8917f4d9f30094f4c78d25606da5cdbd7f7",
+  "LEIA-ME_PUBLICACAO.txt": "28c660748bd0349ba4f574a0d205a65b1d5d0505568b461610d025c3b7c79c93",
+  "LICENSE-CODE": "91defca70e17f88595fa4f2e65b5b1c82e3719fa0f00839649f489b48bb0d9d5",
+  "LICENSE-DOCS": "5087bb7335ccb1be03ed566279673ff95f4d9109f3368fd9fbb9d720f6b8fd95",
+  "O_que_a_uniao_resolve.pdf": "2643ec8f2a58f3f1ae66b7ec48c502876411fe830fa7be7009aaf5bca534f69c",
+  "PUBLICATION_STATUS.json": "8155af6d544d1c71bef1a314f52dfa05c4133469fc5c5f8893399af196eb8a97",
+  "README.md": "36c510212f1d41ab4b83fab24f1d74db4c261b80439cf8b653bd66c5b6d2fc6d",
+  "artigo/archive_integrity_report.json": "d19b0304cd153b5673f01fcdc34c575e4d5af087f190ef68daf767fe81f6cf66",
+  "artigo/check_cubic_increment.json": "575cca0f20e62226b2d9c448bf6c73aaf5f191c3d59d4baa0636adcc07c3d6d5",
+  "artigo/check_cubic_increment.py": "2cd607a53b24ba5f389a2e3f448d50029bb1cc09560f8b88660a25ce46d886d4",
+  "artigo/check_joined_claims.json": "76d076541f1cb6ad93dae321a6fd648b7bf1d8f8a514f9663e9343186e9ddb94",
+  "artigo/check_joined_claims.py": "5fea1ab8b1e574e228510c0b39efb2552e966314553d02cd89c94ec0f34c9fce",
+  "artigo/eight_checks.json": "2bb3e6472623f34f67bbdda8cd94ff2df286a5add0a194ae00251b74126f05ef",
+  "artigo/eight_checks.py": "cab66c64828272e570f1fb1963fd0d90a4fef763c6ac350f30ce82cb0514ebc2",
+  "artigo/main.tex": "fd6bf271297bb498ab43b57ef49bb21a97478545ff621f04126f7b3293ee4518",
+  "artigo/reaudit_full_theorem.json": "231e8e2dc37f68b411b3a19f605df4075d0a3587f6d224da9ee7f73ba29314a3",
+  "artigo/reaudit_full_theorem.py": "1c44d7fd23e03dbaaa0ef42ea665270c91381fd760cdd0289a0e338e237f0694",
+  "artigo/verify_NEG_archive.py": "339df700cd6201969b3250540c862c4e387fc3db98331643cad274a9fa3124bb",
+  "suplemento/NEG_original.zip": "180c0e01dbcaf8a671cebd2eaeb8d676d512451814918856c05f6cd5e112e17d"
+}

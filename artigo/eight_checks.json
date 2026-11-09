@@ -1,0 +1,69 @@
+{
+  "derivative_checks": [
+    {
+      "t": 1,
+      "b": 1,
+      "H": 4,
+      "modulus": 8,
+      "residue": 4
+    },
+    {
+      "t": 1,
+      "b": 2,
+      "H": 4,
+      "modulus": 8,
+      "residue": 4
+    },
+    {
+      "t": 2,
+      "b": 3,
+      "H": 16,
+      "modulus": 32,
+      "residue": 16
+    },
+    {
+      "t": 2,
+      "b": 4,
+      "H": 16,
+      "modulus": 32,
+      "residue": 16
+    }
+  ],
+  "transition_checks": [
+    {
+      "t": 2,
+      "n": 2,
+      "b": 3,
+      "u": 1,
+      "modulus": 128,
+      "residue": 64
+    },
+    {
+      "t": 2,
+      "n": 2,
+      "b": 4,
+      "u": 1,
+      "modulus": 128,
+      "residue": 64
+    },
+    {
+      "t": 2,
+      "n": 3,
+      "b": 3,
+      "u": 1,
+      "modulus": 256,
+      "residue": 128
+    },
+    {
+      "t": 2,
+      "n": 3,
+      "b": 4,
+      "u": 1,
+      "modulus": 256,
+      "residue": 128
+    }
+  ],
+  "exact_checks": 8,
+  "failures": 0,
+  "maximum_D_argument": 36
+}

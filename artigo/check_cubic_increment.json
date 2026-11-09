@@ -1,0 +1,16 @@
+{
+  "method": "Independent integer binomial recurrence, modular F series, exact rational nu partial sum",
+  "nu_cutoff_exclusive": 256,
+  "nu_tail_justification": "For k>=256, k+1-2*v2(k)-floor(log2(k-1))>=233; all tested precisions <=30.",
+  "increment_cases_by_t": {
+    "3": 1472,
+    "4": 1472,
+    "5": 1472,
+    "6": 1472,
+    "7": 1472,
+    "8": 1472
+  },
+  "increment_cases_total": 8832,
+  "numerical_inequality_checks": 32730,
+  "failures": []
+}
