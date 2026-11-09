@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the working preprint and its reproducibility archive."
-type: article
+type: dataset
 title: "Delannoy valuation laws: explicit thresholds and multiplicative differences"
 version: "1.0.0"
 date-released: "2026-11-09"
