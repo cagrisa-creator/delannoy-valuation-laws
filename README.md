@@ -2,14 +2,20 @@
 
 **César Augusto Grisa — Independent Researcher**
 
-*Explicit thresholds and multiplicative differences. Version 1.0.0, 9 November 2026.*
+*Explicit thresholds and multiplicative differences. Version 1.0.1, 15 November 2026.*
 
 ## Status
 
-This is a working preprint, not a peer-reviewed theorem paper. The manuscript
-discloses AI-assisted mathematical review, proof suggestions, verification,
-literature search, and drafting. The author must verify the arguments and
-adapt the narrative to the chosen journal's authorship policy.
+This is a preprint prepared for journal evaluation. It has not been peer
+reviewed. The manuscript discloses AI-assisted mathematical review, proof
+suggestions, verification, literature search, and drafting. Internal audits
+and exact computations are distinct from independent human refereeing.
+
+Version 1.0.1 synchronizes the editable source and 12-page PDF prepared for
+initial submission to the New York Journal of Mathematics. Journal acceptance
+has not been granted. The journal accepts a direct PDF attachment, without
+an arXiv deposit or author charges. See its author instructions:
+https://nyjm.albany.edu/Instr.html
 
 ## Mathematical content
 
@@ -30,6 +36,7 @@ tables as a premise.
 ## Files and reproduction
 
 - `artigo/main.tex`: complete editable English manuscript.
+- `artigo/Grisa_Delannoy_valuation_laws.pdf`: matching 12-page submission PDF.
 - `O_que_a_uniao_resolve.pdf`: Portuguese explanation of results and limits.
 - `artigo/eight_checks.py`: eight finite evaluations used in the proof.
 - `artigo/check_cubic_increment.py`: checks of the cubic increment.
@@ -62,9 +69,9 @@ The deposit is currently saved as a draft.
 Manuscript and documentation: CC BY 4.0 (`LICENSE-DOCS`).
 Code: MIT (`LICENSE-CODE`).
 
-## Publication preference (9 November 2026)
+## Publication preference (15 November 2026)
 
 The author does not authorize depositing this work on arXiv. The current
 Courant/CPAM submission route requires arXiv, so it is excluded under this
-constraint. A US journal accepting direct submission is to be selected.
+constraint. NYJM has been selected for direct submission to a single editor.
 GitHub and Zenodo are archival destinations, not journal acceptance.

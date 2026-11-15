@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}
@@ -15,34 +15,34 @@
 \newcommand{\cO}{\mathcal O}\newcommand{\vp}{v_2}
 \newcommand{\vpi}{v_\pi}
 \title{Delannoy valuation laws:\\explicit thresholds and multiplicative differences}
-\author{C\'esar Augusto Grisa\\{\small Independent Researcher}}
-\date{9 November 2026}
+\author{C\'esar Augusto Grisa\\{\small Independent Researcher}\\{\small\texttt{cagrisa@id.uff.br}}}
+\date{15 November 2026}
 \begin{document}
 \maketitle
 \begin{center}\small
-AI-assisted working draft. The mathematical arguments and suggested extensions
-require the author's verification; see the assistance statement at the end.
+Submission manuscript containing proposed proofs.
+AI assistance is disclosed at the end of the paper.
 \end{center}
 \begin{abstract}
-For the central Delannoy numbers $D(N)$, Lengyel conjectured the exact
-$2$-adic valuation of $D(u2^{n+1}+b)-D(u2^n+b)$ for odd positive $u$
-and sufficiently large $n$. This working revision presents an integrated
-argument with explicit thresholds: the valuation is
-$n+2v_2(b(b+1))$ for $b\ne0,-1$ and
-$n\ge\max\{2,v_2(b(b+1))\}$, provided the indices are nonnegative;
-for $b=0,-1$ the valuation is $3n$ for $n\ge2$.
-A ramified constant-term argument gives a uniform Mahler bound and
-local Taylor estimates. An elementary kernel cancellation gives a cubic
-increment congruence from scale $2^3$. The remaining small-valuation
-cases reduce to eight explicit arithmetic evaluations involving only
-$D(N)$ with $N\le36$. The same ingredients prove the basepoint
-valuations in Lengyel's first three conjectures. As a consequence,
-for every positive even $n$ and odd integer $p>1$,
-$v_2(D(pn)-D(n))=v_2(p-1)+3v_2(n)$.
-The finite NEG archive is preserved as supplementary data, while its
-claimed total valuation law is derived as a corollary of the analytic proof.
-The uniform internal structure of the NEG decomposition is not assumed.
+We study exact 2-adic valuations of differences of central Delannoy
+numbers. We present proofs of the valuation conjectures formulated by
+Lengyel, with an explicit threshold for the generic shifted difference
+and a threshold of scale four for the exceptional shifts. A ramified
+constant-term argument gives uniform Mahler bounds and local Taylor
+estimates. An elementary kernel cancellation yields a cubic increment
+congruence, while the remaining cases reduce to eight small exact
+evaluations. We derive a two-point valuation law for positive even
+indices of equal valuation and, as a consequence, a uniform law for
+odd multiplicative changes of an even index. The original finite NEG
+dataset is retained as supplementary evidence, separately from the
+universal proof and from unproved internal assertions about its layers.
 \end{abstract}
+\noindent\textbf{Keywords:} central Delannoy numbers; 2-adic valuations;
+Mahler expansions; supercongruences; explicit thresholds.
+
+\noindent\textbf{2020 Mathematics Subject Classification:}
+Primary 11B83; Secondary 11B65, 11S80.
+
 
 \section{The valuation law and its scope}
 The central Delannoy numbers, sequence A001850, are given by
@@ -876,9 +876,12 @@ of the stored ladders is therefore distinct from a universal proof of
 their dependence on the key.
 
 The archived summands are not identified with the harmonic-kernel terms
-defined earlier. Some cumulative valuations rise and then fall: for
-example, a stored ladder contains $(-3,1),(-2,-1),(-1,0)$. The terminal
-pair therefore does not assert monotonicity.
+defined earlier. Some cumulative valuations rise and then fall. For
+example, one stored ladder contains the consecutive pairs
+\[
+(-3,1),\quad(-2,-1),\quad(-1,0).
+\]
+The terminal pair therefore does not assert monotonicity.
 
 The role of this archive in the unified paper is supplementary:
 Corollary~\ref{cor:multiplier} proves the total valuation law for all
@@ -906,13 +909,13 @@ kernel proof, the extensions to negative and exceptional shifts,
 the basepoint argument at scale four, the deductions of Conjectures~1--3,
 and the two-point and multiplier corollaries. The finite NEG archive
 was checked for internal consistency, not regenerated from missing source.
-The author must independently verify and take responsibility for these
-arguments and references. This file is a review draft, not a claim of
-completed peer review. Before submission, its narrative must be reconstructed
-by the author where required by the chosen journal's policy, and the
-assistance must be disclosed as that policy requires.
+This manuscript presents the proposed arguments for peer review. The
+finite checks and internal review do not constitute independent human
+refereeing. The assistance is disclosed here and in the submission email;
+the author remains responsible for the manuscript and its references.
 
 \begin{thebibliography}{10}
+\small
 \bibitem{AlekseyevEtAl2025}
 M.~A. Alekseyev, T. Amdeberhan, J. Shallit, and I. Vukusic,
 \emph{On the $p$-adic valuations of values of Legendre polynomials},
