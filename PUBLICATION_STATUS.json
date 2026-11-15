@@ -6,14 +6,13 @@
   "journal_constraint": "USA journal accepting direct submission without mandatory arXiv",
   "courant_cpam_status": "Excluded under no-arXiv constraint; current author instructions require arXiv",
   "github_url": "https://github.com/cagrisa-creator/delannoy-valuation-laws",
-  "github_status": "Manuscript and verification files uploaded and verified",
+  "github_status": "Version 1.0.1 source and PDF synchronized",
   "zenodo_draft_url": "https://zenodo.org/uploads/24074633",
   "zenodo_reserved_doi": "10.5281/zenodo.24074633",
-  "zenodo_status": "Saved draft; not published; DOI not active",
+  "zenodo_status": "Published 2026-11-15, version 1.0.1; contains the matching 12-page manuscript and reproducibility ZIP",
   "next_steps": [
-    "Synchronize the saved Zenodo draft with version 1.0.1",
-    "Send the authorized initial submission to exactly one NYJM editor",
-    "Record actual delivery evidence; await editorial assessment"
+    "Await editorial acknowledgement and evaluation; no simultaneous journal submission",
+    "If accepted, adapt source to nyjm.cls/pdflatex and provide complete postal address"
   ],
   "notes": "No arXiv deposit. AI assistance disclosed in manuscript and cover email. Journal acceptance not granted.",
   "novelty_assessment": "Plausible novelty of the uniform theorem; no equivalent proof located in seven primary-source comparisons; priority not certified",
@@ -29,7 +28,8 @@
   ],
   "version": "1.0.1",
   "journal": "New York Journal of Mathematics",
-  "journal_status": "Prepared for authorized initial submission; sending not yet confirmed",
+  "journal_status": "Submitted by email to one NYJM editor on 2026-11-15; Gmail SENT confirmed; editorial receipt and acceptance not yet confirmed",
   "manuscript_sha256": "214246553c478cf4f1bd6b4a4e767d4a55a217bab890387fdb9673ec5459cd22",
-  "journal_fee": 0
+  "journal_fee": 0,
+  "zenodo_url": "https://zenodo.org/records/24074633"
 }

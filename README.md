@@ -12,8 +12,8 @@ suggestions, verification, literature search, and drafting. Internal audits
 and exact computations are distinct from independent human refereeing.
 
 Version 1.0.1 synchronizes the editable source and 12-page PDF prepared for
-initial submission to the New York Journal of Mathematics. Journal acceptance
-has not been granted. The journal accepts a direct PDF attachment, without
+initial submission to the New York Journal of Mathematics. The PDF was submitted by email to one NYJM editor on 15 November 2026.
+Gmail confirmed sending; editorial receipt and acceptance are not yet confirmed. The journal accepts a direct PDF attachment, without
 an arXiv deposit or author charges. See its author instructions:
 https://nyjm.albany.edu/Instr.html
 

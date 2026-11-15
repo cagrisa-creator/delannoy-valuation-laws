@@ -6,7 +6,10 @@ Auditoria interna concluída; não equivale a parecer independente ou aceitaçã
 A declaração detalhada de assistência de IA está no manuscrito e na carta.
 O arquivo NEG é material suplementar; as lacunas internas desse arquivo estão declaradas.
 GitHub: https://github.com/cagrisa-creator/delannoy-valuation-laws
-Zenodo: https://zenodo.org/uploads/24074633 (rascunho, até confirmação de publicação).
-DOI reservado: 10.5281/zenodo.24074633 (inativo enquanto rascunho).
+Zenodo publicado: https://zenodo.org/records/24074633 (versão 1.0.1).
+DOI: https://doi.org/10.5281/zenodo.24074633
 Nenhum depósito no arXiv foi autorizado ou realizado.
+Submissão à NYJM enviada a um único editor em 15/11/2026. Gmail confirmou SENT.
+Recebimento pelo editor e aceitação ainda não confirmados.
+O ZIP Zenodo preserva o retrato da preparação imediatamente anterior ao envio.
 Consultar PUBLICATION_STATUS.json para o estado registrado desta versão.
