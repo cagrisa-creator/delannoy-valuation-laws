@@ -2,20 +2,17 @@
 
 **César Augusto Grisa — Independent Researcher**
 
-*Explicit thresholds and multiplicative differences. Version 1.0.1, 15 November 2026.*
+*Explicit thresholds and multiplicative differences. Version 1.0.2, 16 November 2026.*
 
 ## Status
 
-This is a preprint prepared for journal evaluation. It has not been peer
-reviewed. The manuscript discloses AI-assisted mathematical review, proof
-suggestions, verification, literature search, and drafting. Internal audits
-and exact computations are distinct from independent human refereeing.
+This is a public working preprint and reproducibility archive. It has not
+been peer reviewed or accepted by a journal. Internal audits and exact
+computations are distinct from independent human refereeing.
 
-Version 1.0.1 synchronizes the editable source and 12-page PDF prepared for
-initial submission to the New York Journal of Mathematics. The PDF was submitted by email to one NYJM editor on 15 November 2026.
-Gmail confirmed sending; editorial receipt and acceptance are not yet confirmed. The journal accepts a direct PDF attachment, without
-an arXiv deposit or author charges. See its author instructions:
-https://nyjm.albany.edu/Instr.html
+Version 1.0.2 updates the presentation and accompanying metadata. The
+mathematical statements, proofs, verification scripts, and original finite
+NEG dataset are unchanged. A future journal submission has not been selected.
 
 ## Mathematical content
 
@@ -36,7 +33,7 @@ tables as a premise.
 ## Files and reproduction
 
 - `artigo/main.tex`: complete editable English manuscript.
-- `artigo/Grisa_Delannoy_valuation_laws.pdf`: matching 12-page submission PDF.
+- `artigo/Grisa_Delannoy_valuation_laws.pdf`: matching current preprint PDF.
 - `O_que_a_uniao_resolve.pdf`: Portuguese explanation of results and limits.
 - `artigo/eight_checks.py`: eight finite evaluations used in the proof.
 - `artigo/check_cubic_increment.py`: checks of the cubic increment.
@@ -47,7 +44,7 @@ tables as a premise.
 
 Scripts require only Python 3's standard library and write reports next to
 themselves. To compile the manuscript, run `pdflatex main.tex` twice inside
-`artigo/`, or open that folder in the Codex LaTeX editor.
+`artigo/`.
 
 The retained NEG tables contain 11,858 states representing 13,552 NEG cases.
 The missing term generator, block definitions, uniform state reduction, and
@@ -61,17 +58,18 @@ This is a substantially revised working draft derived from the earlier
 The earlier project is not overwritten. See `CITATION.cff` for author metadata.
 New repository: https://github.com/cagrisa-creator/delannoy-valuation-laws
 
-Reserved DOI: `10.5281/zenodo.24074633` (not active until the Zenodo draft is published).
-The deposit is currently saved as a draft.
+Zenodo version 1.0.2 is saved as a new-version draft at
+https://zenodo.org/uploads/24293242. Reserved DOI: `10.5281/zenodo.24293242`.
+The new files and description have not yet been published in Zenodo. Earlier releases remain available in the
+repository and Zenodo version history.
 
 ## License
 
 Manuscript and documentation: CC BY 4.0 (`LICENSE-DOCS`).
 Code: MIT (`LICENSE-CODE`).
 
-## Publication preference (15 November 2026)
+## Publication preference (16 November 2026)
 
-The author does not authorize depositing this work on arXiv. The current
-Courant/CPAM submission route requires arXiv, so it is excluded under this
-constraint. NYJM has been selected for direct submission to a single editor.
-GitHub and Zenodo are archival destinations, not journal acceptance.
+The author will decide whether and where to submit a future version.
+No arXiv deposit is authorized. GitHub and Zenodo are archival destinations,
+not journal acceptance.

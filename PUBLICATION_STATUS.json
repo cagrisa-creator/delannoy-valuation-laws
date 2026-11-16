@@ -1,35 +1,22 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
+  "version": "1.0.2",
   "author": "César Augusto Grisa",
   "affiliation": "Independent Researcher",
   "arxiv_authorized": false,
-  "journal_constraint": "USA journal accepting direct submission without mandatory arXiv",
-  "courant_cpam_status": "Excluded under no-arXiv constraint; current author instructions require arXiv",
   "github_url": "https://github.com/cagrisa-creator/delannoy-valuation-laws",
-  "github_status": "Version 1.0.1 source and PDF synchronized",
-  "zenodo_draft_url": "https://zenodo.org/uploads/24074633",
-  "zenodo_reserved_doi": "10.5281/zenodo.24074633",
-  "zenodo_status": "Published 2026-11-15, version 1.0.1; contains the matching 12-page manuscript and reproducibility ZIP",
-  "next_steps": [
-    "Await editorial acknowledgement and evaluation; no simultaneous journal submission",
-    "If accepted, adapt source to nyjm.cls/pdflatex and provide complete postal address"
-  ],
-  "notes": "No arXiv deposit. AI assistance disclosed in manuscript and cover email. Journal acceptance not granted.",
-  "novelty_assessment": "Plausible novelty of the uniform theorem; no equivalent proof located in seven primary-source comparisons; priority not certified",
-  "journal_shortlist": [
-    "INTEGERS",
-    "New York Journal of Mathematics",
-    "Rocky Mountain Journal of Mathematics",
-    "Proceedings of the AMS (if within 15 published pages)"
-  ],
-  "journal_excluded_due_to_arxiv": [
-    "Courant Journal of Pure and Applied Mathematics",
-    "Illinois Journal of Mathematics"
-  ],
-  "version": "1.0.1",
-  "journal": "New York Journal of Mathematics",
-  "journal_status": "Submitted by email to one NYJM editor on 2026-11-15; Gmail SENT confirmed; editorial receipt and acceptance not yet confirmed",
-  "manuscript_sha256": "214246553c478cf4f1bd6b4a4e767d4a55a217bab890387fdb9673ec5459cd22",
-  "journal_fee": 0,
-  "zenodo_url": "https://zenodo.org/records/24074633"
+  "zenodo_status": "New version draft created; metadata update and file upload pending; not published",
+  "journal_status": "Author will decide whether and where to submit a future version",
+  "peer_reviewed": false,
+  "journal_accepted": false,
+  "mathematical_changes": false,
+  "notes": "Presentation and metadata revision. Exact verification files and original NEG dataset retained.",
+  "previous_version": "1.0.1",
+  "previous_version_doi": "10.5281/zenodo.24074633",
+  "zenodo_doi": "10.5281/zenodo.24293242",
+  "zenodo_url": "https://zenodo.org/records/24293242",
+  "manuscript_sha256": "ea45de8f9e16485ce8cac19eba72d10fa0518d133e609fb6d960f6a083efcf94",
+  "zenodo_draft_url": "https://zenodo.org/uploads/24293242",
+  "zenodo_doi_status": "Reserved; registration pending publication",
+  "github_status": "Version 1.0.2 source and PDF prepared for repository update"
 }

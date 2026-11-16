@@ -1,15 +1,12 @@
-ATUALIZAÇÃO - 15/11/2026 - versão 1.0.1
+VERSÃO 1.0.2 - 16/11/2026
 Autor: César Augusto Grisa. Afiliação: Independent Researcher.
-Fonte e PDF sincronizados com a versão preparada para submissão inicial à NYJM.
-Revista gratuita; aceita PDF direto e não exige depósito no arXiv.
-Auditoria interna concluída; não equivale a parecer independente ou aceitação.
-A declaração detalhada de assistência de IA está no manuscrito e na carta.
-O arquivo NEG é material suplementar; as lacunas internas desse arquivo estão declaradas.
+Nova apresentação do preprint, com fonte, PDF e metadados sincronizados.
+Enunciados, demonstrações, programas de verificação e arquivo NEG preservados.
+O trabalho não foi aceito por revista e não tem validação independente por pares.
+A escolha de eventual nova submissão ficará a cargo do autor.
+Nenhum depósito no arXiv está autorizado.
 GitHub: https://github.com/cagrisa-creator/delannoy-valuation-laws
-Zenodo publicado: https://zenodo.org/records/24074633 (versão 1.0.1).
-DOI: https://doi.org/10.5281/zenodo.24074633
-Nenhum depósito no arXiv foi autorizado ou realizado.
-Submissão à NYJM enviada a um único editor em 15/11/2026. Gmail confirmou SENT.
-Recebimento pelo editor e aceitação ainda não confirmados.
-O ZIP Zenodo preserva o retrato da preparação imediatamente anterior ao envio.
-Consultar PUBLICATION_STATUS.json para o estado registrado desta versão.
+Consultar CITATION.cff e PUBLICATION_STATUS.json para os links desta versão.
+As versões anteriores continuam disponíveis no histórico.
+Zenodo: rascunho da nova versão salvo em https://zenodo.org/uploads/24293242
+DOI reservado: 10.5281/zenodo.24293242; publicação da nova versão pendente.
