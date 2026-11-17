@@ -1,0 +1,69 @@
+EXPLORATORY REFINEMENT OF THE CUBIC INCREMENT
+16 November 2026. No submitted/public manuscript changed.
+
+Notation is that of the submitted article: q=2^t, c=v2(y-x), t>=3,
+Q=2^(t+1), R_k(X)=prod_{j=1}^{k-1}(1-X/j)^2, L_k=floor(log2(k-1)).
+
+Define H_j^(2)=sum_{i=1}^j i^(-2) and
+mu = sum_{k>=1} (2^k/k^2)(2 H_{k-1}^2-H_{k-1}^(2)).
+This is the coefficient of X^2 in R_k, summed with weights 2^k/k^2.
+The series converges since its kth summand has valuation at least
+k-2v2(k)-2L_k, which tends to infinity.
+
+CLAIM A: v2(mu)=-1.
+The sum through k=8 is exactly 4352977/39690 and has valuation -1.
+For 9<=k<=16 the bound k-2v2(k)-2L_k is at least 2 (direct eight checks).
+For k>=17, let a=floor(log2 k)>=4. At k=2^a the bound is
+2^a-4a+2>=2. Between powers of two it is at least
+2^a-4a+3>=3. These dyadic minima increase with a.
+Consequently all remaining terms are in 4 Z_2; mu has valuation -1.
+
+CLAIM B (quartic congruence):
+F(qy)-F(qx) = nu q^3(y^3-x^3) + mu q^4(y^4-x^4)
+             modulo 2^(5t+c-4).
+
+Proof refinement of existing proposition:
+For m>=3 the degree-m part of R_k contributes valuation at least
+5t+c+[k-2v2(k)-3L_k]+(m-3)(t-L_k).
+For k<Q, L_k<=t. Universally k-2v2(k)-3L_k>=-4:
+for L_k<=2 check k=2,...,8; for L>=3, non-powers give
+2^L+3-5L>=-4, and k=2^(L+1) gives 2^(L+1)-5L-2>=-1.
+Thus these terms lie in 2^(5t+c-4) Z_2.
+
+Quadratic and cubic kernel replacement tails are bounded by Q-2+c and
+Q-1+c, as in the manuscript. The quartic tail has valuation >=Q-2+c:
+at k=2^a>=Q, the bound is 4t+2^a-4a+2>=Q-2;
+between consecutive powers the bound is at least one larger.
+All these dyadic minima increase for a>=t+1>=4.
+The binomial high-index tail remains bounded by Q-1+c.
+Finally Q-2=2^(t+1)-2>=5t-4 for t>=3. The quadratic term vanishes
+because K=0. This proves Claim B by precisely the same finite-cutoff
+and tail argument used in the submitted paper.
+
+CLAIM C (stronger cubic congruence):
+F(qy)-F(qx) = nu q^3(y^3-x^3) modulo 2^(4t+c-1).
+Indeed Claim A and divisibility of y^4-x^4 by y-x place the quartic
+term in this ideal. The error from Claim B is in the same ideal since
+5t-4>=4t-1 when t>=3.
+This gains t-2 bits over the manuscript's exponent 3t+c+1.
+For t>=4, x=0,y=1 shows sharpness of this uniform cubic-only precision:
+the quartic term has valuation exactly 4t-1 and the remaining error
+has strictly greater valuation.
+
+EXACT FINITE VERIFICATION (supporting, not a substitute for above proof):
+precision_explore.py computes nu and 2mu modulo 2^60 using k<=256,
+with tails controlled by the displayed dyadic estimates. It compares
+the cubic and quartic congruences against exact Delannoy recurrence
+values for 252 pairs, t=3,...,9 and 0<=x<y<=8, up to index 4096.
+There are no failures. Both congruences concern integer arguments;
+the existing signed-argument estimates extend the proof to signed
+x,y exactly as in the submitted proposition.
+
+INTERPRETATION:
+This adds actual congruence information beyond the existing valuation
+law. After dividing the cubic approximation by 2^(3t+c), the available
+precision grows from 1 bit to t-1 bits. This is a concrete mathematical
+strengthening, but not yet a verified claim of external novelty or
+an independent referee certification. A conceptual identification of
+nu or a general theorem for further coefficients remains a deeper
+research direction.

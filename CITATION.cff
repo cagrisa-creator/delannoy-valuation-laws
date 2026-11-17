@@ -1,25 +1,14 @@
 cff-version: 1.2.0
-message: "Please cite the working preprint and its reproducibility archive."
-type: dataset
-title: "Delannoy valuation laws: explicit thresholds and multiplicative differences"
-version: "1.0.2"
-date-released: "2026-11-16"
+message: "Please cite this research preprint and its reproducibility archive."
+type: article
+title: "Delannoy differences: exact valuations and the two-adic image"
+version: "1.1.0"
+date-released: "2026-11-17"
 authors:
   - family-names: "Grisa"
-    given-names: "César Augusto"
+    given-names: "C�sar Augusto"
     affiliation: "Independent Researcher"
 license: CC-BY-4.0
-keywords:
-  - central Delannoy numbers
-  - 2-adic valuation
-  - Mahler expansion
-  - Lengyel conjectures
-abstract: >-
-  Working preprint presenting integrated arguments for Delannoy valuation
-  laws and multiplicative differences, with exact reproduction scripts and
-  the original finite NEG dataset. Not peer reviewed; mathematical statements
-  and proofs remain subject to independent specialist assessment.
-
+url: "https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0"
 repository-code: "https://github.com/cagrisa-creator/delannoy-valuation-laws"
-# Reserved DOI; version 1.0.2 is not yet published in Zenodo.
-doi: "10.5281/zenodo.24293242"
+# The reserved Zenodo DOI is not included as a registered citation DOI.

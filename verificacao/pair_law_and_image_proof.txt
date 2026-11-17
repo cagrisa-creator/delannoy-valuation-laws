@@ -1,0 +1,130 @@
+EXPLORATORY CONSEQUENCES OF THE SUBMITTED DELANNOY MANUSCRIPT
+16 November 2026
+
+Status: deductions from the stated results of the submitted manuscript, not a
+separate audit of those results and not a certification of literature priority.
+No submitted or public manuscript has been edited.
+
+1. COMPLETE TWO-POINT VALUATION LAW
+
+Let M,N be distinct nonnegative integers, k=v_2(M-N), and
+t_X=v_2(X(X+1)), with t_0=+infinity. Then
+
+  v_2(D(M)-D(N)) = k+1                         if k<=1;
+                       k+2 min(t_M,t_N)        if k>=2.
+
+Proof. The local coefficient bound in the manuscript gives
+F(4u+r)=F(r) mod16, because every nonconstant coefficient of G_r has
+valuation at least4. The four constants D(0),...,D(3) are 1,3,13,63,
+respectively. Thus the residue values modulo16 are 1,3,13,15.
+Different parity of M,N gives valuation1. The same parity with different
+residues modulo4 gives valuation2. These settle k=0 and k=1.
+
+Suppose k>=2, so M,N have the same residue modulo4. First suppose
+t_M=t_N=t. If both are even, write M=2^t m and N=2^t n with m,n odd;
+if both are odd, write M+1=2^t m and N+1=2^t n with m,n odd. In either
+case k>=t+1. Exchange M,N so M>N. Put h=M-N=U2^k with U odd positive,
+and B=2N-M. Then B+h=N, B+2h=M, v_2(B(B+1))=t and B is neither 0
+nor -1. The manuscript's Theorem1 applies and yields k+2t.
+
+Now suppose t_M!=t_N and set a=min(t_M,t_N). Equality of the residues
+modulo4 implies a>=2, and unequal valuations of the even quantities
+M,N (or M+1,N+1) give k=a. If M,N are even, the basepoint law gives
+v_2(D(M)-1)=3t_M and v_2(D(N)-1)=3t_N, including D(0)-1=0 with
+infinite valuation. Subtract these terms with unequal valuations to get
+3a=k+2a. If M,N are odd, use D(M)+1,D(N)+1 and the analogous
+basepoint law. This proves the formula.
+
+Exact computational corroboration: all 524,800 unordered pairs
+0<=N<M<=1024 satisfy the formula. Reproduction: pairs_complete_check.py.
+This finite check is not used in the preceding proof.
+
+2. EXTENSION TO Z_2 AND CRITICAL POINTS
+
+The same formula holds for all distinct x,y in Z_2, with
+t_x=v_2(x(x+1)) and t_0=t_{-1}=+infinity. Approximate x,y by
+nonnegative integers. Their difference valuation k stabilizes. The
+minimum of the two t-values also stabilizes unless both x,y are
+critical points; that exceptional pair is {0,-1}, already covered by
+k=0 and F(0)-F(-1)=2. Continuity then preserves the valuation of the
+nonzero differences. This proves the extension.
+
+The formula makes F injective on Z_2: distinct arguments always have
+a finite difference valuation. For x different from 0,-1 and
+t=v_2(x(x+1)), take h tending to 0 with v_2(h)>t. Both t_x and t_{x+h}
+equal t. Consequently
+
+  v_2((F(x+h)-F(x))/h)=2t.
+
+All these quotients belong to the closed set 2^(2t) Z_2^times.
+Local analyticity gives v_2(F'(x))=2t in the limit. At 0 and -1, the
+basepoint law gives v_2((F(x+h)-F(x))/h)=2v_2(h) for small nonzero h,
+which tends to infinity; hence F'(0)=F'(-1)=0. There are exactly two
+critical points. The basepoint laws and local analyticity show cubic
+vanishing of F(x)-1 at 0 and F(x)+1 at -1: their first nonzero Taylor
+coefficient has degree3 and is a unit.
+
+3. EXACT IMAGE AND HAAR MEASURE
+
+Notation: Z_2^times is the set of odd 2-adic integers. Normalize additive
+Haar measure by mu(Z_2)=1. Then
+
+ F(Z_2) = {1,-1} union (3+16Z_2) union (13+16Z_2)
+          union over a>=2 of
+          [(1+2^(3a) Z_2^times) union (-1+2^(3a) Z_2^times)].
+
+Each expression 1+2^(3a) Z_2^times is the ball
+1+2^(3a)+2^(3a+1) Z_2. The minus-one branch has the corresponding
+description -1+2^(3a)+2^(3a+1) Z_2.
+
+Proof of surjectivity on each component. A distance-preserving map
+g: Z_2 -> Z_2 is onto. For every m>=1, its induced map modulo 2^m is
+well-defined and injective, hence a permutation. For a prescribed
+target z, the compact nonempty sets {u:g(u)=z mod2^m} are nested;
+their intersection gives a preimage of z. The same argument on the
+finite odd residue classes proves that an isometry
+Z_2^times -> Z_2^times is onto.
+
+For r=1,2, let
+
+  g_r(u)=(F(4u+r)-F(r))/16.
+
+The complete pair law gives
+v_2(g_r(u)-g_r(v))=v_2(u-v), so g_r is an isometry Z_2->Z_2.
+Here F(1)=3 and F(2)=13. Thus the two residue-class images are exactly
+3+16Z_2 and 13+16Z_2.
+
+For a>=2, define on odd u
+
+  h_a(u)=(F(2^a u)-1)/2^(3a).
+
+The basepoint law makes h_a(u) odd. The pair formula gives
+v_2(h_a(u)-h_a(v))=v_2(u-v), so h_a is an isometry of the units
+onto themselves. Therefore the image of the shell v_2(x)=a is exactly
+1+2^(3a)Z_2^times. Reflection F(-x-1)=-F(x) gives the corresponding
+shell near -1. The remaining points 0,-1 map to 1,-1.
+
+These image components are disjoint. The two large balls are 3 and 13
+mod16, while the branches near1 and -1 are1 and15 mod16. Within
+each branch, distinct a have distinct valuations relative to the
+branch center; the center itself is excluded from all shells.
+
+The singleton centers have measure 0. Each of the two large balls has
+measure 1/16. A shell-image ball at exponent a has measure 2^(-3a-1).
+Consequently
+
+  mu(F(Z_2))=2/16+2 sum_{a>=2}2^(-3a-1)
+            =1/8+sum_{a>=2}2^(-3a)
+            =1/8+1/56=1/7.
+
+4. SIGNIFICANCE AND LIMITS
+
+The complete pair law broadens the announced result from equal-
+valuation even indices to all distinct indices. The exact image and
+critical-point statements turn divisibility formulas into a description
+of the interpolated function. They require no new computational
+assumption beyond the manuscript's established estimates. Their proofs
+still depend on the correctness of those estimates. Literature priority
+must be checked before claiming these consequences as new. Such a
+reorganization adds conceptual scope; it does not turn an elementary
+deduction into an independent new proof technique.

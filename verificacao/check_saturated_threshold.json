@@ -1,0 +1,70 @@
+{
+  "test": "exact-integer check of strengthened saturated formula",
+  "number_of_cases": 148854,
+  "cases_by_n": {
+    "9": 2442,
+    "8": 4884,
+    "7": 9768,
+    "6": 19536,
+    "5": 24208,
+    "4": 20112,
+    "3": 18064,
+    "2": 17040,
+    "1": 16528,
+    "0": 16272
+  },
+  "failures": [],
+  "examples": [
+    {
+      "b": 16,
+      "u": 1,
+      "n": 2,
+      "t": 4,
+      "lo": 20,
+      "hi": 24,
+      "observed_v2": 6,
+      "old_linear_prediction": 10
+    },
+    {
+      "b": 32,
+      "u": 1,
+      "n": 3,
+      "t": 5,
+      "lo": 40,
+      "hi": 48,
+      "observed_v2": 9,
+      "old_linear_prediction": 13
+    },
+    {
+      "b": 1,
+      "u": 1,
+      "n": 1,
+      "t": 1,
+      "lo": 3,
+      "hi": 5,
+      "observed_v2": 2,
+      "old_linear_prediction": 3
+    },
+    {
+      "b": 1,
+      "u": 1,
+      "n": 2,
+      "t": 1,
+      "lo": 5,
+      "hi": 9,
+      "observed_v2": 4,
+      "old_linear_prediction": 4
+    },
+    {
+      "b": 0,
+      "u": 1,
+      "n": 2,
+      "t": null,
+      "lo": 4,
+      "hi": 8,
+      "observed_v2": 6,
+      "old_linear_prediction": null
+    }
+  ],
+  "status": "finite confirmation; general proof follows from submitted basepoint theorem and main theorem"
+}

@@ -1,0 +1,158 @@
+Put
+\[
+ H_j^{(2)}=\sum_{i=1}^j\frac1{i^2},\qquad H_0^{(2)}=0,
+ \qquad
+ \mu=\sum_{k\ge1}\frac{2^k}{k^2}
+       \left(2H_{k-1}^2-H_{k-1}^{(2)}\right).
+\]
+The constants $K$ and $\nu$ retain the definitions in
+Lemma~\ref{lem:elementary-kernels}.
+
+\begin{proposition}[Cubic and quartic increments]\label{prop:cubic-t3}
+The series defining $\mu$ converges in $\Qtwo$, and $v_2(\mu)=-1$.
+For distinct integers $x,y$ and $t\ge3$, put $q=2^t$ and
+$c=v_2(y-x)$. Then
+\begin{align}
+ F(qy)-F(qx)
+ &\equiv\nu q^3(y^3-x^3)
+          \pmod{2^{4t+c-1}},\label{eq:sharpened-cubic}\\
+ F(qy)-F(qx)
+ &\equiv\nu q^3(y^3-x^3)+\mu q^4(y^4-x^4)
+          \pmod{2^{5t+c-4}}.\label{eq:quartic-increment}
+\end{align}
+Both statements allow either sign of $x$ and $y$.
+\end{proposition}
+\begin{proof}
+For $k\ge2$, write
+\[
+ R_k(X)=\prod_{j=1}^{k-1}(1-X/j)^2
+       =\sum_{m=0}^{2k-2}e_{k,m}X^m,
+ \qquad L_k=\lfloor\log_2(k-1)\rfloor.
+\]
+The coefficients satisfy
+\[
+ v_2(e_{k,m})\ge-mL_k,\qquad
+ e_{k,0}=1,\quad e_{k,1}=-2H_{k-1},\quad
+ e_{k,2}=2H_{k-1}^2-H_{k-1}^{(2)}.
+\]
+Indeed, each selected factor of degree $d$ has valuation at least
+$-dL_k$. The formula for $e_{k,2}$ follows by collecting its squared
+linear terms and its quadratic terms. For all $k\ge1$,
+\[
+ 2^k\binom{qz}{k}^2=q^2z^2\frac{2^k}{k^2}R_k(qz),
+\]
+where $R_1=1$.
+
+The $k$th summand of $\mu$ has valuation at least
+\[
+ k-2v_2(k)-2L_k\qquad(k\ge2).
+\]
+This bound tends to infinity, proving convergence. The sum through
+$k=8$ is
+\[
+ \sum_{k=1}^8\frac{2^k}{k^2}
+       \left(2H_{k-1}^2-H_{k-1}^{(2)}\right)
+       =\frac{4352977}{39690},
+\]
+of valuation $-1$. For $k=9,\ldots,16$, the displayed lower bounds
+are respectively $3,2,5,2,7,6,9,2$.
+For larger $k$, let $a=\lfloor\log_2k\rfloor\ge4$.
+At $k=2^a$ the lower bound is $2^a-4a+2\ge2$;
+between consecutive powers of two it is at least
+$2^a-4a+3\ge3$. These bounds increase with $a$.
+Thus every term after the eighth belongs to $4\Ztwo$, and
+$v_2(\mu)=-1$.
+
+Use the cutoff $Q=2^{t+1}$. For every $k\ge2$,
+\begin{equation}\label{eq:quartic-degree-bound}
+ k-2v_2(k)-3L_k\ge-4.
+\end{equation}
+For $2\le k\le8$, this follows by direct substitution.
+If $L=L_k\ge3$ and $2^L<k<2^{L+1}$, then
+$v_2(k)\le L-1$, and the left side is at least
+$2^L+3-5L\ge-4$. At $k=2^{L+1}$ it equals
+$2^{L+1}-5L-2\ge-1$. Both dyadic lower bounds increase for $L\ge3$.
+
+For $k<Q$ we have $L_k\le t$. Since $y^d-x^d$ is divisible by
+$y-x$ for every positive integer $d$, the degree-$m$ term, $m\ge3$,
+in the difference of the two products has valuation at least
+\[
+ (m+2)t+k-2v_2(k)-mL_k+c
+ =5t+c+[k-2v_2(k)-3L_k]+(m-3)(t-L_k)
+ \ge5t+c-4.
+\]
+Retaining the terms of degrees zero, one and two in $R_k$ therefore gives
+\begin{align*}
+ \sum_{1\le k<Q}2^k
+  \left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]
+ &\equiv q^2K_{<Q}(y^2-x^2)
+       +q^3\nu_{<Q}(y^3-x^3)\\
+ &\hspace{1em}+q^4\mu_{<Q}(y^4-x^4)
+       \pmod{2^{5t+c-4}},
+\end{align*}
+where the subscript denotes truncation to $1\le k<Q$.
+
+We next justify replacing all three finite kernels by their limits.
+For $k\ge Q$, write $a=\lfloor\log_2k\rfloor\ge t+1$.
+The dyadic lower bounds for the quadratic, cubic and quartic
+kernel terms, after multiplication by their powers of $q$, are
+respectively
+\[
+ 2t+2^a-2a,\qquad
+ 3t+2+2^a-3a,\qquad
+ 4t+2+2^a-4a.
+\]
+For the latter two bounds, use $L_k=a-1$ at $k=2^a$;
+between consecutive powers of two the bounds are at least two and
+one larger, respectively. Each displayed expression increases with
+$a\ge t+1\ge4$. At $a=t+1$, the three values are $Q-2,Q-1,Q-2$.
+Consequently
+\[
+ q^2(K-K_{<Q})\in2^{Q-2}\Ztwo,\quad
+ q^3(\nu-\nu_{<Q})\in2^{Q-1}\Ztwo,\quad
+ q^4(\mu-\mu_{<Q})\in2^{Q-2}\Ztwo.
+\]
+Multiplication by the corresponding power differences gains $c$.
+
+It remains to control the binomial tail. Generalized binomial
+coefficients at integer arguments are integers, including at negative
+arguments. Vandermonde's identity and
+\[
+ \binom{q(y-x)}j=\frac{q(y-x)}j\binom{q(y-x)-1}{j-1}
+\]
+give
+\[
+ v_2\!\left(\binom{qy}{k}-\binom{qx}{k}\right)
+ \ge t+c-\lfloor\log_2k\rfloor.
+\]
+Factoring the difference of the squares yields
+\[
+ v_2\!\left(2^k\left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]\right)
+ \ge k+t+c-\lfloor\log_2k\rfloor
+ \ge Q+c-1\qquad(k\ge Q).
+\]
+Here $k-\lfloor\log_2k\rfloor$ is nondecreasing.
+Since $Q-2=2^{t+1}-2\ge5t-4$ for $t\ge3$, all replacement errors
+and the binomial tail belong to $2^{5t+c-4}\Ztwo$.
+The identity $K=0$ from Lemma~\ref{lem:elementary-kernels}
+now proves \eqref{eq:quartic-increment}.
+
+Finally, $v_2(\mu)=-1$ and divisibility of $y^4-x^4$ by $y-x$
+place the quartic term in $2^{4t+c-1}\Ztwo$.
+As $5t-4\ge4t-1$ for $t\ge3$,
+\eqref{eq:sharpened-cubic} follows as well.
+\end{proof}
+
+\begin{remark}[Sharpness of the cubic precision]\label{rem:cubic-sharpness}
+For $t\ge4$, take $x=0$ and $y=1$ in
+\eqref{eq:quartic-increment}. The quartic term has valuation exactly
+$4t-1$, whereas the remaining error has valuation at least
+$5t-4>4t-1$. Hence
+\[
+ v_2\bigl(F(2^t)-1-\nu2^{3t}\bigr)=4t-1\qquad(t\ge4).
+\]
+Thus the exponent in \eqref{eq:sharpened-cubic} cannot be increased
+uniformly without retaining another term. Relative to the modulus
+$2^{3t+c+1}$ needed for the valuation argument, it supplies
+$t-2$ additional binary digits.
+\end{remark}

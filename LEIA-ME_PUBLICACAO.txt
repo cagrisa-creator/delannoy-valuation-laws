@@ -1,12 +1,14 @@
-VERSÃO 1.0.2 - 16/11/2026
-Autor: César Augusto Grisa. Afiliação: Independent Researcher.
-Nova apresentação do preprint, com fonte, PDF e metadados sincronizados.
-Enunciados, demonstrações, programas de verificação e arquivo NEG preservados.
-O trabalho não foi aceito por revista e não tem validação independente por pares.
-A escolha de eventual nova submissão ficará a cargo do autor.
-Nenhum depósito no arXiv está autorizado.
-GitHub: https://github.com/cagrisa-creator/delannoy-valuation-laws
-Consultar CITATION.cff e PUBLICATION_STATUS.json para os links desta versão.
-As versões anteriores continuam disponíveis no histórico.
-Zenodo: rascunho da nova versão salvo em https://zenodo.org/uploads/24293242
-DOI reservado: 10.5281/zenodo.24293242; publicação da nova versão pendente.
+REVIS�O 1.1.0 � 17/11/2026
+
+Foram incorporadas as tr�s melhorias: classifica��o geral das diferen�as,
+congru�ncias c�bica/qu�rtica mais precisas e imagem exata da interpola��o
+com medida de Haar 1/7. O relat�rio bibliogr�fico registra a sobreposi��o
+conhecida com Wang�Zhong e os limites da pesquisa de prioridade.
+
+A nova revis�o usa a branch revision-v1.1.0. A branch main e a c�pia exata
+enviada � Houston permanecem preservadas. A revis�o 1.1.0 n�o foi reenviada
+� revista. A situa��o p�blica do GitHub e do Zenodo est� registrada em
+PUBLICATION_STATUS.json; DOI reservado n�o significa DOI j� publicado.
+
+O artigo principal est� em artigo/Grisa_Delannoy_differences_v1.1.0.pdf.
+O fonte edit�vel e os c�lculos acompanham o pacote. N�o houve dep�sito no arXiv.

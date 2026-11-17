@@ -1,0 +1,87 @@
+{
+  "integer_indices_checked": 65536,
+  "max_bits": 16,
+  "failures": 0,
+  "limiting_haar_measure_from_proof": "1/7",
+  "levels": [
+    {
+      "bits": 4,
+      "number_of_image_residues": 4,
+      "residue_proportion": 0.25,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 5,
+      "number_of_image_residues": 6,
+      "residue_proportion": 0.1875,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 6,
+      "number_of_image_residues": 10,
+      "residue_proportion": 0.15625,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 7,
+      "number_of_image_residues": 20,
+      "residue_proportion": 0.15625,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 8,
+      "number_of_image_residues": 38,
+      "residue_proportion": 0.1484375,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 9,
+      "number_of_image_residues": 74,
+      "residue_proportion": 0.14453125,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 10,
+      "number_of_image_residues": 148,
+      "residue_proportion": 0.14453125,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 11,
+      "number_of_image_residues": 294,
+      "residue_proportion": 0.1435546875,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 12,
+      "number_of_image_residues": 586,
+      "residue_proportion": 0.14306640625,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 13,
+      "number_of_image_residues": 1172,
+      "residue_proportion": 0.14306640625,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 14,
+      "number_of_image_residues": 2342,
+      "residue_proportion": 0.1429443359375,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 15,
+      "number_of_image_residues": 4682,
+      "residue_proportion": 0.14288330078125,
+      "matches_image_formula": true
+    },
+    {
+      "bits": 16,
+      "number_of_image_residues": 9364,
+      "residue_proportion": 0.14288330078125,
+      "matches_image_formula": true
+    }
+  ],
+  "caution": "Finite check is corroboration, not proof of image surjectivity or novelty."
+}

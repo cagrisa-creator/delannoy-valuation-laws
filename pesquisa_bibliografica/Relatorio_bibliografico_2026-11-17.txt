@@ -1,0 +1,64 @@
+COMPARA��O BIBLIOGR�FICA DA REVIS�O 1.1.0
+Confer�ncia em 17 de novembro de 2026
+
+Conclus�o: a pesquisa delimitada n�o localizou uma formula��o equivalente
+da classifica��o geral de diferen�as, da imagem exata com medida 1/7 ou
+das duas congru�ncias refinadas. H� candidatos concretos a contribui��o,
+mas n�o uma certifica��o de prioridade universal. A aus�ncia de resultados
+em uma busca n�o prova ineditismo.
+
+Sobreposi��o confirmada: o caso deslocado b=u=1 j� decorre do Teorema 3.1
+de Wang�Zhong e recebeu cr�dito expl�cito no artigo.
+
+1. T. Lengyel (2021)
+On some p-adic properties and supercongruences of Delannoy and Schr�der numbers
+Localiza��o: Conjectures 1�4, pp. 4�5; Lemmas 2�3; Theorem 3
+Formulates the exact basepoint and shifted-difference conjectures and settles low congruence classes. Direct problem source, not a prior proof of the full conjectures.
+https://math.colgate.edu/~integers/v86/v86.pdf
+
+2. R.-H. Wang; M. X. X. Zhong (2025)
+Congruences for sums of Delannoy numbers and polynomials; published title includes Legendre polynomials
+Localiza��o: Theorem 3.1 in consulted preprint, equations (3.4)�(3.5)
+Gives the D(2^a+1) congruence whose consecutive differences imply the b=u=1 case. This case must be credited as already known. Does not state our arbitrary-index pair classification or exact interpolant image.
+https://arxiv.org/html/2505.05728v1
+
+3. M. A. Alekseyev; T. Amdeberhan; J. Shallit; I. Vukusic (2025)
+On the p-adic valuations of values of Legendre polynomials
+Localiza��o: Theorems 3�6 and Corollary 7
+Theorem 3 assumes v_p(r)>=1. The p=3, r=3 case treats valuations of D(N) itself. This is distinct from v2 of differences at argument 3; v2(3)=0 does not satisfy that hypothesis.
+https://arxiv.org/html/2505.08935v1
+
+4. F. Beukers; M. Houben; A. Straub (2018)
+Gauss congruences for rational functions in several variables
+Localiza��o: Theorem 5.6 and Example 5.7
+Proves shifted Gauss divisibility congruences for the two-variable Delannoy array at all primes. Example 5.7 does not give the exact full pair valuations or the interpolant image.
+https://cosicdatabase.esat.kuleuven.be/backend/publications/files/journal/3664
+
+5. Z.-W. Sun (2018)
+Arithmetic properties of Delannoy numbers and Schr�der numbers
+Localiza��o: Introduction, Theorems 1.1�1.2, generalized polynomial arithmetic
+Foundational congruence and polynomial arithmetic. The specific statements consulted concern identities and sums/products, rather than the complete arbitrary-index difference law or the Haar measure of its interpolation.
+https://arxiv.org/pdf/1602.00574
+
+O QUE MUDOU DE FATO
+
+A classifica��o geral amplia o dom�nio das f�rmulas, mas parte desse ganho
+� uma dedu��o curta das estimativas j� presentes. A imagem e os pontos
+cr�ticos d�o interpreta��o estrutural. O termo qu�rtico fornece informa��o
+adicional sobre a diferen�a e permite provar a otimalidade de uma precis�o
+c�bica uniforme. N�o foi encontrada uma nova t�cnica geral para todas as
+sequ�ncias combinat�rias; n�o se deve apresentar a revis�o como tal.
+
+LIMITES
+
+Foram lidos os enunciados relevantes nas cinco fontes prim�rias listadas.
+As buscas adicionais inclu�ram diferen�as, interpola��o, pontos cr�ticos,
+medida de Haar, o valor 1/7 e solu��es das conjecturas de Lengyel. Resultados
+sobre categorias de Delannoy e pontos cr�ticos de fun��es geradoras em
+an�lise combinat�ria n�o tratam dos pontos cr�ticos desta interpola��o.
+P�ginas inacess�veis e resumos de buscadores n�o foram tratados como prova
+de sobreposi��o nem de novidade. A compara��o pode n�o captar literatura
+n�o indexada ou enunciados equivalentes em outra nota��o.
+
+A revis�o permanece sujeita � avalia��o especializada de suas provas e da
+prioridade bibliogr�fica. N�o foi declarada aceita��o ou publica��o em revista.

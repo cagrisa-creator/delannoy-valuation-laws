@@ -1,0 +1,156 @@
+\begin{proof}[Proof of Theorem~\ref{thm:pairs}]
+Lemma~\ref{lem:local-control} gives
+\[
+ F(4u+r)\equiv D(r)\pmod{16}
+ \qquad(u\in\Ztwo,\ 0\le r\le3).
+\]
+The four residues are $1,3,13,15$, respectively. If $k=0$, the
+indices have different parity, and their values differ by $2$ modulo
+$4$. If $k=1$, they have the same parity and different residues modulo
+$4$, and their values differ by $4$ modulo $8$. These observations give
+the first branch of the formula.
+
+Suppose $k\ge2$. Then $M,N$ have the same residue modulo $4$.
+First suppose $t_M=t_N=t$. The value $t$ is finite: the only
+nonnegative integer with infinite $t_X$ is $X=0$, and the indices are
+distinct. If the indices are even, their quotients by $2^t$ are odd;
+if they are odd, the same is true of $(M+1)/2^t$ and $(N+1)/2^t$.
+Consequently $k\ge t+1$. After interchanging the indices, assume
+$M>N$, and write
+\[
+ h=M-N=U2^k,\qquad B=2N-M=N-h,
+\]
+where $U$ is positive and odd. Since $k>t$, subtracting $h$ preserves
+the valuation of the even member of $N,N+1$. Thus
+$v_2(B(B+1))=t$, in particular $B\ne0,-1$. Moreover,
+\[
+ B+U2^k=N\ge0,\qquad B+U2^{k+1}=M.
+\]
+Theorem~\ref{thm:main}, in its range $k\ge\max\{2,t\}$, now gives
+$v_2(D(M)-D(N))=k+2t$.
+
+If $t_M\ne t_N$, put $a=\min(t_M,t_N)$. The common residue modulo
+$4$ must be $0$ or $3$, since in the other two classes both $t$-values
+are $1$. Hence $a\ge2$. The two even quantities, either $M,N$ or
+$M+1,N+1$, have unequal valuations, so $k=a$. In the even case,
+Proposition~\ref{prop:basepoints} gives
+\[
+ v_2(D(M)-1)=3t_M,\qquad v_2(D(N)-1)=3t_N,
+\]
+with $v_2(D(0)-1)=+\infty$ when one index is zero. Subtraction of
+terms of unequal valuations gives $3a$. In the odd case the same
+argument uses $D(M)+1$ and $D(N)+1$. Thus in both cases the valuation
+is $3a=k+2\min(t_M,t_N)$, as required.
+\end{proof}
+
+\section{The interpolating function and its image}\label{sec:image}
+Write $\Ztwo^\times$ for the odd $2$-adic integers. Let $m$ denote
+additive Haar measure on $\Ztwo$, normalized by $m(\Ztwo)=1$.
+
+\begin{theorem}\label{thm:image}
+The function $F:\Ztwo\longrightarrow\Ztwo$ is injective. Its only
+critical points are $0$ and $-1$, and
+\[
+ v_2(F'(x))=2v_2(x(x+1))\qquad(x\in\Ztwo\setminus\{0,-1\}).
+\]
+The zeros of $F(x)-1$ at $0$ and of $F(x)+1$ at $-1$ have order
+three, with unit leading Taylor coefficients. The image is the
+disjoint union
+\begin{align}
+ F(\Ztwo)={}&\{1,-1\}\ \cup\ (3+16\Ztwo)\ \cup\ (13+16\Ztwo)
+ \notag\\
+ &{}\cup\bigcup_{a\ge2}
+ \left[(1+2^{3a}\Ztwo^\times)\ \cup\
+       (-1+2^{3a}\Ztwo^\times)\right].\label{eq:exact-image}
+\end{align}
+In particular, $m(F(\Ztwo))=1/7$.
+\end{theorem}
+\begin{proof}
+First extend Theorem~\ref{thm:pairs} to distinct $x,y\in\Ztwo$.
+Set $k=v_2(x-y)$ and $t_z=v_2(z(z+1))$, with
+$t_0=t_{-1}=+\infty$. Choose nonnegative integers $M_j\to x$ and
+$N_j\to y$. For sufficiently large $j$, $v_2(M_j-N_j)=k$. If
+$k\ge2$, at least one of $t_x,t_y$ is finite, since the distinct
+roots $0,-1$ differ by an odd number. The minimum of the two
+$t$-values therefore also stabilizes: a finite value is locally
+constant, and the $t$-value of an approximating sequence tending to
+a root tends to infinity. The integer formula and continuity of $F$
+give
+\[
+ v_2(F(x)-F(y))=
+ \begin{cases}
+ k+1,& k\le1,\\
+ k+2\min(t_x,t_y),& k\ge2.
+ \end{cases}\label{eq:padic-pairs}\tag{\theequation}
+\]
+Indeed, a convergent sequence all of whose terms lie in
+$2^e\Ztwo^\times$ has its limit in that same closed set. The
+right-hand side is finite, so $F$ is injective.
+
+Lemma~\ref{lem:local-control} gives local analyticity on all four
+residue classes. For $x\ne0,-1$, let $t=v_2(x(x+1))$. Whenever
+$v_2(h)>t$ and $v_2(h)\ge2$, one has $t_{x+h}=t$. Applying
+\eqref{eq:padic-pairs} and dividing by $h$ yields
+\[
+ v_2\left(\frac{F(x+h)-F(x)}{h}\right)=2t.
+\]
+As $h\to0$, the quotients stay in the closed set
+$2^{2t}\Ztwo^\times$, proving the derivative formula. At $x=0$ or
+$-1$, the pair formula instead gives
+\[
+ v_2(F(x+h)-F(x))=3v_2(h)\qquad(v_2(h)\ge2).
+\]
+The corresponding difference quotients tend to zero. Thus these are
+exactly the critical points. To identify the order at either point,
+take the first nonzero coefficient in its local Taylor series. For
+sufficiently large $v_2(h)$, that term controls the valuation of the
+series. The displayed equality forces its degree to be $3$ and its
+coefficient to be a unit.
+
+We next determine the image. We use the elementary fact that every
+isometry $g:\Ztwo\to\Ztwo$ is onto. For each $j\ge1$, the induced
+map modulo $2^j$ is an injection of a finite set into itself, hence a
+permutation. For any target, its nonempty inverse congruence classes
+form nested compact subsets of $\Ztwo$; their intersection contains a
+preimage.
+
+For $r=1,2$, define
+\[
+ g_r(u)=\frac{F(4u+r)-F(r)}{16}\qquad(u\in\Ztwo).
+\]
+The local coefficient bound makes this integral. Both arguments in
+each difference have $t$-value $1$, so \eqref{eq:padic-pairs} gives
+\[
+ v_2(g_r(u)-g_r(v))=v_2(u-v).
+\]
+Thus $g_r$ is onto. Since $F(1)=3$ and $F(2)=13$, the images of
+$1+4\Ztwo$ and $2+4\Ztwo$ are exactly the two balls in
+\eqref{eq:exact-image}.
+
+For each $a\ge2$, parametrize the shell $v_2(x)=a$ by
+$x=2^a(1+2u)$, and put
+\[
+ g_a(u)=\frac{F(2^a(1+2u))-F(2^a)}{2^{3a+1}}.
+\]
+Here \eqref{eq:padic-pairs} again makes $g_a$ an integral isometry of
+$\Ztwo$ onto itself. Its shell image is therefore
+\[
+ F(2^a)+2^{3a+1}\Ztwo=1+2^{3a}\Ztwo^\times,
+\]
+where the last equality follows from
+Proposition~\ref{prop:basepoints}. Reflection gives the shell image
+near $-1$ as $-1+2^{3a}\Ztwo^\times$. Together with the two points
+$0,-1$, these shells and the classes $1,2$ modulo $4$ partition
+$\Ztwo$, proving \eqref{eq:exact-image}.
+
+The two large image balls are $3$ and $13$ modulo $16$, whereas
+the two shell families are $1$ and $15$ modulo $16$. Within either
+family, different $a$ give different valuations relative to its
+center; the centers themselves are excluded. Hence the union is
+disjoint. Each shell image is a ball of measure $2^{-3a-1}$, and
+singletons have measure zero. It follows that
+\[
+ m(F(\Ztwo))=\frac2{16}+2\sum_{a\ge2}2^{-3a-1}
+ =\frac18+\frac1{56}=\frac17.
+\]
+\end{proof}

@@ -14,83 +14,134 @@
 \newcommand{\Ztwo}{\mathbb Z_2}\newcommand{\Qtwo}{\mathbb Q_2}
 \newcommand{\cO}{\mathcal O}\newcommand{\vp}{v_2}
 \newcommand{\vpi}{v_\pi}
-\title{Delannoy valuation laws:\\explicit thresholds and multiplicative differences}
+\title{Delannoy differences:\\exact valuations and the two-adic image}
 \author{C\'esar Augusto Grisa\\{\small Independent Researcher}\\{\small\texttt{cagrisa@id.uff.br}}}
-\date{16 November 2026}
+\date{17 November 2026}
+\pagestyle{myheadings}
+\markright{C. A. Grisa: Delannoy differences}
 \begin{document}
 \maketitle
 \begin{abstract}
-We study exact 2-adic valuations of differences of central Delannoy
-numbers. We present proofs of the valuation conjectures formulated by
-Lengyel, with an explicit threshold for the generic shifted difference
-and a threshold of scale four for the exceptional shifts. A ramified
-constant-term argument gives uniform Mahler bounds and local Taylor
-estimates. An elementary kernel cancellation yields a cubic increment
-congruence, while the remaining cases reduce to eight small exact
-evaluations. We derive a two-point valuation law for positive even
-indices of equal valuation and, as a consequence, a uniform law for
-odd multiplicative changes of an even index. The original finite NEG
-dataset is retained as supplementary evidence, separately from the
-universal proof and from unproved internal assertions about its layers.
+We determine the exact 2-adic valuation of the difference of any two
+distinct central Delannoy numbers. The formula is expressed through the
+valuation of the index difference and those of the products of each
+index with its successor. It gives the valuation conjectures of Lengyel
+and a complete formula for shifted dyadic differences, including the
+small scales. The continuous interpolation on the 2-adic integers is
+injective, has precisely two critical points, and has an explicitly
+described image of Haar measure one seventh. A constant-term argument
+provides uniform Mahler bounds and local analytic estimates. A vanishing
+quadratic kernel and an odd cubic coefficient explain the valuation
+laws. Retaining the quartic term gives a sharper congruence and proves
+the optimality of its uniform cubic precision. Eight small arithmetic
+evaluations complete the low-valuation cases.
 \end{abstract}
 \noindent\textbf{Keywords:} central Delannoy numbers; 2-adic valuations;
-Mahler expansions; supercongruences; explicit thresholds.
+Mahler expansions; supercongruences; two-adic interpolation.
 
 \noindent\textbf{2020 Mathematics Subject Classification:}
 Primary 11B83; Secondary 11B65, 11S80.
 
 
-\section{The valuation law and its scope}
-The central Delannoy numbers, sequence A001850, are given by
+\section{Exact valuations of Delannoy differences}
+The central Delannoy numbers, sequence A001850, are
 \[
 D(N)=\sum_{k=0}^N2^k\binom Nk^2\qquad(N\ge0).
 \]
 Their combinatorial and arithmetic properties are discussed in
 \cite{Sulanke2003,BanderierSchwer2005,Sun2018,Lengyel2021}.
-Lengyel's Conjecture~4 \cite[Conjecture~4]{Lengyel2021} predicts, for
-odd positive $u$ and $n$ sufficiently large, the valuation $3n$ if
-$b=0,-1$ and $n+2v_2(b(b+1))$ otherwise.
-
-\begin{theorem}\label{thm:main}
-Let $b\in\Z$, let $u$ be an odd positive integer, and let $n$ be a
-nonnegative integer. Suppose
-$b+u2^n\ge0$.
-If $b\notin\{0,-1\}$, put $t=v_2(b(b+1))$. Then
+We use $v_2(0)=+\infty$ and put
 \[
-v_2\bigl(D(b+u2^{n+1})-D(b+u2^n)\bigr)=n+2t
-\qquad(n\ge\max\{2,t\}).
+ t_X=v_2(X(X+1));\qquad t_0=+\infty.
 \]
-If $b\in\{0,-1\}$, then
+Our main result classifies all differences, without a parity restriction
+on the indices.
+
+\begin{theorem}[The complete difference law]\label{thm:pairs}
+Let $M,N$ be distinct nonnegative integers, and put $k=v_2(M-N)$.
+Then
 \[
-v_2\bigl(D(b+u2^{n+1})-D(b+u2^n)\bigr)=3n
-\qquad(n\ge2).
+ v_2\bigl(D(M)-D(N)\bigr)=
+ \begin{cases}
+ k+1,&k\le1,\\
+ k+2\min(t_M,t_N),&k\ge2.
+ \end{cases}
 \]
 \end{theorem}
-The condition on the indices is automatic when $b\ge0$ and eventually
-holds for every fixed negative $b$ and positive $u$. Thus the statement
-implies the full sufficiently-large-$n$ assertion of Conjecture~4.
-It does not assert optimal thresholds in every individual case.
-For instance, the generic formula fails at $b=u=1,n=1$:
-$D(5)-D(3)=1620$ has valuation $2$, rather than $3$.
+For example, $D(8)-D(4)=265408=2^6\cdot4147$, where the
+indices have unequal valuations. The theorem gives
+$k+2\min(t_8,t_4)=2+2\cdot2=6$.
+For positive even indices of equal valuation $a$, it reduces to
+$v_2(D(M)-D(N))=v_2(M-N)+2a$. In particular, for an odd
+integer $p>1$ and a positive even integer $n$,
+\[
+ v_2(D(pn)-D(n))=v_2(p-1)+3v_2(n).
+\]
+The multiplier need not be prime.
 
-\paragraph{Relation to recent work.}
-Wang and Zhong \cite[Theorem~3.1]{WangZhong2025} prove
+The proof first establishes the following shifted form.
+\begin{theorem}[All scales of a shifted difference]\label{thm:main}
+Let $b\in\Z$, let $u$ be a positive odd integer, and let $n\ge0$.
+Suppose $b+u2^n\ge0$, and put $t=v_2(b(b+1))$, with
+$t=+\infty$ for $b=0,-1$. Then
+\[
+ v_2\bigl(D(b+u2^{n+1})-D(b+u2^n)\bigr)=
+ \begin{cases}
+ 1,&n=0,\\
+ 2,&n=1,\\
+ n+2\min(n,t),&n\ge2.
+ \end{cases}
+\]
+\end{theorem}
+For fixed $b\ne0,-1$ and $n\ge\max\{2,t\}$, the last
+expression is $n+2t$; at $b=0,-1$ it is $3n$. These are
+the sufficiently-large-scale assertions of Lengyel's
+Conjecture~4 \cite[Conjecture~4]{Lengyel2021}. The minimum also
+describes the range below that threshold. For example, $b=16,u=1,n=2$
+gives valuation $6$, whereas extending $n+2t$ to this case would give
+$10$. The basepoint laws $v_2(D(2^a u)-1)=3a$ and
+$v_2(D(2^a u-1)+1)=3a$, for odd positive $u$ and $a\ge2$,
+are proved separately in Section~\ref{sec:basepoints}. Thus the first
+three conjectures concern deviations from $1$ and $-1$, not just
+differences between two sequence terms.
+
+Theorem~\ref{thm:pairs} also controls the interpolation on $\Ztwo$.
+We show that it is injective, has critical points only at $0,-1$,
+and has an exact image of normalized Haar measure $1/7$
+(Theorem~\ref{thm:image}). A sharper local expansion identifies
+the quartic coefficient and gives the optimal uniform precision of the
+cubic approximation (Proposition~\ref{prop:cubic-t3}).
+
+\paragraph{Relation to earlier work.}
+Lengyel \cite[Conjectures~1--4]{Lengyel2021} formulates the
+valuation problems treated here; his Lemmas~2--3 also settle several
+small congruence classes. Wang and Zhong
+\cite[Theorem~3.1]{WangZhong2025} prove
 $D(2^a+1)\equiv3+2^{a+2}\pmod{2^{2a+2}}$ for $a\ge2$.
-Subtracting consecutive instances already gives the case $b=u=1$
-of the generic formula. The target here is the uniform law for arbitrary
-integer shifts and odd multipliers, with an explicit threshold.
-Recent work on valuations of Legendre polynomial values
-\cite{AlekseyevEtAl2025} addresses a different valuation problem;
-in particular, its prime-divisibility hypotheses do not directly cover
-the present $2$-adic differences at $P_N(3)=D(N)$.
+Subtracting consecutive instances already yields the shifted case
+$b=u=1$. That special case is therefore not a new consequence specific
+to this paper. Our target is the exact difference law for arbitrary
+indices and its consequences for the interpolating function.
+Beukers, Houben and Straub \cite[Example~5.7]{BeukersHoubenStraub2018}
+prove shifted Gauss congruences for the two-variable Delannoy array;
+these give divisibility bounds, rather than the exact difference
+valuations considered here. Alekseyev, Amdeberhan, Shallit and Vukusic
+\cite[Theorem~3]{AlekseyevEtAl2025} determine valuations of Legendre
+polynomial values under prime-divisibility hypotheses. Their results
+include the $3$-adic valuation of $P_N(3)=D(N)$ and address a different
+problem from the $2$-adic differences studied here.
 
-The proof has three parts: analytic control on the four residue classes
-modulo $4$, a cubic increment at larger scales, and a finite table for
-the remaining two valuation types. The basepoint laws and the fourth conjecture are derived first;
-two-point and multiplicative valuation laws follow as corollaries.
-The finite NEG archive records a complementary cancellation mechanism.
-Historical audit reports and the NEG tables are not mathematical premises
-of the universal arguments.
+\paragraph{Organization of the proof.}
+We first prove reflection and local analytic estimates on the four
+classes modulo $4$. A quadratic kernel vanishes, while its cubic
+counterpart is a unit. The quadratic cancellation is already proved by
+Cohen \cite[Lemma~3]{Cohen1999}; we include its proof for completeness.
+Retaining one more coefficient gives the
+cubic and quartic congruences. Four derivative residues and four
+transition residues finish the small-valuation cases. The basepoint
+laws then give Theorem~\ref{thm:main}, followed by the complete pair
+law and the image theorem. The original finite NEG dataset is retained
+only as a supplementary archive, not as a premise of any proof.
 
 \section{Interpolation and reflection}
 Define
@@ -390,9 +441,6 @@ proves the asserted quadratic remainder bound.
 
 
 \section{Local estimates and eight arithmetic evaluations}
-% Self-contained replacement for M3 -> M5a -> M5b assembly.
-% Inputs: reflection and a_j in 2^{j+3} Z_2 for A and H, proved in M3.
-% Mathematical improvement independently derived 20 October 2026.
 
 \begin{lemma}[Local analytic control]\label{lem:local-control}
 For each $r\in\{0,1,2,3\}$ write
@@ -523,8 +571,6 @@ Lemma~\ref{lem:four-transitions}.
 \end{proof}
 
 \section{An elementary cubic increment}
-% Self-contained replacement for the original M2/M4 arguments.
-% Uses only amsmath, amssymb, amsthm and ordinary theorem environments.
 
 \begin{lemma}[Elementary kernel cancellation]\label{lem:elementary-kernels}
 Put
@@ -534,7 +580,8 @@ Put
  \Sigma=\sum_{k\ge1}\frac{2^kH_{k-1}}{k^2},\qquad\nu=-2\Sigma.
 \]
 These series converge in $\mathbb Q_2$, and
-$K=0$ and $\nu\in\mathbb Z_2^\times$.
+$K=0$ and $\nu\in\mathbb Z_2^\times$. The identity $K=0$ is
+Cohen's dilogarithm cancellation \cite[Lemma~3]{Cohen1999}.
 \end{lemma}
 \begin{proof}
 Write
@@ -577,92 +624,165 @@ $2^a+1-3a\ge5$ for $a\ge4$.
 Thus $\nu=-\sum_kT_k\equiv1\pmod2$.
 \end{proof}
 
-\begin{proposition}[Cubic increment from scale eight]\label{prop:cubic-t3}
-Let
-$F(z)=\sum_{k\ge0}2^k\binom zk^2$ for $z\in\mathbb Z_2$.
-For integers $x\ne y$ and $t\ge3$, put
-$q=2^t$ and $c=v_2(y-x)$.  Then
+Put
 \[
- F(qy)-F(qx)
- \equiv\nu q^3(y^3-x^3)\pmod{2^{3t+c+1}}.
+ H_j^{(2)}=\sum_{i=1}^j\frac1{i^2},\qquad H_0^{(2)}=0,
+ \qquad
+ \mu=\sum_{k\ge1}\frac{2^k}{k^2}
+       \left(2H_{k-1}^2-H_{k-1}^{(2)}\right).
 \]
+The constants $K$ and $\nu$ retain the definitions in
+Lemma~\ref{lem:elementary-kernels}.
+
+\begin{proposition}[Cubic and quartic increments]\label{prop:cubic-t3}
+The series defining $\mu$ converges in $\Qtwo$, and $v_2(\mu)=-1$.
+For distinct integers $x,y$ and $t\ge3$, put $q=2^t$ and
+$c=v_2(y-x)$. Then
+\begin{align}
+ F(qy)-F(qx)
+ &\equiv\nu q^3(y^3-x^3)
+          \pmod{2^{4t+c-1}},\label{eq:sharpened-cubic}\\
+ F(qy)-F(qx)
+ &\equiv\nu q^3(y^3-x^3)+\mu q^4(y^4-x^4)
+          \pmod{2^{5t+c-4}}.\label{eq:quartic-increment}
+\end{align}
+Both statements allow either sign of $x$ and $y$.
 \end{proposition}
 \begin{proof}
-Use the cutoff $Q=2^{t+1}$.
-For $2\le k<Q$, write
+For $k\ge2$, write
 \[
  R_k(X)=\prod_{j=1}^{k-1}(1-X/j)^2
-        =\sum_{m=0}^{2k-2}e_{k,m}X^m,
+       =\sum_{m=0}^{2k-2}e_{k,m}X^m,
  \qquad L_k=\lfloor\log_2(k-1)\rfloor.
 \]
-Each factor has degree-$d$ coefficient of valuation at least $-dL_k$;
-hence $v_2(e_{k,m})\ge-mL_k$.
-Also $e_{k,0}=1$, $e_{k,1}=-2H_{k-1}$ and
+The coefficients satisfy
 \[
- 2^k\binom{qz}{k}^2=q^2z^2\frac{2^k}{k^2}R_k(qz).
+ v_2(e_{k,m})\ge-mL_k,\qquad
+ e_{k,0}=1,\quad e_{k,1}=-2H_{k-1},\quad
+ e_{k,2}=2H_{k-1}^2-H_{k-1}^{(2)}.
 \]
-For every $t\ge3$ and $k\ge2$,
+Indeed, each selected factor of degree $d$ has valuation at least
+$-dL_k$. The formula for $e_{k,2}$ follows by collecting its squared
+linear terms and its quadratic terms. For all $k\ge1$,
 \[
- t+k-2v_2(k)-2L_k\ge1.                         \tag{*}
+ 2^k\binom{qz}{k}^2=q^2z^2\frac{2^k}{k^2}R_k(qz),
 \]
-For $L_k=0,1,2$ the minimum is $t-2$.
-If $L=L_k\ge3$ and $2^L<k<2^{L+1}$, then
-$v_2(k)\le L-1$, giving the lower bound
-$t+2^L+3-4L\ge t-1\ge2$.
-If $k=2^{L+1}$, the expression is
-$t+2^{L+1}-4L-2\ge t+2$.
+where $R_1=1$.
 
-Since $L_k\le t$ for $k<Q$, the degree-$m$ part with $m\ge2$
-of the difference has valuation at least
+The $k$th summand of $\mu$ has valuation at least
 \[
- 3t+c+[t+k-2v_2(k)-2L_k]+(m-2)(t-L_k)
- \ge3t+c+1.
+ k-2v_2(k)-2L_k\qquad(k\ge2).
 \]
-Here $y^{m+2}-x^{m+2}$ is divisible by $y-x$.
-The $k=1$ term is exactly $2q^2(y^2-x^2)$, so including it yields
+This bound tends to infinity, proving convergence. The sum through
+$k=8$ is
 \[
+ \sum_{k=1}^8\frac{2^k}{k^2}
+       \left(2H_{k-1}^2-H_{k-1}^{(2)}\right)
+       =\frac{4352977}{39690},
+\]
+of valuation $-1$. For $k=9,\ldots,16$, the displayed lower bounds
+are respectively $3,2,5,2,7,6,9,2$.
+For larger $k$, let $a=\lfloor\log_2k\rfloor\ge4$.
+At $k=2^a$ the lower bound is $2^a-4a+2\ge2$;
+between consecutive powers of two it is at least
+$2^a-4a+3\ge3$. These bounds increase with $a$.
+Thus every term after the eighth belongs to $4\Ztwo$, and
+$v_2(\mu)=-1$.
+
+Use the cutoff $Q=2^{t+1}$. For every $k\ge2$,
+\begin{equation}\label{eq:quartic-degree-bound}
+ k-2v_2(k)-3L_k\ge-4.
+\end{equation}
+For $2\le k\le8$, this follows by direct substitution.
+If $L=L_k\ge3$ and $2^L<k<2^{L+1}$, then
+$v_2(k)\le L-1$, and the left side is at least
+$2^L+3-5L\ge-4$. At $k=2^{L+1}$ it equals
+$2^{L+1}-5L-2\ge-1$. Both dyadic lower bounds increase for $L\ge3$.
+
+For $k<Q$ we have $L_k\le t$. Since $y^d-x^d$ is divisible by
+$y-x$ for every positive integer $d$, the degree-$m$ term, $m\ge3$,
+in the difference of the two products has valuation at least
+\[
+ (m+2)t+k-2v_2(k)-mL_k+c
+ =5t+c+[k-2v_2(k)-3L_k]+(m-3)(t-L_k)
+ \ge5t+c-4.
+\]
+Retaining the terms of degrees zero, one and two in $R_k$ therefore gives
+\begin{align*}
  \sum_{1\le k<Q}2^k
   \left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]
- \equiv q^2K_{<Q}(y^2-x^2)
-       -2q^3\Sigma_{<Q}(y^3-x^3)
-       \pmod{2^{3t+c+1}},
-\]
-where $K_{<Q}=\sum_{1\le k<Q}2^k/k^2$ and
-$\Sigma_{<Q}=\sum_{1\le k<Q}2^kH_{k-1}/k^2$.
+ &\equiv q^2K_{<Q}(y^2-x^2)
+       +q^3\nu_{<Q}(y^3-x^3)\\
+ &\hspace{1em}+q^4\mu_{<Q}(y^4-x^4)
+       \pmod{2^{5t+c-4}},
+\end{align*}
+where the subscript denotes truncation to $1\le k<Q$.
 
-For the quadratic kernel tail, with $a=\lfloor\log_2k\rfloor\ge t+1$,
+We next justify replacing all three finite kernels by their limits.
+For $k\ge Q$, write $a=\lfloor\log_2k\rfloor\ge t+1$.
+The dyadic lower bounds for the quadratic, cubic and quartic
+kernel terms, after multiplication by their powers of $q$, are
+respectively
 \[
- v_2(q^2 2^k/k^2)\ge2t+2^a-2a\ge Q-2.
+ 2t+2^a-2a,\qquad
+ 3t+2+2^a-3a,\qquad
+ 4t+2+2^a-4a.
 \]
-The last expression increases with $a$ since its successive difference
-is $2^a-2>0$.
-For the cubic kernel tail, at $k=2^a$ the elementary bound is
-$3t+2+2^a-3a\ge Q-1$; between consecutive powers of two
-it is at least two larger.  Again the dyadic minimum increases,
-as its successive difference is $2^a-3>0$.
+For the latter two bounds, use $L_k=a-1$ at $k=2^a$;
+between consecutive powers of two the bounds are at least two and
+one larger, respectively. Each displayed expression increases with
+$a\ge t+1\ge4$. At $a=t+1$, the three values are $Q-2,Q-1,Q-2$.
 Consequently
 \[
- q^2(K-K_{<Q})\in2^{Q-2}\mathbb Z_2,
- \qquad
- 2q^3(\Sigma-\Sigma_{<Q})\in2^{Q-1}\mathbb Z_2.
+ q^2(K-K_{<Q})\in2^{Q-2}\Ztwo,\quad
+ q^3(\nu-\nu_{<Q})\in2^{Q-1}\Ztwo,\quad
+ q^4(\mu-\mu_{<Q})\in2^{Q-2}\Ztwo.
 \]
-After multiplication by the respective power differences, each bound
-gains $c$.  Since $Q-2=2^{t+1}-2\ge3t+1$ for $t\ge3$,
-the finite kernels can be replaced by $K$ and $\Sigma$.
+Multiplication by the corresponding power differences gains $c$.
 
-Finally, generalized binomial coefficients at integer arguments are
-integers, including negative arguments.  Vandermonde's identity and
-$\binom{q(y-x)}j=\frac{q(y-x)}j\binom{q(y-x)-1}{j-1}$ give
+It remains to control the binomial tail. Generalized binomial
+coefficients at integer arguments are integers, including at negative
+arguments. Vandermonde's identity and
 \[
- v_2\left(2^k\left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]\right)
+ \binom{q(y-x)}j=\frac{q(y-x)}j\binom{q(y-x)-1}{j-1}
+\]
+give
+\[
+ v_2\!\left(\binom{qy}{k}-\binom{qx}{k}\right)
+ \ge t+c-\lfloor\log_2k\rfloor.
+\]
+Factoring the difference of the squares yields
+\[
+ v_2\!\left(2^k\left[\binom{qy}{k}^2-\binom{qx}{k}^2\right]\right)
  \ge k+t+c-\lfloor\log_2k\rfloor
  \ge Q+c-1\qquad(k\ge Q).
 \]
-The function $k-\lfloor\log_2k\rfloor$ is nondecreasing.
-The high-index sum therefore lies in
-$2^{Q+c-1}\mathbb Z_2\subseteq2^{3t+c+1}\mathbb Z_2$.
-Using $K=0$ and $\nu=-2\Sigma$ finishes the proof.
+Here $k-\lfloor\log_2k\rfloor$ is nondecreasing.
+Since $Q-2=2^{t+1}-2\ge5t-4$ for $t\ge3$, all replacement errors
+and the binomial tail belong to $2^{5t+c-4}\Ztwo$.
+The identity $K=0$ from Lemma~\ref{lem:elementary-kernels}
+now proves \eqref{eq:quartic-increment}.
+
+Finally, $v_2(\mu)=-1$ and divisibility of $y^4-x^4$ by $y-x$
+place the quartic term in $2^{4t+c-1}\Ztwo$.
+As $5t-4\ge4t-1$ for $t\ge3$,
+\eqref{eq:sharpened-cubic} follows as well.
 \end{proof}
+
+\begin{remark}[Sharpness of the cubic precision]\label{rem:cubic-sharpness}
+For $t\ge4$, take $x=0$ and $y=1$ in
+\eqref{eq:quartic-increment}. The quartic term has valuation exactly
+$4t-1$, whereas the remaining error has valuation at least
+$5t-4>4t-1$. Hence
+\[
+ v_2\bigl(F(2^t)-1-\nu2^{3t}\bigr)=4t-1\qquad(t\ge4).
+\]
+Thus the exponent in \eqref{eq:sharpened-cubic} cannot be increased
+uniformly without retaining another term. Relative to the modulus
+$2^{3t+c+1}$ needed for the valuation argument, it supplies
+$t-2$ additional binary digits.
+\end{remark}
+
 
 \begin{corollary}[Odd-base valuation]\label{cor:odd-base-t3}
 For $t\ge3$, odd $r\in\mathbb Z$, and nonzero $s\in\mathbb Z$,
@@ -678,7 +798,7 @@ and the error has strictly larger valuation.
 \end{proof}
 
 
-\section{Basepoint valuations and the first three conjectures}
+\section{Basepoint valuations and the first three conjectures}\label{sec:basepoints}
 \begin{proposition}[Valuations at zero and minus one]\label{prop:basepoints}
 For every odd integer $u$ and every $a\ge2$,
 \[
@@ -744,9 +864,9 @@ The degenerate value $m=0$ in the last formula can be included only
 with the extended convention $v_2(0)=+\infty$.
 \end{proof}
 
-\section{Assembly and the exceptional shifts}
+\section{Proof of the shifted law at every scale}
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-First suppose $b\notin\{0,-1\}$, and put $t=v_2(b(b+1))$.
+For $n\ge2$ and $t\le n$, first suppose $b\ne0,-1$.
 For $t=1,2$, Proposition~\ref{prop:low-eight-checks} proves the claim
 for $F$ on $\Ztwo$. For $t\ge3$, set $q=2^t$ and
 $s=u2^{n-t}$, so $s$ is a nonzero integer.
@@ -773,31 +893,87 @@ For $b=-1$, use the two deviations from $-1$ furnished by the same
 proposition; their valuations are again $3n+3$ and $3n$.
 In each case, adding an error of strictly higher valuation preserves
 the valuation of the main term: $B+E=B(1+E/B)$ with $E/B\in2\Ztwo$.
+It remains to cover finite $t>n\ge2$ and the two small scales.
+If $b$ is even, put $X=b+u2^n$ and $Y=b+u2^{n+1}$.
+Then $v_2(X)=n$, while $v_2(Y)>n$ or $Y=0$.
+The basepoint law gives valuations $3n$ and strictly greater than
+$3n$ for $F(X)-1,F(Y)-1$. Their difference has valuation $3n$.
+If $b$ is odd, apply the same argument to $X+1,Y+1$ and
+the deviations $F(X)+1,F(Y)+1$. In both cases the basepoint
+law permits signed arguments and the zero deviation has infinite
+valuation. This proves the branch $n+2\min(n,t)=3n$.
+
+For every nonnegative integer $j$, the binomial sum gives
+\[
+ D(j)\equiv1+2j^2+4\binom j2^2\equiv2j+1\pmod8.
+\]
+For the second congruence the difference is
+$j(j-1)(j(j-1)+2)=4A(A+1)$, with $A=j(j-1)/2$, and is
+divisible by $8$. Two admissible indices differing by odd $u$ therefore
+have difference of valuation $1$; if they differ by $2u$, the valuation
+is $2$. These are precisely $n=0,1$.
 Finally $F$ agrees with $D$ at both indices, which are nonnegative
 by the hypothesis of the theorem.
 \end{proof}
 
 
-\section{Two-point and multiplicative valuation laws}
+\section{The complete pair law and multiplicative differences}
+\begin{proof}[Proof of Theorem~\ref{thm:pairs}]
+Lemma~\ref{lem:local-control} gives
+\[
+ F(4u+r)\equiv D(r)\pmod{16}
+ \qquad(u\in\Ztwo,\ 0\le r\le3).
+\]
+The four residues are $1,3,13,15$, respectively. If $k=0$, the
+indices have different parity, and their values differ by $2$ modulo
+$4$. If $k=1$, they have the same parity and different residues modulo
+$4$, and their values differ by $4$ modulo $8$. These observations give
+the first branch of the formula.
+
+Suppose $k\ge2$. Then $M,N$ have the same residue modulo $4$.
+First suppose $t_M=t_N=t$. The value $t$ is finite: the only
+nonnegative integer with infinite $t_X$ is $X=0$, and the indices are
+distinct. If the indices are even, their quotients by $2^t$ are odd;
+if they are odd, the same is true of $(M+1)/2^t$ and $(N+1)/2^t$.
+Consequently $k\ge t+1$. After interchanging the indices, assume
+$M>N$, and write
+\[
+ h=M-N=U2^k,\qquad B=2N-M=N-h,
+\]
+where $U$ is positive and odd. Since $k>t$, subtracting $h$ preserves
+the valuation of the even member of $N,N+1$. Thus
+$v_2(B(B+1))=t$, in particular $B\ne0,-1$. Moreover,
+\[
+ B+U2^k=N\ge0,\qquad B+U2^{k+1}=M.
+\]
+Theorem~\ref{thm:main}, in its range $k\ge\max\{2,t\}$, now gives
+$v_2(D(M)-D(N))=k+2t$.
+
+If $t_M\ne t_N$, put $a=\min(t_M,t_N)$. The common residue modulo
+$4$ must be $0$ or $3$, since in the other two classes both $t$-values
+are $1$. Hence $a\ge2$. The two even quantities, either $M,N$ or
+$M+1,N+1$, have unequal valuations, so $k=a$. In the even case,
+Proposition~\ref{prop:basepoints} gives
+\[
+ v_2(D(M)-1)=3t_M,\qquad v_2(D(N)-1)=3t_N,
+\]
+with $v_2(D(0)-1)=+\infty$ when one index is zero. Subtraction of
+terms of unequal valuations gives $3a$. In the odd case the same
+argument uses $D(M)+1$ and $D(N)+1$. Thus in both cases the valuation
+is $3a=k+2\min(t_M,t_N)$, as required.
+\end{proof}
+
+
 \begin{corollary}[Two even indices of the same valuation]\label{cor:two-point}
 Let $M,N$ be distinct positive even integers with
 $v_2(M)=v_2(N)=a$. Then
 \[
-v_2\bigl(D(M)-D(N)\bigr)=v_2(M-N)+2a.
+ v_2(D(M)-D(N))=v_2(M-N)+2a.
 \]
 \end{corollary}
 \begin{proof}
-Exchange $M,N$ if necessary so that $M>N$. Put
-$h=M-N=U2^k$ with $U$ positive odd and $k=v_2(M-N)$.
-Since $M/2^a$ and $N/2^a$ are odd, $k\ge a+1\ge2$.
-Set $B=2N-M$. Then $v_2(B)=a$, $B+1$ is odd, and
-$B\notin\{0,-1\}$. In particular $v_2(B(B+1))=a$.
-Moreover
-\[
-B+U2^k=N>0,\qquad B+U2^{k+1}=M>0.
-\]
-Theorem~\ref{thm:main} applies because $k\ge\max\{2,a\}$ and gives
-the required valuation $k+2a$.
+Here $t_M=t_N=a$ and $v_2(M-N)\ge a+1\ge2$.
+Apply Theorem~\ref{thm:pairs}.
 \end{proof}
 
 \begin{corollary}[Global even multiplier law]\label{cor:multiplier}
@@ -814,86 +990,158 @@ $v_2(pn-n)=a+s$. Corollary~\ref{cor:two-point} gives
 $(a+s)+2a=s+3a$.
 \end{proof}
 
-\begin{remark}[The explicit bridge to the NEG target]\label{rem:neg-bridge}
-Writing $n=2^a u$ and $p-1=2^s q$ with $u,q$ odd, the direct
-substitution in Theorem~\ref{thm:main} is
+\section{The interpolating function and its image}\label{sec:image}
+Write $\Ztwo^\times$ for the odd $2$-adic integers. Let $m$ denote
+additive Haar measure on $\Ztwo$, normalized by $m(\Ztwo)=1$.
+
+\begin{theorem}\label{thm:image}
+The function $F:\Ztwo\longrightarrow\Ztwo$ is injective. Its only
+critical points are $0$ and $-1$, and
 \[
-B=(2-p)n,\qquad k=a+s,\qquad U=qu.
+ v_2(F'(x))=2v_2(x(x+1))\qquad(x\in\Ztwo\setminus\{0,-1\}).
 \]
-Here $B+U2^k=n$, $B+U2^{k+1}=pn$, and
-$v_2(B(B+1))=a$. Since $a,s\ge1$, $k\ge\max\{2,a\}$.
-The negative-shift part of the theorem is essential when $p>1$.
-An unspecified sufficiently-large-scale assertion would not justify
-this substitution uniformly, because $B$ varies with the parameters.
-For example, $p=3,n=2$ gives
-$D(6)-D(2)=8976=2^4\cdot561$, consistent with $1+3=4$.
-\end{remark}
+The zeros of $F(x)-1$ at $0$ and of $F(x)+1$ at $-1$ have order
+three, with unit leading Taylor coefficients. The image is the
+disjoint union
+\begin{align}
+ F(\Ztwo)={}&\{1,-1\}\ \cup\ (3+16\Ztwo)\ \cup\ (13+16\Ztwo)
+ \notag\\
+ &{}\cup\bigcup_{a\ge2}
+ \left[(1+2^{3a}\Ztwo^\times)\ \cup\
+       (-1+2^{3a}\Ztwo^\times)\right].\label{eq:exact-image}
+\end{align}
+In particular, $m(F(\Ztwo))=1/7$.
+\end{theorem}
+\begin{proof}
+First extend Theorem~\ref{thm:pairs} to distinct $x,y\in\Ztwo$.
+Set $k=v_2(x-y)$ and $t_z=v_2(z(z+1))$, with
+$t_0=t_{-1}=+\infty$. Choose nonnegative integers $M_j\to x$ and
+$N_j\to y$. For sufficiently large $j$, $v_2(M_j-N_j)=k$. If
+$k\ge2$, at least one of $t_x,t_y$ is finite, since the distinct
+roots $0,-1$ differ by an odd number. The minimum of the two
+$t$-values therefore also stabilizes: a finite value is locally
+constant, and the $t$-value of an approximating sequence tending to
+a root tends to infinity. The integer formula and continuity of $F$
+give
+\begin{equation}\label{eq:padic-pairs}
+ v_2(F(x)-F(y))=
+ \begin{cases}
+ k+1,& k\le1,\\
+ k+2\min(t_x,t_y),& k\ge2.
+ \end{cases}
+\end{equation}
+Indeed, a convergent sequence all of whose terms lie in
+$2^e\Ztwo^\times$ has its limit in that same closed set. The
+right-hand side is finite, so $F$ is injective.
+
+Lemma~\ref{lem:local-control} gives local analyticity on all four
+residue classes. For $x\ne0,-1$, let $t=v_2(x(x+1))$. Whenever
+$v_2(h)>t$ and $v_2(h)\ge2$, one has $t_{x+h}=t$. Applying
+\eqref{eq:padic-pairs} and dividing by $h$ yields
+\[
+ v_2\left(\frac{F(x+h)-F(x)}{h}\right)=2t.
+\]
+As $h\to0$, the quotients stay in the closed set
+$2^{2t}\Ztwo^\times$, proving the derivative formula. At $x=0$ or
+$-1$, the pair formula instead gives
+\[
+ v_2(F(x+h)-F(x))=3v_2(h)\qquad(v_2(h)\ge2).
+\]
+The corresponding difference quotients tend to zero. Thus these are
+exactly the critical points. To identify the order at either point,
+take the first nonzero coefficient in its local Taylor series. For
+sufficiently large $v_2(h)$, that term controls the valuation of the
+series. The displayed equality forces its degree to be $3$ and its
+coefficient to be a unit.
+
+We next determine the image. We use the elementary fact that every
+isometry $g:\Ztwo\to\Ztwo$ is onto. For each $j\ge1$, the induced
+map modulo $2^j$ is an injection of a finite set into itself, hence a
+permutation. For any target, its nonempty inverse congruence classes
+form nested compact subsets of $\Ztwo$; their intersection contains a
+preimage.
+
+For $r=1,2$, define
+\[
+ g_r(u)=\frac{F(4u+r)-F(r)}{16}\qquad(u\in\Ztwo).
+\]
+The local coefficient bound makes this integral. Both arguments in
+each difference have $t$-value $1$, so \eqref{eq:padic-pairs} gives
+\[
+ v_2(g_r(u)-g_r(v))=v_2(u-v).
+\]
+Thus $g_r$ is onto. Since $F(1)=3$ and $F(2)=13$, the images of
+$1+4\Ztwo$ and $2+4\Ztwo$ are exactly the two balls in
+\eqref{eq:exact-image}.
+
+For each $a\ge2$, parametrize the shell $v_2(x)=a$ by
+$x=2^a(1+2u)$, and put
+\[
+ g_a(u)=\frac{F(2^a(1+2u))-F(2^a)}{2^{3a+1}}.
+\]
+Here \eqref{eq:padic-pairs} again makes $g_a$ an integral isometry of
+$\Ztwo$ onto itself. Its shell image is therefore
+\[
+ F(2^a)+2^{3a+1}\Ztwo=1+2^{3a}\Ztwo^\times,
+\]
+where the last equality follows from
+Proposition~\ref{prop:basepoints}. Reflection gives the shell image
+near $-1$ as $-1+2^{3a}\Ztwo^\times$. Together with the two points
+$0,-1$, these shells and the classes $1,2$ modulo $4$ partition
+$\Ztwo$, proving \eqref{eq:exact-image}.
+
+The two large image balls are $3$ and $13$ modulo $16$, whereas
+the two shell families are $1$ and $15$ modulo $16$. Within either
+family, different $a$ give different valuations relative to its
+center; the centers themselves are excluded. Hence the union is
+disjoint. Each shell image is a ball of measure $2^{-3a-1}$, and
+singletons have measure zero. It follows that
+\[
+ m(F(\Ztwo))=\frac2{16}+2\sum_{a\ge2}2^{-3a-1}
+ =\frac18+\frac1{56}=\frac17.
+\]
+\end{proof}
+
 
 \section{Finite arithmetic and reproducibility}
-The only finite evaluations required by the proof are the four derivative
-residues and four transition residues displayed in the two tables.
-They are direct evaluations of a finite binomial sum and involve indices
-at most $36$. Thus the written proof can be checked without a large
-computation or access to an external archive.
-The accompanying file \texttt{eight\_checks.py} recomputes all eight
-entries using exact integers. A separate modular script tests the
-cubic congruence for $8{,}832$ signed pairs and scales $3\le t\le8$;
-these additional checks corroborate the estimates and are not substitutes
-for their universal proofs. The original million-class transition
-certificate is no longer needed by this revision.
+The only finite evaluations used to complete the valuation proof are
+the four derivative and four transition residues displayed in the two
+tables, all at indices at most $36$. They are direct binomial sums.
+The rational evaluation of the first eight terms of the quartic kernel
+is also given explicitly; the remaining terms are controlled by
+uniform bounds. No large computation is a premise of the proofs.
 
+Supplementary exact checks include all $524{,}800$ pairs
+$0\le N<M\le1024$, $148{,}854$ admissible shifted differences,
+and $252$ pairs for both refined congruences up to index $4096$.
+A separate check evaluates $1{,}710$ signed pairs directly by generalized
+binomial sums modulo $2^{80}$, at scales $3$ through $12$.
+The image residues agree with Theorem~\ref{thm:image} through modulus
+$2^{16}$. These checks corroborate the proofs and do not replace them.
+The scripts and reports accompany the preprint at
+\url{https://github.com/cagrisa-creator/delannoy-valuation-laws}.
 
-\section{The archived finite NEG data}\label{sec:neg-archive}
-The accompanying archive \texttt{NEG\_original.zip} preserves the
-submitted finite dataset and its reports. Its target formula is exactly
-Corollary~\ref{cor:multiplier}. The archived section decomposes a
-truncated sum into terms with negative and nonnegative valuation margins
-relative to $w=v_2(p-1)+3v_2(n)$. In this terminology, NEG refers to
-negative margins of summands, not to negative Delannoy indices.
+\appendix
+\section{The supplementary finite NEG archive}\label{sec:neg-archive}
+The original file \texttt{NEG\_original.zip} is preserved unchanged.
+It records a finite decomposition related to the multiplier formula,
+where NEG means negative valuation margins of summands, not negative
+Delannoy indices. The CSV and JSON agree on $11{,}858$ distinct states
+representing $13{,}552$ NEG cases. The reported full sample comprises
+$104{,}448$ parameter tuples, but only the NEG state records are supplied.
+The actual table has $a\ge7$, finitely many $a\le64$, and $s\le12$.
 
-The report describes $104{,}448$ sampled parameter tuples and
-$13{,}552$ NEG cases. Its CSV and JSON contain $11{,}858$ distinct
-keys of the form
-\[
-(p\bmod8,\ s,\ a,\ q\bmod256,\ u\bmod128).
-\]
-An archive-consistency check confirms agreement between those two tables,
-the NEG multiplicity total, the stored ladder lengths, and the terminal
-pair $(-1,0)$ in every recorded ladder. The full sampling total is
-reported by the archive; only the NEG state records are supplied.
-The archived generation parameters have $s\le12$ and a finite list
-of exponents $a\le64$. The actual NEG table has $a\ge7$.
-
-The package does not include the program that generated the terms,
-their complete formulas, a proof of reduction to all residue states,
-or a written proof of its claimed tail bound. In particular, the key
-retains the unbounded parameters $a,s$ exactly. Internal consistency
-of the stored ladders is therefore distinct from a universal proof of
-their dependence on the key.
-
-The archived summands are not identified with the harmonic-kernel terms
-defined earlier. Some cumulative valuations rise and then fall. For
-example, one stored ladder contains the consecutive pairs
-\[
-(-3,1),\quad(-2,-1),\quad(-1,0).
-\]
-The terminal pair therefore does not assert monotonicity.
-
-The role of this archive in the unified paper is supplementary:
-Corollary~\ref{cor:multiplier} proves the total valuation law for all
-the stated even indices and odd multipliers, including parameters
-outside the finite sample, without invoking the NEG decomposition.
-It does not by itself prove the separate valuation of each block,
-the determinism of every unobserved ladder, or the archived tail claim.
-Those internal statements require their own definitions and proofs.
-
-\paragraph{Reproduction files.}
-\texttt{check\_joined\_claims.py} tests the added basepoint,
-exceptional, two-point, and multiplier consequences by exact integer
-arithmetic and tests additional large parameters modularly.
-\texttt{verify\_NEG\_archive.py} checks only archive integrity and
-cross-table consistency. Its JSON report explicitly distinguishes
-these checks from regeneration of the original mathematical computation.
+The archive does not include its term generator, complete block
+definitions, a uniform state reduction, or a proof of its tail claim.
+Its stored ladders end at $(-1,0)$, but cumulative valuations need not
+increase monotonically: one ladder contains $(-3,1),(-2,-1),(-1,0)$.
+Consequently an integrity check of the archive is distinct from a
+universal proof of its internal assertions. Theorems~\ref{thm:pairs}
+and~\ref{thm:main} and the multiplier corollary establish total
+valuation formulas without using the archived decomposition.
+The script \texttt{verify\_NEG\_archive.py} checks only its internal
+integrity and cross-table consistency. Historical reports remain
+available in earlier releases of the archive.
 
 \begin{thebibliography}{10}
 \small
@@ -905,6 +1153,15 @@ arXiv:2505.08935 (2025),
 \bibitem{BanderierSchwer2005}
 C. Banderier and S. Schwer, Why Delannoy numbers?,
 \emph{J. Statist. Plann. Inference} \textbf{135} (2005), 40--54.
+\bibitem{BeukersHoubenStraub2018}
+F. Beukers, M. Houben, and A. Straub,
+Gauss congruences for rational functions in several variables,
+\emph{Acta Arith.} \textbf{184} (2018), 341--362,
+\url{https://doi.org/10.4064/aa170614-13-7}.
+\bibitem{Cohen1999}
+H. Cohen, On the $2$-adic valuations of the truncated polylogarithm series,
+\emph{Fibonacci Quart.} \textbf{37} (1999), 117--121,
+\url{https://www.fq.math.ca/Scanned/37-2/cohen.pdf}.
 \bibitem{Lengyel2021}
 T. Lengyel, On some $p$-adic properties and supercongruences of Delannoy
 and Schr\"oder numbers, \emph{INTEGERS} \textbf{21} (2021), A86,

@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-17",
+  "sources": [
+    {
+      "authors": "T. Lengyel",
+      "year": 2021,
+      "title": "On some p-adic properties and supercongruences of Delannoy and Schr�der numbers",
+      "url": "https://math.colgate.edu/~integers/v86/v86.pdf",
+      "location": "Conjectures 1�4, pp. 4�5; Lemmas 2�3; Theorem 3",
+      "overlap": "Formulates the exact basepoint and shifted-difference conjectures and settles low congruence classes. Direct problem source, not a prior proof of the full conjectures."
+    },
+    {
+      "authors": "R.-H. Wang; M. X. X. Zhong",
+      "year": 2025,
+      "title": "Congruences for sums of Delannoy numbers and polynomials; published title includes Legendre polynomials",
+      "url": "https://arxiv.org/html/2505.05728v1",
+      "doi": "10.1142/S1793042126500442",
+      "location": "Theorem 3.1 in consulted preprint, equations (3.4)�(3.5)",
+      "overlap": "Gives the D(2^a+1) congruence whose consecutive differences imply the b=u=1 case. This case must be credited as already known. Does not state our arbitrary-index pair classification or exact interpolant image."
+    },
+    {
+      "authors": "M. A. Alekseyev; T. Amdeberhan; J. Shallit; I. Vukusic",
+      "year": 2025,
+      "title": "On the p-adic valuations of values of Legendre polynomials",
+      "url": "https://arxiv.org/html/2505.08935v1",
+      "location": "Theorems 3�6 and Corollary 7",
+      "overlap": "Theorem 3 assumes v_p(r)>=1. The p=3, r=3 case treats valuations of D(N) itself. This is distinct from v2 of differences at argument 3; v2(3)=0 does not satisfy that hypothesis."
+    },
+    {
+      "authors": "F. Beukers; M. Houben; A. Straub",
+      "year": 2018,
+      "title": "Gauss congruences for rational functions in several variables",
+      "url": "https://cosicdatabase.esat.kuleuven.be/backend/publications/files/journal/3664",
+      "doi": "10.4064/aa170614-13-7",
+      "location": "Theorem 5.6 and Example 5.7",
+      "overlap": "Proves shifted Gauss divisibility congruences for the two-variable Delannoy array at all primes. Example 5.7 does not give the exact full pair valuations or the interpolant image."
+    },
+    {
+      "authors": "Z.-W. Sun",
+      "year": 2018,
+      "title": "Arithmetic properties of Delannoy numbers and Schr�der numbers",
+      "url": "https://arxiv.org/pdf/1602.00574",
+      "location": "Introduction, Theorems 1.1�1.2, generalized polynomial arithmetic",
+      "overlap": "Foundational congruence and polynomial arithmetic. The specific statements consulted concern identities and sums/products, rather than the complete arbitrary-index difference law or the Haar measure of its interpolation."
+    }
+  ],
+  "search_queries": [
+    "Delannoy Lengyel Conjecture 4",
+    "Delannoy 2-adic differences",
+    "Delannoy Haar measure",
+    "Delannoy interpolation 2-adic",
+    "Delannoy 2-adic valuation Lengyel conjectures proof",
+    "Delannoy numbers 2-adic interpolation differences valuations 2025 2026",
+    "Delannoy valuation differences",
+    "Delannoy trilogarithm",
+    "Delannoy injective p-adic",
+    "Delannoy Gauss congruences Beukers Houben Straub",
+    "Delannoy 1/7 valuation",
+    "Delannoy critical points 2-adic",
+    "Lengyel Delannoy conjectures solved"
+  ],
+  "conclusion": "No equivalent full pair law, exact image of Haar measure 1/7, or sharp cubic/quartic increment formula was located in the specifically consulted works and searches. This is a bounded literature check, not proof of universal novelty.",
+  "known_overlap": "The shifted b=u=1 case follows from Wang�Zhong Theorem 3.1 and is explicitly credited.",
+  "candidate_contributions": [
+    "Complete arbitrary-index difference classification",
+    "Exact 2-adic image, injectivity and critical points",
+    "Refined cubic and quartic congruences with uniform cubic sharpness"
+  ],
+  "limitations": [
+    "Search indexing can miss papers and unpublished work",
+    "Equivalent statements may use different notation",
+    "No specialist priority certification or independent human refereeing"
+  ]
+}

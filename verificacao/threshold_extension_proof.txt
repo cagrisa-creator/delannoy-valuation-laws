@@ -1,0 +1,69 @@
+FULL DYADIC-SCALE CLASSIFICATION: PROVED CONSEQUENCE OF THE SUBMITTED RESULTS
+
+Notation: D(N)=sum_{k=0}^N 2^k binom(N,k)^2. Let b be an integer,
+u a positive odd integer, n>=0, and assume b+u*2^n>=0. Set
+t=v2(b(b+1)), using t=+infinity if b=0 or b=-1.
+
+Then the proposed strengthened statement is
+
+v2(D(b+u*2^(n+1))-D(b+u*2^n)) =
+    1                        if n=0;
+    2                        if n=1;
+    n+2*min(n,t)              if n>=2.
+
+This is a derivation, conditional only on the correctness of the submitted
+main theorem and basepoint valuation proposition, not a new unproved
+generalization inferred from numerical data.
+
+PROOF FOR n>=2:
+If t<=n, the submitted main theorem applies verbatim, giving n+2t.
+If t>n (including t=infinity), one of b,b+1 is divisible by 2^(n+1).
+
+If b is even, write N=b+u*2^n and M=b+u*2^(n+1). Then v2(N)=n
+and v2(M)>=n+1. Both indices are positive in this case. The submitted
+basepoint proposition gives v2(D(N)-1)=3n and
+v2(D(M)-1)>=3n+3. Their difference therefore has valuation 3n,
+which is n+2*min(n,t).
+
+If b is odd, use N+1 and M+1 instead: their valuations are n and
+at least n+1. The minus-one basepoint formula gives
+v2(D(N)+1)=3n and v2(D(M)+1)>=3n+3. Again subtraction has
+valuation 3n. This also treats b=-1; the even case treats b=0.
+
+PROOF OF THE LOW SCALES:
+For every nonnegative integer j, terms with k>=3 in the binomial sum
+are divisible by 8. Thus
+
+D(j) = 1+2*j^2+j^2*(j-1)^2 (mod 8).
+
+Subtracting 1+2*j leaves
+j*(j-1)*(j*(j-1)+2)=4*A*(A+1), A=j*(j-1)/2,
+which is divisible by 8. Therefore D(j)=2*j+1 (mod 8).
+Consequently D(M)-D(N)=2*(M-N)=u*2^(n+1) (mod 8).
+This has valuation 1 for n=0 and valuation 2 for n=1.
+
+SHARPNESS OF THE CURRENT LINEAR BRANCH:
+For b=2^t, u=1, n=t-1 with t>=3, the saturated result gives
+3t-3, whereas extending the old n+2t expression down one scale
+would predict 3t-1. Thus the old linear formula cannot uniformly
+start at n=t-1. The correct improvement is adding a saturated branch,
+not simply reducing the threshold while retaining that expression.
+Example: b=16,u=1,n=2 gives v2(D(24)-D(20))=6, not 10.
+For the lower floor n>=2, b=u=1,n=1 gives v2(D(5)-D(3))=2,
+not the linear value 3.
+
+FINITE CROSS-CHECK:
+The adjacent script checked 148,854 admissible triples, with
+-1000<=b<=1000, positive odd 1<=u<=31, 0<=n<=9, and indices
+at most 3000. There were no counterexamples. The computation uses
+exact integer recurrence values, not floating-point approximations.
+These finite checks corroborate the displayed proof; they do not replace it.
+
+EDITORIAL AND MATHEMATICAL VALUE:
+This is a clean, concrete strengthening: it covers every dyadic scale,
+absorbs b=0,-1 into a unified convention, and explains exactly why the
+linear valuation law stops working below the submitted threshold.
+It requires no new difficult analytic estimate. Consequently it improves
+completeness and presentation, while its conceptual depth is modest:
+it is a short corollary of results already proved in the manuscript.
+Novelty relative to the external literature has not been established here.

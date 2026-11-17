@@ -1,0 +1,12 @@
+{
+  "limit": 1024,
+  "pairs": 524800,
+  "cases": {
+    "k=0": 262656,
+    "k=1": 131328,
+    "k>=2": 130816
+  },
+  "failures": [],
+  "formula": "k=v2(M-N), t_X=v2(X(X+1)), t_0=infinity; v2(D(M)-D(N))=k+1 for k<=1, otherwise k+2 min(t_M,t_N)",
+  "status": "Computational corroboration. A deduction from existing manuscript results is provided separately."
+}

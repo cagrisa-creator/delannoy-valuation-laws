@@ -1,75 +1,56 @@
-# Delannoy valuation laws
+# Delannoy differences: exact valuations and the two-adic image
 
-**César Augusto Grisa — Independent Researcher**
+**C�sar Augusto Grisa � Independent Researcher**
 
-*Explicit thresholds and multiplicative differences. Version 1.0.2, 16 November 2026.*
+Version 1.1.0, 17 November 2026. Research preprint and reproducibility archive.
+This revision has not been independently peer reviewed or accepted by a journal.
 
-## Status
+## Separate revision
 
-This is a public working preprint and reproducibility archive. It has not
-been peer reviewed or accepted by a journal. Internal audits and exact
-computations are distinct from independent human refereeing.
+This branch, `revision-v1.1.0`, contains the new mathematical revision.
+The `main` branch remains at the earlier version and is not overwritten.
+The exact PDF submitted to Houston Journal of Mathematics on 16 November 2026
+is preserved separately; version 1.1.0 has not been sent to the journal.
 
-Version 1.0.2 updates the presentation and accompanying metadata. The
-mathematical statements, proofs, verification scripts, and original finite
-NEG dataset are unchanged. A future journal submission has not been selected.
+## Results
 
-## Mathematical content
+For distinct nonnegative M,N let k=v2(M-N), t_X=v2(X(X+1)), t_0=infinity.
+The complete difference law gives k+1 if k<=1 and k+2 min(t_M,t_N) otherwise.
+The shifted formula also covers every nonnegative scale. The interpolant on
+the two-adic integers is injective, has critical points only at 0 and -1,
+and has an exact image of normalized Haar measure 1/7. The cubic precision
+is sharpened and a quartic term is retained, with a uniform sharpness proof.
 
-The draft presents integrated arguments for Lengyel's four Delannoy valuation
-conjectures, including negative shifts whenever both Delannoy indices exist.
-It deduces a two-point law for distinct positive even M,N of equal valuation a:
+Known special cases are credited explicitly. No claim of certified universal
+priority is made; see `pesquisa_bibliografica/` for the bounded comparison.
 
-    v2(D(M)-D(N)) = v2(M-N) + 2a.
-
-In particular, for every positive even n and odd integer p>1:
-
-    v2(D(pn)-D(n)) = v2(p-1) + 3*v2(n).
-
-The multiplier need not be prime. The explicit bridge to the finite NEG target
-is written out in the manuscript. The universal proof does not use the NEG
-tables as a premise.
-
-## Files and reproduction
+## Files
 
 - `artigo/main.tex`: complete editable English manuscript.
-- `artigo/Grisa_Delannoy_valuation_laws.pdf`: matching current preprint PDF.
-- `O_que_a_uniao_resolve.pdf`: Portuguese explanation of results and limits.
-- `artigo/eight_checks.py`: eight finite evaluations used in the proof.
-- `artigo/check_cubic_increment.py`: checks of the cubic increment.
-- `artigo/reaudit_full_theorem.py`: checks of the earlier integrated theorem.
-- `artigo/check_joined_claims.py`: 14,016 additional checks, zero failures.
-- `artigo/verify_NEG_archive.py`: internal archive-consistency checks only.
-- `suplemento/NEG_original.zip`: original supplied NEG archive, unchanged.
+- `artigo/Grisa_Delannoy_differences_v1.1.0.pdf`: matching 16-page PDF.
+- `verificacao/pairs_complete_check.py`: 524,800 exact pairs.
+- `verificacao/check_saturated_threshold.py`: 148,854 admissible shifted cases.
+- `verificacao/precision_explore.py`: 252 exact cubic and quartic checks.
+- `verificacao/precision_signed_audit.py`: 1,710 signed modular checks.
+- `verificacao/check_image_residues.py`: image residues through modulus 2^16.
+- `artigo/eight_checks.py`: eight finite entries in the analytic proof.
+- `pesquisa_bibliografica/`: source-by-source comparison and search limits.
+- `suplemento/NEG_original.zip`: unchanged original finite archive.
 
-Scripts require only Python 3's standard library and write reports next to
-themselves. To compile the manuscript, run `pdflatex main.tex` twice inside
-`artigo/`.
+The calculations corroborate written proofs and do not replace them.
+Python scripts require only the standard library. Compile `artigo/main.tex`
+with a standard LaTeX engine. The original NEG archive does not supply its
+term generator, full decomposition definitions, uniform state reduction or
+tail proof. Its internal checks do not establish those missing assertions.
+The universal total valuation laws do not use that dataset as a premise.
 
-The retained NEG tables contain 11,858 states representing 13,552 NEG cases.
-The missing term generator, block definitions, uniform state reduction, and
-tail proof were not reconstructed. A total valuation law does not establish
-those separate internal claims.
+## Archives and license
 
-## Provenance and citation
+Revision link: https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0
 
-This is a substantially revised working draft derived from the earlier
-[Delannoy C4 candidate archive](https://github.com/cagrisa-creator/delannoy-c4-candidate).
-The earlier project is not overwritten. See `CITATION.cff` for author metadata.
-New repository: https://github.com/cagrisa-creator/delannoy-valuation-laws
+A new-version Zenodo draft is reserved at https://zenodo.org/uploads/24293242.
+Its reserved DOI, 10.5281/zenodo.24293242, is registered only on publication.
+Consult `PUBLICATION_STATUS.json` for the latest verified archive state.
+No deposit to arXiv is authorized or performed.
 
-Zenodo version 1.0.2 is saved as a new-version draft at
-https://zenodo.org/uploads/24293242. Reserved DOI: `10.5281/zenodo.24293242`.
-The new files and description have not yet been published in Zenodo. Earlier releases remain available in the
-repository and Zenodo version history.
-
-## License
-
-Manuscript and documentation: CC BY 4.0 (`LICENSE-DOCS`).
-Code: MIT (`LICENSE-CODE`).
-
-## Publication preference (16 November 2026)
-
-The author will decide whether and where to submit a future version.
-No arXiv deposit is authorized. GitHub and Zenodo are archival destinations,
-not journal acceptance.
+Manuscript and documentation: CC BY 4.0. Code: MIT.

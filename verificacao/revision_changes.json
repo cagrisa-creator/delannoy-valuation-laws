@@ -1,0 +1,17 @@
+{
+  "version": "1.1.0",
+  "date": "2026-11-17",
+  "previous_version": "1.0.2",
+  "prior_proofs_byte_identical": 18,
+  "prior_plain_proofs": 21,
+  "changes": [
+    "Complete pair law",
+    "All shifted scales",
+    "Cubic and quartic precision",
+    "Exact image and critical points",
+    "Haar measure 1/7",
+    "Literature comparison and shorter archive appendix"
+  ],
+  "journal_copy_modified": false,
+  "new_revision_sent_to_journal": false
+}

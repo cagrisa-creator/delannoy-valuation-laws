@@ -1,33 +1,32 @@
 {
-  "title": "Delannoy valuation laws: explicit thresholds and multiplicative differences",
+  "title": "Delannoy differences: exact valuations and the two-adic image",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "<p>Working preprint by César Augusto Grisa (Independent Researcher). Version 1.0.2 (16 November 2026) presents integrated arguments for the four Delannoy valuation conjectures formulated by Lengyel (2021), an explicit generic threshold, basepoint valuations, a two-point law on even indices of equal 2-adic valuation, and the consequence v2(D(pn)-D(n)) = v2(p-1)+3v2(n) for positive even n and odd p greater than one, without a primality assumption.</p><p>This version updates the presentation and accompanying metadata; the mathematical statements, proofs, scripts, and finite NEG dataset are unchanged. The manuscript has not been peer reviewed or accepted by a journal. The original finite NEG archive is preserved as supplementary data. Its internal consistency was checked; the missing term generator, decomposition definitions and tail arguments were not reconstructed. The NEG archive is not a premise of the universal proof.</p>",
+  "description": "<p>Research preprint by C�sar Augusto Grisa (Independent Researcher), version 1.1.0, 17 November 2026. This revision classifies the exact 2-adic valuation of D(M)-D(N) for all distinct nonnegative indices, gives all scales of shifted dyadic differences, and derives the odd-multiplier law.</p><p>The two-adic interpolation is shown to be injective, with precisely two critical points and an explicitly described image of normalized Haar measure 1/7. Refined cubic and quartic congruences include a proof of sharp uniform cubic precision. Proofs and exact reproduction scripts are supplied.</p><p>The manuscript has not been independently peer reviewed or accepted by a journal. The literature comparison explicitly credits known special cases and does not certify universal priority. The original finite NEG dataset is preserved as supplementary material, with its limitations stated; it is not a premise of the universal proof.</p><p>This revision is maintained on a separate GitHub branch. The earlier main branch and the manuscript submitted to Houston Journal of Mathematics are preserved.</p>",
   "creators": [
     {
-      "name": "Grisa, César Augusto",
+      "name": "Grisa, C�sar Augusto",
       "affiliation": "Independent Researcher"
     }
   ],
-  "version": "1.0.2",
-  "publication_date": "2026-11-16",
+  "version": "1.1.0",
+  "publication_date": "2026-11-17",
   "language": "eng",
   "license": "cc-by-4.0",
   "keywords": [
     "central Delannoy numbers",
     "2-adic valuation",
     "Mahler expansion",
-    "Lengyel conjectures",
-    "p-adic analysis",
-    "reproducibility"
+    "p-adic interpolation",
+    "Haar measure",
+    "supercongruences"
   ],
-  "notes": "Documents are licensed CC BY 4.0. Code files are additionally licensed MIT; see LICENSE-CODE. Public working draft, not a peer-reviewed publication.",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/cagrisa-creator/delannoy-c4-candidate",
-      "relation": "isDerivedFrom",
+      "identifier": "https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0",
+      "relation": "isSupplementTo",
       "scheme": "url"
     }
   ],
-  "doi": "10.5281/zenodo.24293242"
+  "notes": "Reserved DOI 10.5281/zenodo.24293242 is not registered until the new-version draft is published."
 }

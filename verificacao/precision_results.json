@@ -1,0 +1,34 @@
+{
+  "nu_mod_2_60": 733692677320310131,
+  "nu_hex": "0xa2e999a4dfb7d73",
+  "quartic_coefficient_partial_sum_v2": -1,
+  "quartic_coefficient_scaled_mod_2_60": 900871974115556869,
+  "scaled_by": 2,
+  "improved_cubic_modulus": "2^(4t+v2(y-x)-1), t>=3",
+  "quartic_modulus": "2^(5t+v2(y-x)-4), t>=3",
+  "mathematical_status": "proved by retaining the quartic term in the existing proof; proof outline in precision_proof.txt",
+  "tests": 252,
+  "failures": [],
+  "quartic_failures": [],
+  "minimum_excess_valuation": {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0
+  },
+  "range": {
+    "t": [
+      3,
+      9
+    ],
+    "x_y": [
+      0,
+      8
+    ],
+    "max_index": 4096
+  },
+  "coefficient_tail": "For nu the manuscript bound k+1-2v2(k)-floor(log2(k-1)) exceeds 60 for every k>=257. For mu the bound k-2v2(k)-2floor(log2(k-1)) does likewise. Dyadic minima increase thereafter."
+}
