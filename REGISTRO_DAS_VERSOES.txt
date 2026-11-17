@@ -1,0 +1,19 @@
+REGISTRO SEPARADO DAS VERS�ES � 17/11/2026
+
+1. HOUSTON � vers�o 1.0.2
+Enviada em 16/11/2026 �s 18:51:30, hor�rio de Bras�lia.
+Editor: Th�i Ho�ng L�, leth@olemiss.edu.
+Resposta: cagrisa@id.uff.br.
+C�pia exata de 12 p�ginas e comprovante de envio preservados na pasta local
+houston_submissao_2026-11-16. O envio n�o � um aceite ou publica��o.
+A vers�o e o registro originais n�o foram substitu�dos nem retirados.
+
+2. REVIS�O � vers�o 1.1.0
+Delannoy differences: exact valuations and the two-adic image.
+16 p�ginas, com fonte edit�vel, verifica��es e compara��o bibliogr�fica.
+N�o enviada a outra revista.
+GitHub separado: https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0
+Novo dep�sito: https://zenodo.org/records/24316985
+DOI publicado e conferido em 17/11/2026: 10.5281/zenodo.24316985.
+
+Os tamanhos e as assinaturas SHA-256 das duas c�pias est�o no arquivo JSON.

@@ -1,0 +1,32 @@
+{
+  "updated": "2026-11-17",
+  "versions": [
+    {
+      "version": "1.0.2",
+      "title": "Delannoy valuation laws: explicit thresholds and multiplicative differences",
+      "journal": "Houston Journal of Mathematics",
+      "sent_at": "2026-11-16T18:51:30-03:00",
+      "recipient": "leth@olemiss.edu",
+      "email_for_replies": "cagrisa@id.uff.br",
+      "journal_accepted": false,
+      "sent_pdf_bytes": 123539,
+      "sent_pdf_sha256": "ffc357e304fd40fa06382cfed32ce76a5f143ca7778a401a077fc7c11d3c000b",
+      "github_source_commit": "e680166da29bb7682a15e11f094df89bc87413dd",
+      "note": "Exact submission PDF and sent receipt preserved locally; public source has the same mathematics with general correspondence formatting."
+    },
+    {
+      "version": "1.1.0",
+      "title": "Delannoy differences: exact valuations and the two-adic image",
+      "journal_submitted": false,
+      "github": "https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0",
+      "zenodo": "https://zenodo.org/records/24316985",
+      "doi_reserved": "10.5281/zenodo.24316985",
+      "doi_registered": true,
+      "pdf_bytes": 144735,
+      "pdf_sha256": "d72751e8535c00c8f80d2f50d575bd2ebc7662cac5f6c6b2aa9d500222996c25",
+      "note": "Separate revision archive; the Houston submission is neither replaced nor withdrawn.",
+      "doi": "10.5281/zenodo.24316985",
+      "archive_published": "2026-11-17"
+    }
+  ]
+}

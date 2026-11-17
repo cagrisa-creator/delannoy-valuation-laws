@@ -48,9 +48,11 @@ The universal total valuation laws do not use that dataset as a premise.
 
 Revision link: https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0
 
-A new-version Zenodo draft is reserved at https://zenodo.org/uploads/24293242.
-Its reserved DOI, 10.5281/zenodo.24293242, is registered only on publication.
-Consult `PUBLICATION_STATUS.json` for the latest verified archive state.
+Published Zenodo record: https://zenodo.org/records/24316985
+DOI: https://doi.org/10.5281/zenodo.24316985
+The uploaded ZIP preserves the metadata snapshot at packaging; the verified
+publication state is recorded here and in `PUBLICATION_STATUS.json`.
+See `REGISTRO_DAS_VERSOES.txt` for the separate Houston and revision records.
 No deposit to arXiv is authorized or performed.
 
 Manuscript and documentation: CC BY 4.0. Code: MIT.

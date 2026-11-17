@@ -28,5 +28,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Reserved DOI 10.5281/zenodo.24293242 is not registered until the new-version draft is published."
+  "notes": "Published research preprint, version 1.1.0. Code is additionally MIT licensed. The prior Houston submission remains preserved.",
+  "doi": "10.5281/zenodo.24316985"
 }

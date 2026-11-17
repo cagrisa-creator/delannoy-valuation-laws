@@ -5,7 +5,7 @@
   "affiliation": "Independent Researcher",
   "github_branch": "revision-v1.1.0",
   "github_url": "https://github.com/cagrisa-creator/delannoy-valuation-laws/tree/revision-v1.1.0",
-  "github_status": "Prepared; branch creation pending",
+  "github_status": "Published on separate branch; main preserved",
   "preserved_main_commit": "e680166da29bb7682a15e11f094df89bc87413dd",
   "journal": "Houston Journal of Mathematics",
   "journal_submitted_version": "1.0.2 (correspondence formatting)",
@@ -14,9 +14,13 @@
   "journal_accepted": false,
   "peer_reviewed": false,
   "arxiv_deposit_authorized": false,
-  "zenodo_status": "Existing new-version draft reserved; new files and metadata pending",
-  "zenodo_draft_url": "https://zenodo.org/uploads/24293242",
-  "reserved_doi": "10.5281/zenodo.24293242",
-  "doi_registered": false,
-  "manuscript_sha256": "d72751e8535c00c8f80d2f50d575bd2ebc7662cac5f6c6b2aa9d500222996c25"
+  "zenodo_status": "Published and verified on 2026-11-17",
+  "zenodo_draft_url": "https://zenodo.org/uploads/24316985",
+  "reserved_doi": "10.5281/zenodo.24316985",
+  "doi_registered": true,
+  "manuscript_sha256": "d72751e8535c00c8f80d2f50d575bd2ebc7662cac5f6c6b2aa9d500222996c25",
+  "github_commit": "4f102a939b67d2f88ca9a345c615e1ecc80a3279",
+  "zenodo_url": "https://zenodo.org/records/24316985",
+  "zenodo_doi": "10.5281/zenodo.24316985",
+  "submission_plan": "Archive only; no new journal submission or withdrawal performed"
 }

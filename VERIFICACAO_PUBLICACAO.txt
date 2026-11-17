@@ -1,0 +1,6 @@
+Publicado em 17/11/2026: https://zenodo.org/records/24316985
+DOI: 10.5281/zenodo.24316985
+PDF: 144735 bytes; MD5 43204b6a1a5da9d8f7e00d146d062ff5
+ZIP: MD5 f68e1efdc0f924e88c34fe3c5769a50b
+O ZIP publicado preserva os dados de empacotamento, anteriores � confirma��o final. O PDF corresponde ao GitHub.
+A c�pia exata e o registro da Houston permanecem intactos.
